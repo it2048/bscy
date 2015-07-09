@@ -1,0 +1,2085 @@
+2015/06/18 19:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "xxxx"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/
+HTTP_REFERER=http://127.0.0.1/littlebbs/
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/logo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/logo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/yzm.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/yzm.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/yzm.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/done.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/done.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/done.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg5.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg5.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg5.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg8.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg8.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg8.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg6.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg6.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg6.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/photo.pn...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/photo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg9.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg9.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg9.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg7.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg7.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg7.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/footer_logo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/footer_l...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/footer_logo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/ewm.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/ewm.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/ewm.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb4.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb4.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb4.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz5.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz5.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz5.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz4.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz4.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz4.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/logo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/logo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg5.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg5.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg5.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/done.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/done.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/done.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/yzm.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/yzm.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/yzm.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg8.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg8.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg8.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg6.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg6.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg6.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/photo.pn...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/photo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg9.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg9.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg9.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg7.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg7.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg7.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb4.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb4.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb4.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/footer_logo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/footer_l...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/footer_logo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/ewm.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/ewm.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/ewm.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz4.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz4.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz4.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:09:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz5.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz5.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz5.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/yzm.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/yzm.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/yzm.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg6.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg6.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg6.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/logo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/logo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/done.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/done.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/done.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg5.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg5.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg5.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg7.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg7.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg7.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/photo.pn...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/photo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg9.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg9.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg9.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg8.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg8.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg8.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/footer_logo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/footer_l...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/footer_logo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb4.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb4.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb4.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/ewm.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/ewm.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/ewm.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz4.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz4.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz4.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gz5.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gz5.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gz5.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/logo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/logo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/yzm.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/yzm.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/yzm.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/done.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/done.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/done.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg7.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg7.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg7.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg6.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg6.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg6.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg8.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg8.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg8.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg5.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg5.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg5.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg9.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg9.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg9.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/photo.pn...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/photo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb4.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb4.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb4.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/logo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/logo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/done.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/done.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/done.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/yzm.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/yzm.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/yzm.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg6.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg6.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg6.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg5.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg5.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg5.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg7.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg7.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg7.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg8.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg8.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg8.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/photo.pn...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/photo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg9.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg9.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg9.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb4.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb4.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb4.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/done.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/done.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/done.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/logo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/logo.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/logo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/yzm.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/yzm.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/yzm.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg7.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg7.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg7.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/photo.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/photo.pn...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/photo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg8.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg8.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg8.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg9.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg9.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg9.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb1.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb1.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg5.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg5.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg5.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb2.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb2.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb4.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb4.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb4.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg6.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg6.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg6.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:12:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/hb3.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/hb3.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/hb3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:13:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg4.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg4.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg4.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:13:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/gg5.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/gg5.png')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/gg5.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:13:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/banner.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/banner.p...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/banner.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:13:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/banner.png"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/banner.p...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/images/banner.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home
+---
+2015/06/18 19:18:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "login"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('login')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/login
+---
+2015/06/18 19:19:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "images" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/images/log...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/images/logo.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/login
+---
+2015/06/18 19:19:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "images" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/images/fw2...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/images/fw2.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/login
+---
+2015/06/18 19:19:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "images" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/images/fw4...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/images/fw4.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/login
+---
+2015/06/18 19:19:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "images" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/images/fw3...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/images/fw3.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/login
+---
+2015/06/18 19:19:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "images" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/images/yzm...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/images/yzm.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/login
+---
+2015/06/18 19:19:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "images" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/images/fw1...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/images/fw1.png
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/login
+---
+2015/06/18 19:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/js/Address...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/js/Address.js
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/buypull
+---
+2015/06/18 19:24:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/js/Address...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/js/Address.js
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/buypush
+---
+2015/06/18 19:33:13 [error] [exception.CException] exception 'CException' with message '属性 "BannerWidget.type" 未被定义.' in D:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('type', 1)
+#1 D:\xampp\htdocs\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(HomeController), 'BannerWidget', Array)
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('BannerWidget', Array)
+#3 D:\xampp\htdocs\littlebbs\project\protected\views\home\login.php(2): CBaseController->widget('BannerWidget', Array)
+#4 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('D:\xampp\htdocs...')
+#5 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\xampp\htdocs...', NULL, true)
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\xampp\htdocs...', NULL, true)
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('login', NULL, true)
+#8 D:\xampp\htdocs\littlebbs\project\protected\controllers\HomeController.php(102): CController->render('login')
+#9 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionLogin()
+#10 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#14 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/login')
+#15 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#17 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/login
+---
+2015/06/18 19:40:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/js/Address...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/js/Address.js
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/buypull
+---
+2015/06/18 19:40:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/js/Address...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/js/Address.js
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/buypush
+---
+2015/06/18 19:41:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/js/Address...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/js/Address.js
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/buypush
+---
+2015/06/18 19:41:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/js/Address...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/js/Address.js
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/buypush
+---
+2015/06/18 19:42:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/js/Address...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/js/Address.js
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/buypull
+---
+2015/06/18 19:53:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "buy" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('buy')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('buy')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/buy')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/buy?type=1
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/index
+---
+2015/06/18 20:16:31 [error] [php] include(AppBsAdmin.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 D:\xampp\htdocs\littlebbs\project\protected\components\UserIdentity.php(18): spl_autoload_call()
+#1 D:\xampp\htdocs\littlebbs\project\protected\controllers\AdminloginController.php(19): UserIdentity->authenticate()
+#2 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): AdminloginController->actionLogin()
+#3 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(286): AdminloginController->runAction()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(265): AdminloginController->runActionWithFilters()
+#6 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): AdminloginController->run()
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\littlebbs\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/littlebbs/project/index.php/adminlogin/login
+in D:\xampp\htdocs\littlebbs\project\protected\components\UserIdentity.php (18)
+in D:\xampp\htdocs\littlebbs\project\protected\controllers\AdminloginController.php (19)
+in D:\xampp\htdocs\littlebbs\project\index.php (17)
+2015/06/18 20:21:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "rbacSet/authmanage"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('rbacSet/authman...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/rbacSet/authmanage?_=1434651689766
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/admincontent/index/
+---
+2015/06/18 20:22:16 [error] [php] include(AppAuthitem.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 D:\xampp\htdocs\littlebbs\project\protected\controllers\RbacSetController.php(24): spl_autoload_call()
+#1 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): RbacSetController->actionAuthManage()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): RbacSetController->runAction()
+#4 D:\xampp\htdocs\littlebbs\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#5 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): RbacSetController->filterAuthCheck()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(265): RbacSetController->runActionWithFilters()
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): RbacSetController->run()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\littlebbs\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/littlebbs/project/index.php/rbacSet/authmanage?_=1434651735721
+in D:\xampp\htdocs\littlebbs\project\protected\controllers\RbacSetController.php (24)
+in D:\xampp\htdocs\littlebbs\project\protected\components\AdminSet.php (33)
+in D:\xampp\htdocs\littlebbs\project\index.php (17)
+2015/06/18 20:23:21 [error] [php] include(AppRsAdmin.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 D:\xampp\htdocs\littlebbs\project\protected\controllers\RbacSetController.php(195): spl_autoload_call()
+#1 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): RbacSetController->actionAssignToUsers()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): RbacSetController->runAction()
+#4 D:\xampp\htdocs\littlebbs\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#5 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): RbacSetController->filterAuthCheck()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(265): RbacSetController->runActionWithFilters()
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): RbacSetController->run()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\littlebbs\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/littlebbs/project/index.php/rbacSet/assignToUsers?_=1434651800666
+in D:\xampp\htdocs\littlebbs\project\protected\controllers\RbacSetController.php (195)
+in D:\xampp\htdocs\littlebbs\project\protected\components\AdminSet.php (33)
+in D:\xampp\htdocs\littlebbs\project\index.php (17)
+2015/06/18 20:24:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "adminhomeset/slidemanager"。' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('adminhomeset/sl...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#3 {main}
+REQUEST_URI=/littlebbs/project/index.php/adminhomeset/slidemanager?_=1434651845096
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/admincontent/index/
+---
+2015/06/18 20:42:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "index" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('index')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('adminhomeset/in...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/adminhomeset/index?_=1434652946084
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/admincontent/index/
+---
+2015/06/18 20:43:38 [error] [php] include(AppRsLink.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 D:\xampp\htdocs\littlebbs\project\protected\controllers\AdminhomesetController.php(39): spl_autoload_call()
+#1 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): AdminhomesetController->actionLinkManager()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): AdminhomesetController->runAction()
+#4 D:\xampp\htdocs\littlebbs\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#5 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): AdminhomesetController->filterAuthCheck()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(265): AdminhomesetController->runActionWithFilters()
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): AdminhomesetController->run()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\littlebbs\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/littlebbs/project/index.php/adminhomeset/linkmanager?_=1434653018176
+in D:\xampp\htdocs\littlebbs\project\protected\controllers\AdminhomesetController.php (39)
+in D:\xampp\htdocs\littlebbs\project\protected\components\AdminSet.php (33)
+in D:\xampp\htdocs\littlebbs\project\index.php (17)
+2015/06/18 20:54:27 [error] [php] Undefined variable: slider (D:\xampp\htdocs\littlebbs\project\protected\views\home\index.php:54)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(869): HomeController->renderFile()
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(782): HomeController->renderPartial()
+#2 D:\xampp\htdocs\littlebbs\project\protected\controllers\HomeController.php(79): HomeController->render()
+#3 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(286): HomeController->runAction()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HomeController->run()
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\littlebbs\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/littlebbs/project/index.php/home/index
+in D:\xampp\htdocs\littlebbs\project\protected\views\home\index.php (54)
+in D:\xampp\htdocs\littlebbs\project\protected\controllers\HomeController.php (79)
+in D:\xampp\htdocs\littlebbs\project\index.php (17)
+2015/06/18 22:19:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "js" 动作.' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('home/js/Address...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\littlebbs\project\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/littlebbs/project/index.php/home/js/Address.js
+HTTP_REFERER=http://127.0.0.1/littlebbs/project/index.php/home/buypull
+---
+2015/06/19 06:34:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'baiheng'' in D:\xampp\htdocs\bscy\yii\db\CDbConnection.php:381
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\xampp\htdocs\bscy\yii\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\xampp\htdocs\bscy\yii\base\CModule.php(387): CDbConnection->init()
+#3 D:\xampp\htdocs\bscy\yii\base\CModule.php(103): CModule->getComponent('db')
+#4 D:\xampp\htdocs\bscy\yii\gii\generators\model\ModelCode.php(57): CModule->__get('db')
+#5 D:\xampp\htdocs\bscy\yii\web\CFormModel.php(39): ModelCode->init()
+#6 D:\xampp\htdocs\bscy\yii\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 D:\xampp\htdocs\bscy\yii\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\xampp\htdocs\bscy\yii\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 D:\xampp\htdocs\bscy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): CController->run('')
+#13 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController('gii/model')
+#14 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#15 D:\xampp\htdocs\bscy\project\index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/bscy/project/index.php/gii/model
+HTTP_REFERER=http://127.0.0.1/bscy/project/index.php/gii
+---
+2015/06/19 06:37:08 [error] [php] include(AppBsAdmin.php): failed to open stream: No such file or directory (D:\xampp\htdocs\bscy\yii\YiiBase.php:421)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\project\protected\components\UserIdentity.php(18): spl_autoload_call()
+#1 D:\xampp\htdocs\bscy\project\protected\controllers\AdminloginController.php(19): UserIdentity->authenticate()
+#2 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminloginController->actionLogin()
+#3 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\xampp\htdocs\bscy\yii\web\CController.php(286): AdminloginController->runAction()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdminloginController->runActionWithFilters()
+#6 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdminloginController->run()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/adminlogin/login
+in D:\xampp\htdocs\bscy\project\protected\components\UserIdentity.php (18)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdminloginController.php (19)
+in D:\xampp\htdocs\bscy\project\index.php (17)
+2015/06/19 06:37:42 [error] [php] include(AppBsAdmin.php): failed to open stream: No such file or directory (D:\xampp\htdocs\bscy\yii\YiiBase.php:421)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\project\protected\components\UserIdentity.php(18): spl_autoload_call()
+#1 D:\xampp\htdocs\bscy\project\protected\controllers\AdminloginController.php(19): UserIdentity->authenticate()
+#2 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminloginController->actionLogin()
+#3 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\xampp\htdocs\bscy\yii\web\CController.php(286): AdminloginController->runAction()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdminloginController->runActionWithFilters()
+#6 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdminloginController->run()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/adminlogin/login
+in D:\xampp\htdocs\bscy\project\protected\components\UserIdentity.php (18)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdminloginController.php (19)
+in D:\xampp\htdocs\bscy\project\index.php (17)
+2015/06/19 06:38:41 [error] [php] include(AppHbSlide.php): failed to open stream: No such file or directory (D:\xampp\htdocs\bscy\yii\YiiBase.php:421)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\project\protected\controllers\AdminhomesetController.php(17): spl_autoload_call()
+#1 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminhomesetController->actionSlideManager()
+#2 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdminhomesetController->runAction()
+#4 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#5 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminhomesetController->filterAuthCheck()
+#6 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdminhomesetController->runActionWithFilters()
+#9 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdminhomesetController->run()
+#10 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/adminhomeset/slidemanager?_=1434688721819
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdminhomesetController.php (17)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+in D:\xampp\htdocs\bscy\project\index.php (17)
+2015/06/19 06:41:10 [error] [php] include(AppHbSlide.php): failed to open stream: No such file or directory (D:\xampp\htdocs\bscy\yii\YiiBase.php:421)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\project\protected\controllers\AdminhomesetController.php(17): spl_autoload_call()
+#1 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminhomesetController->actionSlideManager()
+#2 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdminhomesetController->runAction()
+#4 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#5 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminhomesetController->filterAuthCheck()
+#6 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdminhomesetController->runActionWithFilters()
+#9 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdminhomesetController->run()
+#10 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/adminhomeset/slidemanager?_=1434688870893
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdminhomesetController.php (17)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+in D:\xampp\htdocs\bscy\project\index.php (17)
+2015/07/09 16:04:11 [error] [exception.CException] exception 'CException' with message '属性 "AppBsAdmin.email" 未被定义.' in D:\xampp\htdocs\bscy\yii\base\CComponent.php:130
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\db\ar\CActiveRecord.php(143): CComponent->__get('email')
+#1 D:\xampp\htdocs\bscy\yii\base\CModel.php(595): CActiveRecord->__get('email')
+#2 D:\xampp\htdocs\bscy\project\protected\views\admincontent\usermanager.php(38): CModel->offsetGet('email')
+#3 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(126): require('D:\xampp\htdocs...')
+#4 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(869): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#6 D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php(42): CController->renderPartial('usermanager', Array, false, true)
+#7 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdmincontentController->actionUserManager()
+#8 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#11 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminSet->filterAuthCheck(Object(CFilterChain))
+#12 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#14 D:\xampp\htdocs\bscy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): CController->run('usermanager')
+#16 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController('admincontent/us...')
+#17 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#18 D:\xampp\htdocs\bscy\project\index.php(17): CApplication->run()
+#19 {main}
+REQUEST_URI=/bscy/project/index.php/admincontent/usermanager?_=1436429051824
+HTTP_REFERER=http://127.0.0.1/bscy/project/index.php/admincontent/index/
+---
+2015/07/09 16:11:59 [error] [exception.CException] exception 'CException' with message '属性 "AppBsAdmin.email" 未被定义.' in D:\xampp\htdocs\bscy\yii\base\CComponent.php:130
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\db\ar\CActiveRecord.php(143): CComponent->__get('email')
+#1 D:\xampp\htdocs\bscy\project\protected\views\admincontent\useredit.php(22): CActiveRecord->__get('email')
+#2 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(126): require('D:\xampp\htdocs...')
+#3 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#4 D:\xampp\htdocs\bscy\yii\web\CController.php(869): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#5 D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php(81): CController->renderPartial('useredit', Array)
+#6 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdmincontentController->actionUseredit()
+#7 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#10 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminSet->filterAuthCheck(Object(CFilterChain))
+#11 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#13 D:\xampp\htdocs\bscy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): CController->run('useredit')
+#15 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController('admincontent/us...')
+#16 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\xampp\htdocs\bscy\project\index.php(17): CApplication->run()
+#18 {main}
+REQUEST_URI=/bscy/project/index.php/admincontent/useredit?username=admin&_=1436429519328
+HTTP_REFERER=http://127.0.0.1/bscy/project/index.php/admincontent/index/
+---
+2015/07/09 16:40:29 [error] [php] Undefined variable: models (D:\xampp\htdocs\bscy\project\protected\views\admincontent\useradd.php:26)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(869): AdmincontentController->renderFile()
+#1 D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php(47): AdmincontentController->renderPartial()
+#2 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdmincontentController->actionUseradd()
+#3 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#5 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#7 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#9 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#10 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#11 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/useradd?_=1436431229473
+in D:\xampp\htdocs\bscy\project\protected\views\admincontent\useradd.php (26)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (47)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 16:40:44 [error] [php] printf(): Too few arguments (D:\xampp\htdocs\bscy\project\protected\views\admincontent\useradd.php:26)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(95): AdmincontentController->renderInternal()
+#1 D:\xampp\htdocs\bscy\yii\web\CController.php(869): AdmincontentController->renderFile()
+#2 D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php(47): AdmincontentController->renderPartial()
+#3 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdmincontentController->actionUseradd()
+#4 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#6 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#7 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#8 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#10 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#11 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#12 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/useradd?_=1436431244261
+in D:\xampp\htdocs\bscy\project\protected\views\admincontent\useradd.php (26)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (47)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 16:40:48 [error] [php] printf(): Too few arguments (D:\xampp\htdocs\bscy\project\protected\views\admincontent\useradd.php:26)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(95): AdmincontentController->renderInternal()
+#1 D:\xampp\htdocs\bscy\yii\web\CController.php(869): AdmincontentController->renderFile()
+#2 D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php(47): AdmincontentController->renderPartial()
+#3 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdmincontentController->actionUseradd()
+#4 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#6 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#7 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#8 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#10 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#11 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#12 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/useradd?_=1436431248090
+in D:\xampp\htdocs\bscy\project\protected\views\admincontent\useradd.php (26)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (47)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 16:41:07 [error] [php] sprintf(): Too few arguments (D:\xampp\htdocs\bscy\project\protected\views\admincontent\useradd.php:26)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(95): AdmincontentController->renderInternal()
+#1 D:\xampp\htdocs\bscy\yii\web\CController.php(869): AdmincontentController->renderFile()
+#2 D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php(47): AdmincontentController->renderPartial()
+#3 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdmincontentController->actionUseradd()
+#4 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#6 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#7 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#8 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#10 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#11 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#12 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/useradd?_=1436431267548
+in D:\xampp\htdocs\bscy\project\protected\views\admincontent\useradd.php (26)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (47)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 18:42:08 [error] [php] Use of undefined constant ture - assumed 'ture' (D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php:38)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#2 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php (38)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (254)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 18:42:44 [error] [php] Use of undefined constant ture - assumed 'ture' (D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php:35)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#2 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php (35)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (254)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 18:54:23 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php:41)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#2 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php (41)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (254)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 18:55:07 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php:41)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#2 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php (41)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (254)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 18:55:45 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php:41)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#2 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php (41)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (254)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 18:56:45 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php:42)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#2 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php (42)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (254)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 18:57:25 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php:41)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#2 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php (41)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (254)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 19:48:26 [error] [php] Creating default object from empty value (D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php:202)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#1 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#2 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#4 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#6 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/userupdate
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (202)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+in D:\xampp\htdocs\bscy\project\index.php (17)
+2015/07/09 19:50:02 [error] [php] Creating default object from empty value (D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php:204)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#1 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#2 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#4 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#6 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/userupdate
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (204)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+in D:\xampp\htdocs\bscy\project\index.php (17)
+2015/07/09 21:00:55 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php:41)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#2 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php (41)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (270)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 21:01:59 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php:42)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#2 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php (42)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (270)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 21:02:40 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php:41)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#2 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php (41)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (270)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 21:03:12 [error] [php] Invalid argument supplied for foreach() (D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php:41)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdmincontentController->runAction()
+#2 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdmincontentController->filterAuthCheck()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdmincontentController->runActionWithFilters()
+#7 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdmincontentController->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/admincontent/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsAdmin.php (41)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdmincontentController.php (270)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 21:43:09 [error] [exception.CException] exception 'CException' with message 'AdminMoneyController 无法找到请求的视图 "usermanager".' in D:\xampp\htdocs\bscy\yii\web\CController.php:878
+Stack trace:
+#0 D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php(40): CController->renderPartial('usermanager', Array, false, true)
+#1 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminMoneyController->actionIndex()
+#2 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#5 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminSet->filterAuthCheck(Object(CFilterChain))
+#6 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#8 D:\xampp\htdocs\bscy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): CController->run('index')
+#10 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController('adminmoney/inde...')
+#11 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\bscy\project\index.php(17): CApplication->run()
+#13 {main}
+REQUEST_URI=/bscy/project/index.php/adminmoney/index?_=1436449389300
+HTTP_REFERER=http://127.0.0.1/bscy/project/index.php/admincontent/index/
+---
+2015/07/09 21:51:02 [error] [php] Undefined index: srh_tel (D:\xampp\htdocs\bscy\project\protected\views\adminmoney\index.php:27)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(869): AdminMoneyController->renderFile()
+#1 D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php(31): AdminMoneyController->renderPartial()
+#2 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminMoneyController->actionIndex()
+#3 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdminMoneyController->runAction()
+#5 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminMoneyController->filterAuthCheck()
+#7 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#9 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdminMoneyController->runActionWithFilters()
+#10 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdminMoneyController->run()
+#11 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/adminmoney/index?_=1436449861930
+in D:\xampp\htdocs\bscy\project\protected\views\adminmoney\index.php (27)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php (31)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 21:51:37 [error] [php] Undefined index: srh_ct_name (D:\xampp\htdocs\bscy\project\protected\views\adminmoney\index.php:25)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\CController.php(869): AdminMoneyController->renderFile()
+#1 D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php(31): AdminMoneyController->renderPartial()
+#2 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminMoneyController->actionIndex()
+#3 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdminMoneyController->runAction()
+#5 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#6 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminMoneyController->filterAuthCheck()
+#7 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#9 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdminMoneyController->runActionWithFilters()
+#10 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdminMoneyController->run()
+#11 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/adminmoney/index?_=1436449897697
+in D:\xampp\htdocs\bscy\project\protected\views\adminmoney\index.php (25)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php (31)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 22:20:40 [error] [php] sprintf(): Too few arguments (D:\xampp\htdocs\bscy\project\protected\models\AppBsMoney.php:41)
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminMoneyController->actionImport()
+#1 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): AdminMoneyController->runAction()
+#3 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#4 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminMoneyController->filterAuthCheck()
+#5 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#6 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#7 D:\xampp\htdocs\bscy\yii\web\CController.php(265): AdminMoneyController->runActionWithFilters()
+#8 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): AdminMoneyController->run()
+#9 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController()
+#10 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\bscy\project\index.php(17): CWebApplication->run()
+REQUEST_URI=/bscy/project/index.php/adminmoney/import
+in D:\xampp\htdocs\bscy\project\protected\models\AppBsMoney.php (41)
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php (261)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+2015/07/09 22:41:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'month' in 'where clause'. The SQL statement executed was: SELECT * FROM `bs_admin` `t` WHERE (month>=201507) AND (month<=201507) LIMIT 50.
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php (30)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+in D:\xampp\htdocs\bscy\project\index.php (17)
+2015/07/09 22:41:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'month' in 'where clause'. The SQL statement executed was: SELECT * FROM `bs_admin` `t` WHERE (month>=201507) AND (month<=201507) LIMIT 50' in D:\xampp\htdocs\bscy\yii\db\CDbCommand.php:541
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\bscy\yii\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\bscy\yii\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php(30): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminMoneyController->actionIndex()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#8 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminSet->filterAuthCheck(Object(CFilterChain))
+#9 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#11 D:\xampp\htdocs\bscy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): CController->run('index')
+#13 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController('adminmoney/inde...')
+#14 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#15 D:\xampp\htdocs\bscy\project\index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/bscy/project/index.php/adminmoney/index?_=1436452864488
+HTTP_REFERER=http://127.0.0.1/bscy/project/index.php/admincontent/index/
+---
+2015/07/09 22:46:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'month' in 'where clause'. The SQL statement executed was: SELECT * FROM `bs_admin` `t` WHERE (month>=201507) AND (month<=201507) LIMIT 50.
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php (30)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+in D:\xampp\htdocs\bscy\project\index.php (17)
+2015/07/09 22:46:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'month' in 'where clause'. The SQL statement executed was: SELECT * FROM `bs_admin` `t` WHERE (month>=201507) AND (month<=201507) LIMIT 50' in D:\xampp\htdocs\bscy\yii\db\CDbCommand.php:541
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\bscy\yii\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\bscy\yii\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php(30): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminMoneyController->actionIndex()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#8 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminSet->filterAuthCheck(Object(CFilterChain))
+#9 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#11 D:\xampp\htdocs\bscy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): CController->run('index')
+#13 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController('adminmoney/inde...')
+#14 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#15 D:\xampp\htdocs\bscy\project\index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/bscy/project/index.php/adminmoney/index?_=1436453163832
+HTTP_REFERER=http://127.0.0.1/bscy/project/index.php/admincontent/index/
+---
+2015/07/09 22:46:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'month' in 'where clause'. The SQL statement executed was: SELECT * FROM `bs_admin` `t` WHERE (`month`>=201507) AND (`month`<=201507) LIMIT 50.
+in D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php (30)
+in D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php (33)
+in D:\xampp\htdocs\bscy\project\index.php (17)
+2015/07/09 22:46:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'month' in 'where clause'. The SQL statement executed was: SELECT * FROM `bs_admin` `t` WHERE (`month`>=201507) AND (`month`<=201507) LIMIT 50' in D:\xampp\htdocs\bscy\yii\db\CDbCommand.php:541
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\xampp\htdocs\bscy\yii\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 D:\xampp\htdocs\bscy\yii\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php(30): CActiveRecord->findAll(Object(CDbCriteria))
+#4 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminMoneyController->actionIndex()
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#8 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminSet->filterAuthCheck(Object(CFilterChain))
+#9 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#11 D:\xampp\htdocs\bscy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): CController->run('index')
+#13 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController('adminmoney/inde...')
+#14 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#15 D:\xampp\htdocs\bscy\project\index.php(17): CApplication->run()
+#16 {main}
+REQUEST_URI=/bscy/project/index.php/adminmoney/index?_=1436453197834
+HTTP_REFERER=http://127.0.0.1/bscy/project/index.php/admincontent/index/
+---
+2015/07/09 22:47:03 [error] [exception.CException] exception 'CException' with message '属性 "AppBsMoney.username" 未被定义.' in D:\xampp\htdocs\bscy\yii\base\CComponent.php:130
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\db\ar\CActiveRecord.php(143): CComponent->__get('username')
+#1 D:\xampp\htdocs\bscy\yii\base\CModel.php(595): CActiveRecord->__get('username')
+#2 D:\xampp\htdocs\bscy\project\protected\views\adminmoney\index.php(59): CModel->offsetGet('username')
+#3 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(126): require('D:\xampp\htdocs...')
+#4 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(869): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#6 D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php(33): CController->renderPartial('index', Array, false, true)
+#7 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminMoneyController->actionIndex()
+#8 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#11 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminSet->filterAuthCheck(Object(CFilterChain))
+#12 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#14 D:\xampp\htdocs\bscy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): CController->run('index')
+#16 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController('adminmoney/inde...')
+#17 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#18 D:\xampp\htdocs\bscy\project\index.php(17): CApplication->run()
+#19 {main}
+REQUEST_URI=/bscy/project/index.php/adminmoney/index?_=1436453223480
+HTTP_REFERER=http://127.0.0.1/bscy/project/index.php/admincontent/index/
+---
+2015/07/09 22:54:46 [error] [exception.CException] exception 'CException' with message '属性 "AppBsMoney.name" 未被定义.' in D:\xampp\htdocs\bscy\yii\base\CComponent.php:130
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\db\ar\CActiveRecord.php(143): CComponent->__get('name')
+#1 D:\xampp\htdocs\bscy\yii\base\CModel.php(595): CActiveRecord->__get('name')
+#2 D:\xampp\htdocs\bscy\project\protected\views\adminmoney\index.php(66): CModel->offsetGet('name')
+#3 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(126): require('D:\xampp\htdocs...')
+#4 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(869): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#6 D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php(33): CController->renderPartial('index', Array, false, true)
+#7 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminMoneyController->actionIndex()
+#8 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#11 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminSet->filterAuthCheck(Object(CFilterChain))
+#12 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#14 D:\xampp\htdocs\bscy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): CController->run('index')
+#16 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController('adminmoney/inde...')
+#17 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#18 D:\xampp\htdocs\bscy\project\index.php(17): CApplication->run()
+#19 {main}
+REQUEST_URI=/bscy/project/index.php/adminmoney/index?_=1436453686384
+HTTP_REFERER=http://127.0.0.1/bscy/project/index.php/admincontent/index/
+---
+2015/07/09 22:55:13 [error] [exception.CException] exception 'CException' with message '属性 "AppBsMoney.username" 未被定义.' in D:\xampp\htdocs\bscy\yii\base\CComponent.php:130
+Stack trace:
+#0 D:\xampp\htdocs\bscy\yii\db\ar\CActiveRecord.php(143): CComponent->__get('username')
+#1 D:\xampp\htdocs\bscy\yii\base\CModel.php(595): CActiveRecord->__get('username')
+#2 D:\xampp\htdocs\bscy\project\protected\views\adminmoney\index.php(74): CModel->offsetGet('username')
+#3 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(126): require('D:\xampp\htdocs...')
+#4 D:\xampp\htdocs\bscy\yii\web\CBaseController.php(95): CBaseController->renderInternal('D:\xampp\htdocs...', Array, true)
+#5 D:\xampp\htdocs\bscy\yii\web\CController.php(869): CBaseController->renderFile('D:\xampp\htdocs...', Array, true)
+#6 D:\xampp\htdocs\bscy\project\protected\controllers\AdminMoneyController.php(33): CController->renderPartial('index', Array, false, true)
+#7 D:\xampp\htdocs\bscy\yii\web\actions\CInlineAction.php(49): AdminMoneyController->actionIndex()
+#8 D:\xampp\htdocs\bscy\yii\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 D:\xampp\htdocs\bscy\project\protected\components\AdminSet.php(33): CFilterChain->run()
+#11 D:\xampp\htdocs\bscy\yii\web\filters\CInlineFilter.php(58): AdminSet->filterAuthCheck(Object(CFilterChain))
+#12 D:\xampp\htdocs\bscy\yii\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\xampp\htdocs\bscy\yii\web\CController.php(291): CFilterChain->run()
+#14 D:\xampp\htdocs\bscy\yii\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(282): CController->run('index')
+#16 D:\xampp\htdocs\bscy\yii\web\CWebApplication.php(141): CWebApplication->runController('adminmoney/inde...')
+#17 D:\xampp\htdocs\bscy\yii\base\CApplication.php(169): CWebApplication->processRequest()
+#18 D:\xampp\htdocs\bscy\project\index.php(17): CApplication->run()
+#19 {main}
+REQUEST_URI=/bscy/project/index.php/adminmoney/index?_=1436453713431
+HTTP_REFERER=http://127.0.0.1/bscy/project/index.php/admincontent/index/
+---
