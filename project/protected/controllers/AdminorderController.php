@@ -103,6 +103,27 @@ class AdminorderController extends AdminSet
         $this->renderPartial('add',array("models"=>$allList));
     }
 
+    public function actionSx()
+    {
+        $id = Yii::app()->getRequest()->getParam("id", ""); //身份证
+        $model = AppBsOrder::model()->findByPk($id);
+        $this->renderPartial('sx',array("model"=>$model));
+    }
+    public function actionSxsave()
+    {
+        $msg = $this->msgcode();
+        $id = Yii::app()->getRequest()->getParam("sx_id", ""); //身份证
+        $time = Yii::app()->getRequest()->getParam("sx_time", ""); //身份证
+        $time = strtotime($time);
+        $tk = AppBsOrder::model()->findByPk($id);
+        $tk->sx_time = $time;
+        if($tk->save())
+        {
+            $this->msgsucc($msg);
+        }
+        echo json_encode($msg);
+    }
+
     /**
      * 添加幻灯
      */
@@ -120,12 +141,21 @@ class AdminorderController extends AdminSet
         }
         if(AppBsOrder::model()->updateAll($arr,"id in({$ids})"))
         {
-            $this->msgsucc($msg);
+            if(in_array($stage,array(1,2,3)))
+            {
+                if($this->Mail($stage,$ids))
+                    $this->msgsucc($msg);
+                else
+                    $msg['msg']="批量处理成功，但邮件发送失败，请刷新页面后手动发送邮件";
+            }else
+            {
+                $this->msgsucc($msg);
+            }
+
         }else
         {
             $msg['msg']="请检查所选内容的阶段是否一致";
         }
-
         echo json_encode($msg);
     }
 
@@ -278,10 +308,15 @@ class AdminorderController extends AdminSet
     public function actionEdit()
     {
         $id = Yii::app()->getRequest()->getParam("id", 0); //用户名
-        $model = array();
-        if($id!="")
-            $model = AppBsWj::model()->findByPk($id);
-        $this->renderPartial('edit',array("models"=>$model));
+        $criteria = new CDbCriteria;
+        $criteria->select = 'wx_type';
+        $criteria->distinct = TRUE; //是否唯一查询
+        $allList = AppBsWj::model()->findAll($criteria);
+
+        $model = AppBsOrder::model()->findByPk($id);
+        $atp = AppBsEmp::model()->findByPk($model->emp_id);
+        $this->renderPartial('edit',array("models"=>$allList,"atpo"=>$model,"atpt"=>$atp));
+
     }
 
 
@@ -291,19 +326,42 @@ class AdminorderController extends AdminSet
     public function actionUpdate()
     {
         $msg = $this->msgcode();
-        $id = Yii::app()->getRequest()->getParam("id", 1); //用户名
-        $wj_type = Yii::app()->getRequest()->getParam("wj_type", ""); //违纪类型
-        $wj_tk = Yii::app()->getRequest()->getParam("wj_tk", ""); //违纪条款
-        $wj_al = Yii::app()->getRequest()->getParam("wj_al", ""); //违纪案例
-        $wj_zl = Yii::app()->getRequest()->getParam("wj_zl", ""); //违纪资料
+        $id = Yii::app()->getRequest()->getParam("order_id", 0); //用户名
+        $order_sfid = Yii::app()->getRequest()->getParam("order_sfid", ""); //身份证
+        $order_emid = Yii::app()->getRequest()->getParam("order_emid", ""); //员工编号
 
-        $model = AppBsWj::model()->findByPk($id);
-        if($wj_type!=""&&$wj_tk!=""&&!empty($model))
+        $order_qjl = Yii::app()->getRequest()->getParam("order_qjl", ""); //区经理
+        $order_qyjl= Yii::app()->getRequest()->getParam("order_qyjl", ""); //区域经理
+        $order_yglx = Yii::app()->getRequest()->getParam("order_yglx", 0); //员工类型
+
+        $order_wjlx = Yii::app()->getRequest()->getParam("order_wjlx", ""); //违纪类型
+        $order_wjtk = Yii::app()->getRequest()->getParam("order_wjtk", ""); //违纪条款
+        $wj_sj = Yii::app()->getRequest()->getParam("wj_sj", ""); //违纪事件
+        $wj_jl = Yii::app()->getRequest()->getParam("wj_jl", ""); //违纪结论
+
+        $wj_zl = Yii::app()->getRequest()->getParam("wj_zl", ""); //附加资料
+
+        $model = AppBsOrder::model()->findByPk($id);
+        if(empty($id)||empty($model))
         {
-            $model->wx_type = $wj_type;
-            $model->wj_tk = $wj_tk;
-            $model->wj_al = $wj_al;
-            $model->wj_zj = $wj_zl;
+            $msg['msg'] = "编号不能为空";
+        }
+        elseif($order_sfid!=""&&$order_emid!="")
+        {
+            $model->emp_id = $order_emid;
+            $model->q_jl = $order_qjl;
+            $model->qy_jl = $order_qyjl;
+            $model->wj_lx = $order_wjlx;
+
+            $model->wj_tk = $order_wjtk;
+            $model->wj_sj = $wj_sj;
+            $model->wj_jl = $wj_jl;
+            $model->type = $order_yglx;
+            $model->fj = $wj_zl;
+            $model->tj_time = time();
+            $model->stage = TempList::$stage[0];
+            $model->admin = $this->getUserName();
+            $model->ct_no = $this->getUserName();
             if($model->save())
             {
                 $this->msgsucc($msg);
@@ -314,11 +372,9 @@ class AdminorderController extends AdminSet
             }
 
         }else{
-            if($msg["code"]!=3)
-                $msg['msg'] = "必填项不能为空";
+            $msg['msg'] = "身份证和员工编号不能为空";
         }
         echo json_encode($msg);
-
     }
 
     /**
@@ -449,13 +505,59 @@ class AdminorderController extends AdminSet
         echo json_encode($msg);
     }
 
-    public function actionMail()
+    public function Mail($stage,$ids)
     {
-        //echo phpinfo();die();
-        $eml = array();
-        array_push($eml,array("email"=>"277253251@qq.com","name"=>"熊方磊"));
-        array_push($eml,array("email"=>"703441462@qq.com","name"=>"黄二狗"));
-        $this->postmail($eml,"百胜测试","百胜测试");
+        if(empty($ids))
+            return false;
+        else
+        {
+            $allList = AppBsOrder::model()->findAll("id in({$ids})");
+            $str = "";
+            $sx = "";
+            $adArr = array();
+            foreach($allList as $val)
+            {
+                $str .= sprintf("'%s',",$val->emp_id);
+                $sdt = empty($val->sx_time)?"":date('Y-m-d H:i:s',$val->sx_time);
+                $sx .= sprintf("员工编号：%s,对应AM，DM生效日期为：%s;<br>",$val->emp_id,$sdt);
+            }
+
+            if($str!="")
+            {
+                $str = rtrim($str,",");
+                $modl = AppBsEmp::model()->findAll("em_id in({$str})");
+                foreach($modl as $val)
+                {
+                    $email = sprintf("China.%s@yum.com",$val->hyp);
+                    $adArr[$val->em_id] = array("email"=>$email,"name"=>$val->name);
+                }
+            }
+            if(!empty($adArr))
+            {
+                $title = "无效邮件";
+                $body = "由于系统故障，误发了该邮件。收到请删除";
+                if($stage==1)
+                {
+                    $title = "审核通过";
+                    $body = "您提交的违纪处理申请资料已审核通过，已进入DM/AM审核阶段。<br><br><br>请邮寄纸质资料至：四川省成都市城市之心;<br><br>收件人：曾XX";
+                }elseif($stage==2)
+                {
+                    $title = "审核通过";
+                    $body = "您提交的违纪处理申请资料AM/DM已审核通过，将进入盖章流程阶段。<br><br><br>AM、DM生效日期请查看下表：<br>".$sx;
+                }elseif($stage==3)
+                {
+                    $title = "协议已邮寄";
+                    $body = "您提交的违纪处理申请已进入协议邮寄阶段。<br><br><br>协议已邮寄请餐厅注意签收，签收后返寄公司。";
+                }
+                $adArr1 = array();
+                array_push($adArr1,array("email"=>"277253251@qq.com","name"=>"熊方磊"));
+                array_push($adArr1,array("email"=>"nicky.zeng@yum.com","name"=>"Zeng,Nicky"));
+                return $this->postmail($adArr1,$title,$body);
+            }else
+            {
+                return false;
+            }
+        }
     }
 
     public function postmail(array $address,$Subject,$body){

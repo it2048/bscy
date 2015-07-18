@@ -35,7 +35,7 @@
             <th width="60">提交日期</th>
             <th width="60">生效日期</th>
             <th width="100">目前进度</th>
-            <th width="100">编辑</th>
+            <th width="140">编辑</th>
         </tr>
         </thead>
         <tbody>
@@ -61,6 +61,9 @@
                 <td>
                     <a title="确实要删除这条记录吗?" callback="deleteAuCall" target="ajaxTodo" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/del',array('id'=>$value['id'])); ?>" class="btnDel">删除</a>
                     <a title="编辑" mask="true" height="400" width="620" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/edit',array('id'=>$value['id'])); ?>" class="btnEdit">编辑</a>
+
+                    <a title="添加生效日期" mask="true" height="260" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/sx',array('id'=>$value['id'])); ?>" class="btnAdd">添加生效日期</a>
+
                 </td>
             </tr>
         <?php }?>
