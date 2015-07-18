@@ -55,20 +55,38 @@ class AdminorderController extends AdminSet
      */
     public function actionAdmin()
     {
-        //print_r(Yii::app()->user->getState('username'));
-        //先获取当前是否有页码信息
         $pages['pageNum'] = Yii::app()->getRequest()->getParam("pageNum", 1); //当前页
         $pages['countPage'] = Yii::app()->getRequest()->getParam("countPage", 0); //总共多少记录
         $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 50); //每页多少条数据
 
         $criteria = new CDbCriteria;
-        $pages['countPage'] = AppBsWj::model()->count($criteria);
+        $uname = Yii::app()->user->getState('username');
+        $criteria->addCondition("ct_no='{$uname}'");
+        $pages['countPage'] = AppBsOrder::model()->count($criteria);
         $criteria->limit = $pages['numPerPage'];
         $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
         $criteria->order = 'id DESC';
-        $allList = AppBsWj::model()->findAll($criteria);
-        $this->renderPartial('index', array(
+        $allList = AppBsOrder::model()->findAll($criteria);
+
+        $str = "";
+        $adArr = array();
+        foreach($allList as $val)
+        {
+            $str .= sprintf("'%s',",$val->emp_id);
+        }
+        if($str!="")
+        {
+            $str = rtrim($str,",");
+            $modl = AppBsEmp::model()->findAll("em_id in({$str})");
+            foreach($modl as $val)
+            {
+                $adArr[$val->em_id] = array("name"=>$val->name,"zw"=>$val->zw_name,"ct"=>$val->ct_name);
+            }
+        }
+
+        $this->renderPartial('admin', array(
             'models' => $allList,
+            'arr'=>$adArr,
             'pages' => $pages),false,true);
     }
 
@@ -83,6 +101,103 @@ class AdminorderController extends AdminSet
         $allList = AppBsWj::model()->findAll($criteria);
 
         $this->renderPartial('add',array("models"=>$allList));
+    }
+
+    /**
+     * 添加幻灯
+     */
+    public function actionSh()
+    {
+        $msg = $this->msgcode();
+        $ids = Yii::app()->getRequest()->getParam("ids", ""); //身份证
+        $stage = Yii::app()->getRequest()->getParam("stage", 0); //身份证
+        if($stage==4)
+        {
+            $arr = array("stage"=>TempList::$stage[$stage],"admin"=>$this->getUserName(),"ja_time"=>time());
+        }else
+        {
+            $arr = array("stage"=>TempList::$stage[$stage],"admin"=>$this->getUserName());
+        }
+        if(AppBsOrder::model()->updateAll($arr,"id in({$ids})"))
+        {
+            $this->msgsucc($msg);
+        }else
+        {
+            $msg['msg']="请检查所选内容的阶段是否一致";
+        }
+
+        echo json_encode($msg);
+    }
+
+    public function actionExp()
+    {
+        $allList = AppBsOrder::model()->findAll();
+        $str = "";
+        $adArr = array();
+        foreach($allList as $val)
+        {
+            $str .= sprintf("'%s',",$val->emp_id);
+        }
+        if($str!="")
+        {
+            $str = rtrim($str,",");
+            $modl = AppBsEmp::model()->findAll("em_id in({$str})");
+            foreach($modl as $val)
+            {
+                $adArr[$val->em_id] = array("name"=>$val->name,"zw"=>$val->zw_name,"ct"=>$val->ct_name);
+            }
+        }
+        // 输出Excel文件头，可把user.csv换成你要的文件名
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="用户信息.csv"');
+        header('Cache-Control: max-age=0');
+        $fp = fopen('php://output', 'a');
+        // 输出Excel列名信息
+        $head = explode(",","员工编号,员工姓名,员工身份,职务,店号,餐厅,区经理,区域经理,违纪类型,违纪条款,违纪事件,违纪结论,补充证据,提交日期,生效日期,目前进度,结案日期");
+        foreach ($head as $i => $v) {
+            // CSV的Excel支持GBK编码，一定要转换，否则乱码
+            $head[$i] = iconv('utf-8', 'gbk', $v);
+        }
+        // 将数据通过fputcsv写到文件句柄
+        fputcsv($fp, $head);
+
+        // 计数器
+        $cnt = 0;
+        // 每隔$limit行，刷新一下输出buffer，不要太大，也不要太小
+        $limit = 100000;
+
+        foreach($allList as $value)
+        {
+            $cnt ++;
+            if ($limit == $cnt) { //刷新一下输出buffer，防止由于数据过多造成问题
+                ob_flush();
+                flush();
+                $cnt = 0;
+            }
+            $row = array($value['emp_id'],
+                empty($adArr[$value['emp_id']]['name'])?"":$adArr[$value['emp_id']]['name'],
+                TempList::$sf[$value['type']],
+                empty($adArr[$value['emp_id']]['zw'])?"":$adArr[$value['emp_id']]['zw'],
+                $value['ct_no'],
+                empty($adArr[$value['emp_id']]['ct'])?"":$adArr[$value['emp_id']]['ct'],
+                $value['q_jl'],
+                $value['qy_jl'],
+                $value['wj_lx'],
+                $value['wj_tk'],
+                $value['wj_sj'],
+                $value['wj_jl'],
+                $value['fj'],
+                date("Y-m-d H:i:s",$value['tj_time']),
+                empty($value['sx_time'])?"":date("Y-m-d H:i:s",$value['sx_time']),
+                $value['stage'],
+                empty($value['ja_time'])?"":date("Y-m-d H:i:s",$value['ja_time'])
+            );
+            foreach ($row as $i => $v) {
+                // CSV的Excel支持GBK编码，一定要转换，否则乱码
+                $row[$i] = iconv('utf-8', 'gbk', $v);
+            }
+            fputcsv($fp, $row);
+        }
     }
 
 
@@ -215,7 +330,7 @@ class AdminorderController extends AdminSet
         $id = Yii::app()->getRequest()->getParam("id", 0); //用户名
         if($id!=0)
         {
-            if(AppBsWj::model()->deleteByPk($id))
+            if(AppBsOrder::model()->deleteByPk($id))
             {
                 $this->msgsucc($msg);
             }
@@ -332,6 +447,61 @@ class AdminorderController extends AdminSet
             $msg['msg'] = "身份证号不能为空";
         }
         echo json_encode($msg);
+    }
+
+    public function actionMail()
+    {
+        //echo phpinfo();die();
+        $this->postmail('it2048@163.com',"测试","一起摇摆！");
+    }
+
+    public function postmail($to,$subject = '',$body = ''){
+        //$to 表示收件人地址 $subject 表示邮件标题 $body表示邮件正文
+        $mail = new PHPMailer(); //new一个PHPMailer对象出来
+        $mail->IsSMTP(); // 设定使用SMTP服务
+        $mail->SMTPDebug  = 1;                     // 启用SMTP调试功能
+//smtp需要鉴权 这个必须是true
+        $mail->SMTPAuth=true;
+//链接qq域名邮箱的服务器地址
+        $mail->Host = 'smtp.qq.com';
+//设置使用ssl加密方式登录鉴权
+        //$mail->SMTPSecure = 'ssl';
+//设置ssl连接smtp服务器的远程服务器端口号 可选465或587
+        $mail->Port = 465;
+//设置smtp的helo消息头 这个可有可无 内容任意
+        $mail->Helo = 'Hello smtp.qq.com Server';
+//设置发件人的主机域 可有可无 默认为localhost 内容任意，建议使用你的域名
+        $mail->Hostname = 'it2048.cn';
+//设置发送的邮件的编码 可选GB2312 我喜欢utf-8 据说utf8在某些客户端收信下会乱码
+        $mail->CharSet = 'UTF-8';
+//设置发件人姓名（昵称） 任意内容，显示在收件人邮件的发件人邮箱地址前的发件人姓名
+        $mail->FromName = '晶晶在线';
+//smtp登录的账号 这里填入字符串格式的qq号即可
+        $mail->Username ='277253251@qq.com';
+//smtp登录的密码 这里填入“独立密码” 若为设置“独立密码”则填入登录qq的密码 建议设置“独立密码”
+        $mail->Password = 'asd147258';
+//设置发件人邮箱地址 这里填入上述提到的“发件人邮箱”
+        $mail->From = '277253251@qq.com';
+//邮件正文是否为html编码 注意此处是一个方法 不再是属性 true或false
+        $mail->isHTML(true);
+//添加多个收件人 则多次调用方法即可
+        $mail->addAddress($to,'晶晶在线用户');
+//添加该邮件的主题
+        $mail->Subject = $subject;
+//添加邮件正文 上方将isHTML设置成了true，则可以是完整的html字符串 如：使用file_get_contents函数读取本地的html文件
+        $mail->Body = $body;
+
+
+//发送命令 返回布尔值
+//PS：经过测试，要是收件人不存在，若不出现错误依然返回true 也就是说在发送之前 自己需要些方法实现检测该邮箱是否真实有效
+        $status = $mail->send();
+
+//简单的判断与提示信息
+        if($status) {
+            echo '发送邮件成功';
+        }else{
+            echo '发送邮件失败，错误信息未：'.$mail->ErrorInfo;
+        }
     }
 
 }

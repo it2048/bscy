@@ -19,6 +19,7 @@
  * @property string $admin
  * @property string $ct_no
  * @property integer $type
+ * @property integer $ja_time
  */
 class BsOrder extends CActiveRecord
 {
@@ -39,13 +40,13 @@ class BsOrder extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('ct_no, type', 'required'),
-			array('tj_time, sx_time, type', 'numerical', 'integerOnly'=>true),
+			array('tj_time, sx_time, type, ja_time', 'numerical', 'integerOnly'=>true),
 			array('emp_id, q_jl, qy_jl, admin, ct_no', 'length', 'max'=>45),
 			array('wj_lx, wj_tk, stage', 'length', 'max'=>128),
 			array('wj_sj, wj_jl, fj', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, emp_id, q_jl, qy_jl, wj_lx, wj_tk, wj_sj, wj_jl, fj, tj_time, sx_time, stage, admin, ct_no, type', 'safe', 'on'=>'search'),
+			array('id, emp_id, q_jl, qy_jl, wj_lx, wj_tk, wj_sj, wj_jl, fj, tj_time, sx_time, stage, admin, ct_no, type, ja_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -81,6 +82,7 @@ class BsOrder extends CActiveRecord
 			'admin' => 'Admin',
 			'ct_no' => 'Ct No',
 			'type' => 'Type',
+			'ja_time' => 'Ja Time',
 		);
 	}
 
@@ -117,6 +119,7 @@ class BsOrder extends CActiveRecord
 		$criteria->compare('admin',$this->admin,true);
 		$criteria->compare('ct_no',$this->ct_no,true);
 		$criteria->compare('type',$this->type);
+		$criteria->compare('ja_time',$this->ja_time);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

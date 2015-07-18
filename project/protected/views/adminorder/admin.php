@@ -6,11 +6,19 @@
     <div class="panelBar">
         <ul class="toolBar">
             <li><a class="add" mask="true" height="400" width="700" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/add');?>"><span>添加违纪</span></a></li>
+            <li><a title="批量资料审核通过" target="selectedTodo" callback="updateAuCall" rel="ids" postType="string" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/sh',array("stage"=>1));?>" class="delete"><span>资料审核通过</span></a></li>
+            <li><a title="DM/AM审核通过，进入盖章流程" target="selectedTodo" callback="updateAuCall" rel="ids" postType="string" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/sh',array("stage"=>2));?>" class="edit"><span>DM/AM审核通过，进入盖章流程</span></a></li>
+            <li><a title="协议已邮寄/交给助理" target="selectedTodo" callback="updateAuCall" rel="ids" postType="string" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/sh',array("stage"=>3));?>" class="add"><span>协议已邮寄/交给助理</span></a></li>
+            <li><a title="收到返寄，结案" target="selectedTodo" callback="updateAuCall" rel="ids" postType="string" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/sh',array("stage"=>4));?>" class="delete"><span>收到返寄，结案</span></a></li>
+            <li class="line">line</li>
+            <li><a class="icon" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/exp');?>" target="dwzExport" targetType="navTab" title="导出所有违纪纪录"><span>导出所有违纪纪录</span></a></li>
+
         </ul>
     </div>
     <table class="table" width="960" layoutH="76">
         <thead>
         <tr>
+            <th width="22"><input type="checkbox" group="ids" class="checkboxCtrl"></th>
             <th width="20">员工编号</th>
             <th width="60">员工姓名</th>
             <th width="60">员工身份</th>
@@ -27,11 +35,13 @@
             <th width="60">提交日期</th>
             <th width="60">生效日期</th>
             <th width="100">目前进度</th>
+            <th width="100">编辑</th>
         </tr>
         </thead>
         <tbody>
         <?php foreach ($models as $value) {?>
             <tr>
+                <td><input name="ids" value="<?php echo $value['id']; ?>" type="checkbox"></td>
                 <td><?php echo $value['emp_id']; ?></td>
                 <td><?php echo empty($arr[$value['emp_id']]['name'])?"":$arr[$value['emp_id']]['name']; ?></td>
                 <td><?php echo TempList::$sf[$value['type']]; ?></td>
@@ -48,6 +58,10 @@
                 <td><?php echo date("Y-m-d H:i:s",$value['tj_time']); ?></td>
                 <td><?php echo empty($value['sx_time'])?"":date("Y-m-d H:i:s",$value['sx_time']); ?></td>
                 <td title="<?php echo $value['stage']; ?>"><?php echo $value['stage']; ?></td>
+                <td>
+                    <a title="确实要删除这条记录吗?" callback="deleteAuCall" target="ajaxTodo" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/del',array('id'=>$value['id'])); ?>" class="btnDel">删除</a>
+                    <a title="编辑" mask="true" height="400" width="620" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/edit',array('id'=>$value['id'])); ?>" class="btnEdit">编辑</a>
+                </td>
             </tr>
         <?php }?>
         </tbody>
@@ -66,7 +80,17 @@
             alertMsg.error("删除失败");
         else
         {
-            navTab.reload(res.slidemanager);  //刷新主页面
+            navTab.reload(res.orderadmin);  //刷新主页面
+        }
+    }
+
+    function updateAuCall(res)
+    {
+        if(res.code!=0)
+            alertMsg.error(res.msg);
+        else
+        {
+            navTab.reload(res.orderadmin);  //刷新主页面
         }
     }
 </script>
