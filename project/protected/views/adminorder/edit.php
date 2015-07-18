@@ -12,11 +12,11 @@
             </p>
             <p class="nowrap">
                 <label>员工姓名：</label>
-                <input  name="order_name" type="text" size="20" value="<?php echo $atpt->name;?>">
+                <input  name="order_name" type="text" size="20" readonly="readonly" value="<?php echo $atpt->name;?>">
             </p>
             <p class="nowrap">
                 <label>职务：</label>
-                <input  name="order_zw" type="text" size="20" value="<?php echo $atpt->zw_name;?>">
+                <input  name="order_zw" type="text" size="20" readonly="readonly" value="<?php echo $atpt->zw_name;?>">
             </p>
             <p class="nowrap">
                 <label>餐厅：</label>
@@ -24,11 +24,11 @@
             </p>
             <p class="nowrap">
                 <label>区经理：</label>
-                <input  name="order_qjl" type="text" size="20" value="<?php echo $atpo->q_jl;?>">
+                <input  name="order_qjl" type="text" size="20" readonly="readonly" value="<?php echo $atpo->q_jl;?>">
             </p>
             <p class="nowrap">
                 <label>区域经理：</label>
-                <input  name="order_qyjl" type="text" size="20" value="<?php echo $atpo->qy_jl;?>">
+                <input  name="order_qyjl" type="text" size="20" readonly="readonly" value="<?php echo $atpo->qy_jl;?>">
             </p>
             <p>
                 <label>员工类型：</label>

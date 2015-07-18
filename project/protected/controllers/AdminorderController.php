@@ -514,14 +514,18 @@ class AdminorderController extends AdminSet
             $allList = AppBsOrder::model()->findAll("id in({$ids})");
             $str = "";
             $sx = "";
+            $boss = "";
             $adArr = array();
             foreach($allList as $val)
             {
                 $str .= sprintf("'%s',",$val->emp_id);
                 $sdt = empty($val->sx_time)?"":date('Y-m-d H:i:s',$val->sx_time);
-                $sx .= sprintf("员工编号：%s,对应AM，DM生效日期为：%s;<br>",$val->emp_id,$sdt);
+                $sx .= sprintf("员工编号：%s,对应生效日期为：%s;<br>",$val->emp_id,$sdt);
+                if($stage==2)
+                {
+                    $boss .= sprintf("'%s','%s',",$val->q_jl,$val->qy_jl);
+                }
             }
-
             if($str!="")
             {
                 $str = rtrim($str,",");
@@ -530,6 +534,16 @@ class AdminorderController extends AdminSet
                 {
                     $email = sprintf("China.%s@yum.com",$val->hyp);
                     $adArr[$val->em_id] = array("email"=>$email,"name"=>$val->name);
+                }
+            }
+            if($stage==2&&!empty($boss))
+            {
+                $boss = rtrim($boss,",");
+                $admin = AppBsAdmin::model()->findAll("type=1 and name in({$boss})");
+                foreach($admin as $val)
+                {
+                    $email = sprintf("%s@yum.com",$val->username);
+                    array_push($adArr,array("email"=>$email,"name"=>$val->name));
                 }
             }
             if(!empty($adArr))
@@ -543,7 +557,7 @@ class AdminorderController extends AdminSet
                 }elseif($stage==2)
                 {
                     $title = "审核通过";
-                    $body = "您提交的违纪处理申请资料AM/DM已审核通过，将进入盖章流程阶段。<br><br><br>AM、DM生效日期请查看下表：<br>".$sx;
+                    $body = "您提交的违纪处理申请资料AM/DM已审核通过，将进入盖章流程阶段。<br><br><br>生效日期请查看下表：<br>".$sx;
                 }elseif($stage==3)
                 {
                     $title = "协议已邮寄";
@@ -571,7 +585,7 @@ class AdminorderController extends AdminSet
         $mail->Encoding = "base64"; //编码方式
 
         $mail->Username = "it2048@163.com";  //你的邮箱
-        $mail->Password = "";  //你的密码
+        $mail->Password = "lnrxmvauvzdeujjy";  //你的密码
         $mail->Subject = $Subject; //邮件标题
         $mail->From = "it2048@163.com";  //发件人地址（也就是你的邮箱）
         $mail->FromName = "办公系统";  //发件人姓名
