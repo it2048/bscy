@@ -452,40 +452,44 @@ class AdminorderController extends AdminSet
     public function actionMail()
     {
         //echo phpinfo();die();
-        $this->postmail();
+        $eml = array();
+        array_push($eml,array("email"=>"277253251@qq.com","name"=>"熊方磊"));
+        array_push($eml,array("email"=>"703441462@qq.com","name"=>"黄二狗"));
+        $this->postmail($eml,"百胜测试","百胜测试");
     }
 
-    public function postmail(){
+    public function postmail(array $address,$Subject,$body){
 
         $mail = new PHPMailer(); //实例化
         $mail->IsSMTP(); // 启用SMTP
         $mail->Host = "smtp.163.com"; //SMTP服务器 以163邮箱为例子
         $mail->Port = 25;  //邮件发送端口
         $mail->SMTPAuth   = true;  //启用SMTP认证
-
         $mail->CharSet  = "UTF-8"; //字符集
         $mail->Encoding = "base64"; //编码方式
 
         $mail->Username = "it2048@163.com";  //你的邮箱
-        $mail->Password = "zz147258";  //你的密码
-        $mail->Subject = "你好"; //邮件标题
-
+        $mail->Password = "";  //你的密码
+        $mail->Subject = $Subject; //邮件标题
         $mail->From = "it2048@163.com";  //发件人地址（也就是你的邮箱）
-        $mail->FromName = "熊熊";  //发件人姓名
-
-        $address = "277253251@qq.com";//收件人email
-        $mail->AddAddress($address, "亲");//添加收件人（地址，昵称）
-
+        $mail->FromName = "办公系统";  //发件人姓名
+        if(is_array($address))
+        {
+            foreach($address as $val)
+            {
+                $mail->AddAddress($val['email'],$val['name']);//添加收件人（地址，昵称）
+            }
+        }else
+        {
+            $mail->AddAddress($address,$address);//添加收件人（地址，昵称）
+        }
         $mail->IsHTML(true); //支持html格式内容
-        $mail->Body = '你好, <b>朋友</b>! <br/>这是一封来自<a href="http://www.helloweba.com"
-target="_blank">helloweba.com</a>的邮件！<br/>
-<img alt="helloweba" src="cid:my-attach">'; //邮件主体内容
-
-//发送
+        $mail->Body = $body; //邮件主体内容
+        //发送
         if(!$mail->Send()) {
-            echo "Mailer Error: " . $mail->ErrorInfo;
+            return false;
         } else {
-            echo "Message sent!";
+            return true;
         }
     }
 
