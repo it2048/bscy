@@ -452,55 +452,40 @@ class AdminorderController extends AdminSet
     public function actionMail()
     {
         //echo phpinfo();die();
-        $this->postmail('it2048@163.com',"测试","一起摇摆！");
+        $this->postmail();
     }
 
-    public function postmail($to,$subject = '',$body = ''){
-        //$to 表示收件人地址 $subject 表示邮件标题 $body表示邮件正文
-        $mail = new PHPMailer(); //new一个PHPMailer对象出来
-        $mail->IsSMTP(); // 设定使用SMTP服务
-        $mail->SMTPDebug  = 1;                     // 启用SMTP调试功能
-//smtp需要鉴权 这个必须是true
-        $mail->SMTPAuth=true;
-//链接qq域名邮箱的服务器地址
-        $mail->Host = 'smtp.qq.com';
-//设置使用ssl加密方式登录鉴权
-        //$mail->SMTPSecure = 'ssl';
-//设置ssl连接smtp服务器的远程服务器端口号 可选465或587
-        $mail->Port = 465;
-//设置smtp的helo消息头 这个可有可无 内容任意
-        $mail->Helo = 'Hello smtp.qq.com Server';
-//设置发件人的主机域 可有可无 默认为localhost 内容任意，建议使用你的域名
-        $mail->Hostname = 'it2048.cn';
-//设置发送的邮件的编码 可选GB2312 我喜欢utf-8 据说utf8在某些客户端收信下会乱码
-        $mail->CharSet = 'UTF-8';
-//设置发件人姓名（昵称） 任意内容，显示在收件人邮件的发件人邮箱地址前的发件人姓名
-        $mail->FromName = '晶晶在线';
-//smtp登录的账号 这里填入字符串格式的qq号即可
-        $mail->Username ='277253251@qq.com';
-//smtp登录的密码 这里填入“独立密码” 若为设置“独立密码”则填入登录qq的密码 建议设置“独立密码”
-        $mail->Password = 'asd147258';
-//设置发件人邮箱地址 这里填入上述提到的“发件人邮箱”
-        $mail->From = '277253251@qq.com';
-//邮件正文是否为html编码 注意此处是一个方法 不再是属性 true或false
-        $mail->isHTML(true);
-//添加多个收件人 则多次调用方法即可
-        $mail->addAddress($to,'晶晶在线用户');
-//添加该邮件的主题
-        $mail->Subject = $subject;
-//添加邮件正文 上方将isHTML设置成了true，则可以是完整的html字符串 如：使用file_get_contents函数读取本地的html文件
-        $mail->Body = $body;
+    public function postmail(){
 
+        $mail = new PHPMailer(); //实例化
+        $mail->IsSMTP(); // 启用SMTP
+        $mail->Host = "smtp.163.com"; //SMTP服务器 以163邮箱为例子
+        $mail->Port = 25;  //邮件发送端口
+        $mail->SMTPAuth   = true;  //启用SMTP认证
 
-//发送命令 返回布尔值
-//PS：经过测试，要是收件人不存在，若不出现错误依然返回true 也就是说在发送之前 自己需要些方法实现检测该邮箱是否真实有效
-        $status = $mail->send();
+        $mail->CharSet  = "UTF-8"; //字符集
+        $mail->Encoding = "base64"; //编码方式
 
-//简单的判断与提示信息
-        if($status) {
-            echo '发送邮件成功';
-        }else{
-            echo '发送邮件失败，错误信息未：'.$mail->ErrorInfo;
+        $mail->Username = "it2048@163.com";  //你的邮箱
+        $mail->Password = "zz147258";  //你的密码
+        $mail->Subject = "你好"; //邮件标题
+
+        $mail->From = "it2048@163.com";  //发件人地址（也就是你的邮箱）
+        $mail->FromName = "熊熊";  //发件人姓名
+
+        $address = "277253251@qq.com";//收件人email
+        $mail->AddAddress($address, "亲");//添加收件人（地址，昵称）
+
+        $mail->IsHTML(true); //支持html格式内容
+        $mail->Body = '你好, <b>朋友</b>! <br/>这是一封来自<a href="http://www.helloweba.com"
+target="_blank">helloweba.com</a>的邮件！<br/>
+<img alt="helloweba" src="cid:my-attach">'; //邮件主体内容
+
+//发送
+        if(!$mail->Send()) {
+            echo "Mailer Error: " . $mail->ErrorInfo;
+        } else {
+            echo "Message sent!";
         }
     }
 
