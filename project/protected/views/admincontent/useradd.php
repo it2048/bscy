@@ -51,7 +51,7 @@
             </p>
             <p>
                 <label>详细信息：</label>
-                <textarea name="desc" cols="34" rows="6" class="textInput"></textarea>
+                <textarea name="desc" cols="30" rows="6" class="textInput"></textarea>
             </p>
         </div>
         <div class="formBar">

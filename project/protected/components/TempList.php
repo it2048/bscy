@@ -8,6 +8,22 @@
 
 class TempList
 {
+
+
+    public static $stage = array(
+        0=>"资料审核中",
+        1=>"资料审核通过，DM/AM审核中",
+        2=>"已进入盖章流程",
+        3=>"协议已邮寄",
+        4=>"已结案"
+    );
+    public static $sf = array(
+        0=>"ST",
+        1=>"PT",
+        2=>"FC",
+        3=>"ZP"
+    );
+
     public static $Type = array(
         0=>"未知",
         1=>"办公室",

@@ -64,6 +64,13 @@
                         <li><a href="#">后台管理</a>
                             <ul>
                                 <?php NavigatorHelper::getInstance()->printNavigator('admincontent/usermanager', 'usermaneger', '用户管理'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminemp/index', 'empindex', '员工名单管理'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminwj/index', 'wjindex', '违纪下拉管理'); ?>
+
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminorder/index', 'orderindex', '员工违纪设置'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminorder/admin', 'orderadmin', 'HR违纪设置'); ?>
+
+
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminmoney/index', 'moneyindex', '用户薪酬管理'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('rbacSet/authmanage', 'authmanage', '用户权限管理'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('rbacSet/assignToUsers', 'AssignToUsers', '用户职能分配'); ?>
