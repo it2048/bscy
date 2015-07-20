@@ -70,6 +70,9 @@
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminorder/index', 'orderindex', '员工违纪设置'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminorder/admin', 'orderadmin', 'HR违纪设置'); ?>
 
+                                <?php NavigatorHelper::getInstance()->printNavigator('admincontracts/admin', 'contractsadmin', 'HR劳动合同追踪'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('admincontracts/index', 'contractsindex', '员工劳动合同追踪'); ?>
+
 
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminmoney/index', 'moneyindex', '用户薪酬管理'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('rbacSet/authmanage', 'authmanage', '用户权限管理'); ?>

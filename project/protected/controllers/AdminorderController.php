@@ -60,8 +60,6 @@ class AdminorderController extends AdminSet
         $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 50); //每页多少条数据
 
         $criteria = new CDbCriteria;
-        $uname = Yii::app()->user->getState('username');
-        $criteria->addCondition("ct_no='{$uname}'");
         $pages['countPage'] = AppBsOrder::model()->count($criteria);
         $criteria->limit = $pages['numPerPage'];
         $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
@@ -179,7 +177,7 @@ class AdminorderController extends AdminSet
         }
         // 输出Excel文件头，可把user.csv换成你要的文件名
         header('Content-Type: application/vnd.ms-excel');
-        header('Content-Disposition: attachment;filename="用户信息.csv"');
+        header('Content-Disposition: attachment;filename="违纪信息表.csv"');
         header('Cache-Control: max-age=0');
         $fp = fopen('php://output', 'a');
         // 输出Excel列名信息
