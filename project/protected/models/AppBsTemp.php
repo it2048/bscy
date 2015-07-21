@@ -56,11 +56,10 @@ class AppBsTemp extends BsTemp{
             $desc = rtrim($desc,"|");
             $str .= sprintf("('%s'),",$desc);
         }
-
         fclose($file_handle);
         if(empty($str))
         {
-            return "更新数据失败";
+            return "无数据需要更新";
         }
         else{
             $this->deleteAll();
