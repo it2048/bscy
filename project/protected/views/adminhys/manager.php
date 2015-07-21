@@ -47,7 +47,7 @@
                     }
                     ?></td>
                 <td>
-                    <a title="预定" mask="true" height="400" width="620" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminhys/order',array('id'=>$value['id'])); ?>" class="btnAdd">编辑</a>
+                    <a title="预定" mask="true" height="400" width="620" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminhys/order',array('id'=>$value['id'],"hysyd_time"=>$pages['hys_time'])); ?>" class="btnAdd">编辑</a>
                     <a title="查看预定详情" mask="true" height="500" width="720" rel="dlg_page11" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminhys/detail',array('id'=>$value['id'],"hysyd_time"=>$pages['hys_time'])); ?>" class="btnLook">查看预定详情</a>
                 </td>
             </tr>

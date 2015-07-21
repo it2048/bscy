@@ -9,7 +9,7 @@
             </p>
             <p class="nowrap">
                 <label>预定日期：</label>
-                <input type="text" name="dhys_time" size="10" class="date" dateFmt="yyyyMMdd" readonly="true" value="<?php echo date('Ymd'); ?>"/>
+                <input type="text" name="dhys_time" size="10" class="date" dateFmt="yyyyMMdd" readonly="true" value="<?php echo $time; ?>"/>
             </p>
             <p class="nowrap">
                 <label>开始时间(24小时制)：</label>

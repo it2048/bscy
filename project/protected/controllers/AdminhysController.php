@@ -216,10 +216,12 @@ class AdminhysController extends AdminSet
     public function actionOrder()
     {
         $id = Yii::app()->getRequest()->getParam("id", 0); //用户名
+        $time = Yii::app()->getRequest()->getParam("hysyd_time",date('Ymd')); //每页多少条数据
+
         $model = array();
         if($id!="")
             $model = AppBsHys::model()->findByPk($id);
-        $this->renderPartial('order',array("models"=>$model));
+        $this->renderPartial('order',array("models"=>$model,"time"=>$time));
     }
 
     /**
@@ -242,9 +244,15 @@ class AdminhysController extends AdminSet
         $dhys_zj = Yii::app()->getRequest()->getParam("dhys_zj", array()); //需要的设备
 
 
-        if($dhys_id!=""&&$dhys_time!=""&&$dhys_ydbm!=""&&$dhys_ydr!="")
+        if($dhys_time<date('Ymd'))
         {
-            $mod = AppBsDhy::model()->findAll("hys_no={$dhys_id} AND d_time = {$dhys_time} AND ((st_time<{$dhys_sttime} AND sp_time>{$dhys_sttime}) OR (st_time<{$dhys_sptime} AND sp_time>{$dhys_sptime}))");
+            $msg['msg'] = "预定日期不能小于当前日期";
+        }
+        elseif($dhys_id!=""&&$dhys_time!=""&&$dhys_ydbm!=""&&$dhys_ydr!="")
+        {
+            $mod = AppBsDhy::model()->findAll("hys_no={$dhys_id} AND d_time = {$dhys_time} AND ((st_time<{$dhys_sttime} AND
+            sp_time>{$dhys_sttime}) OR (st_time<{$dhys_sptime} AND sp_time>{$dhys_sptime}) OR
+            (st_time>={$dhys_sttime} AND sp_time<={$dhys_sptime}))");
             if(empty($mod))
             {
                 $model = new AppBsDhy();
