@@ -74,6 +74,12 @@
                                 <?php NavigatorHelper::getInstance()->printNavigator('admincontracts/index', 'contractsindex', '员工劳动合同追踪'); ?>
 
 
+
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminhys/index', 'hysindex', '会议室设置'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminhys/manager', 'hysmanager', '会议室预定'); ?>
+
+
+
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminmoney/index', 'moneyindex', '用户薪酬管理'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('rbacSet/authmanage', 'authmanage', '用户权限管理'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('rbacSet/assignToUsers', 'AssignToUsers', '用户职能分配'); ?>
