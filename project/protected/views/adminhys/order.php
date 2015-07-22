@@ -43,9 +43,9 @@
             请勾选需要的设备：<br>
             <p class="nowrap">
             <div style="margin-left: 130px;">
-                <input type="checkbox" name="dhys_zj[]" value="1" />1、是否需要连接线
-                <br><input type="checkbox" name="dhys_zj[]" value="2" />2、是否需要话筒
-                <br><input type="checkbox" name="dhys_zj[]" value="3" />3、是否需要遥控器
+                <input type="checkbox" name="dhys_zj[]" value="1" />1、需要连接线
+                <br><input type="checkbox" name="dhys_zj[]" value="2" />2、需要话筒
+                <br><input type="checkbox" name="dhys_zj[]" value="3" />3、需要遥控器
             </div>
             </p>
         </div>
