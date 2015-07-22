@@ -50,7 +50,7 @@ class AdmincontentController extends AdminSet
         !empty($pages['srh_type'])&&$criteria->addCondition('type='.$pages['srh_type']);
 
         !empty($pages['srh_email'])&&$criteria->addSearchCondition('username', $pages['srh_email']);
-        !empty($pages['srh_det'])&&$criteria->addSearchCondition('desc', $pages['srh_det']);
+        !empty($pages['srh_det'])&&$criteria->addSearchCondition("`desc`", $pages['srh_det']);
 
 
         $pages['countPage'] = AppBsAdmin::model()->count($criteria);
@@ -93,7 +93,7 @@ class AdmincontentController extends AdminSet
         !empty($pages['srh_type'])&&$criteria->addCondition('type='.$pages['srh_type']);
 
         !empty($pages['srh_email'])&&$criteria->addSearchCondition('username', $pages['srh_email']);
-        !empty($pages['srh_det'])&&$criteria->addSearchCondition('desc', $pages['srh_det']);
+        !empty($pages['srh_det'])&&$criteria->addSearchCondition('`desc`', $pages['srh_det']);
 
 
         $pages['countPage'] = AppBsAdmin::model()->count($criteria);
