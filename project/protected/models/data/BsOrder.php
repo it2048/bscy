@@ -20,6 +20,12 @@
  * @property string $ct_no
  * @property integer $type
  * @property integer $ja_time
+ * @property integer $wj_time
+ * @property string $yg_name
+ * @property string $yg_zw
+ * @property string $yg_ct
+ * @property string $tz_email
+ * @property string $sfz
  */
 class BsOrder extends CActiveRecord
 {
@@ -39,14 +45,17 @@ class BsOrder extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ct_no, type', 'required'),
-			array('tj_time, sx_time, type, ja_time', 'numerical', 'integerOnly'=>true),
+			array('ct_no, type, sfz', 'required'),
+			array('tj_time, sx_time, type, ja_time, wj_time', 'numerical', 'integerOnly'=>true),
 			array('emp_id, q_jl, qy_jl, admin, ct_no', 'length', 'max'=>45),
-			array('wj_lx, wj_tk, stage', 'length', 'max'=>128),
+			array('wj_lx, wj_tk, stage, yg_ct, tz_email', 'length', 'max'=>128),
+			array('yg_name', 'length', 'max'=>36),
+			array('yg_zw', 'length', 'max'=>64),
+			array('sfz', 'length', 'max'=>24),
 			array('wj_sj, wj_jl, fj', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, emp_id, q_jl, qy_jl, wj_lx, wj_tk, wj_sj, wj_jl, fj, tj_time, sx_time, stage, admin, ct_no, type, ja_time', 'safe', 'on'=>'search'),
+			array('id, emp_id, q_jl, qy_jl, wj_lx, wj_tk, wj_sj, wj_jl, fj, tj_time, sx_time, stage, admin, ct_no, type, ja_time, wj_time, yg_name, yg_zw, yg_ct, tz_email, sfz', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -83,6 +92,12 @@ class BsOrder extends CActiveRecord
 			'ct_no' => 'Ct No',
 			'type' => 'Type',
 			'ja_time' => 'Ja Time',
+			'wj_time' => 'Wj Time',
+			'yg_name' => 'Yg Name',
+			'yg_zw' => 'Yg Zw',
+			'yg_ct' => 'Yg Ct',
+			'tz_email' => 'Tz Email',
+			'sfz' => 'Sfz',
 		);
 	}
 
@@ -120,6 +135,12 @@ class BsOrder extends CActiveRecord
 		$criteria->compare('ct_no',$this->ct_no,true);
 		$criteria->compare('type',$this->type);
 		$criteria->compare('ja_time',$this->ja_time);
+		$criteria->compare('wj_time',$this->wj_time);
+		$criteria->compare('yg_name',$this->yg_name,true);
+		$criteria->compare('yg_zw',$this->yg_zw,true);
+		$criteria->compare('yg_ct',$this->yg_ct,true);
+		$criteria->compare('tz_email',$this->tz_email,true);
+		$criteria->compare('sfz',$this->sfz,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

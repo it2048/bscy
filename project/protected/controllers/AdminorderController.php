@@ -28,25 +28,8 @@ class AdminorderController extends AdminSet
         $criteria->order = 'id DESC';
         $allList = AppBsOrder::model()->findAll($criteria);
 
-        $str = "";
-        $adArr = array();
-        foreach($allList as $val)
-        {
-            $str .= sprintf("'%s',",$val->emp_id);
-        }
-        if($str!="")
-        {
-            $str = rtrim($str,",");
-            $modl = AppBsEmp::model()->findAll("em_id in({$str})");
-            foreach($modl as $val)
-            {
-                $adArr[$val->em_id] = array("name"=>$val->name,"zw"=>$val->zw_name,"ct"=>$val->ct_name);
-            }
-        }
-
         $this->renderPartial('index', array(
             'models' => $allList,
-            'arr'=>$adArr,
             'pages' => $pages),false,true);
     }
 
@@ -66,25 +49,8 @@ class AdminorderController extends AdminSet
         $criteria->order = 'id DESC';
         $allList = AppBsOrder::model()->findAll($criteria);
 
-        $str = "";
-        $adArr = array();
-        foreach($allList as $val)
-        {
-            $str .= sprintf("'%s',",$val->emp_id);
-        }
-        if($str!="")
-        {
-            $str = rtrim($str,",");
-            $modl = AppBsEmp::model()->findAll("em_id in({$str})");
-            foreach($modl as $val)
-            {
-                $adArr[$val->em_id] = array("name"=>$val->name,"zw"=>$val->zw_name,"ct"=>$val->ct_name);
-            }
-        }
-
         $this->renderPartial('admin', array(
             'models' => $allList,
-            'arr'=>$adArr,
             'pages' => $pages),false,true);
     }
 
@@ -112,9 +78,13 @@ class AdminorderController extends AdminSet
         $msg = $this->msgcode();
         $id = Yii::app()->getRequest()->getParam("sx_id", ""); //身份证
         $time = Yii::app()->getRequest()->getParam("sx_time", ""); //身份证
+
+        $email = Yii::app()->getRequest()->getParam("wj_email", ""); //身份证
+
         $time = strtotime($time);
         $tk = AppBsOrder::model()->findByPk($id);
         $tk->sx_time = $time;
+        $tk->tz_email = $email;
         if($tk->save())
         {
             $this->msgsucc($msg);
@@ -160,28 +130,13 @@ class AdminorderController extends AdminSet
     public function actionExp()
     {
         $allList = AppBsOrder::model()->findAll();
-        $str = "";
-        $adArr = array();
-        foreach($allList as $val)
-        {
-            $str .= sprintf("'%s',",$val->emp_id);
-        }
-        if($str!="")
-        {
-            $str = rtrim($str,",");
-            $modl = AppBsEmp::model()->findAll("em_id in({$str})");
-            foreach($modl as $val)
-            {
-                $adArr[$val->em_id] = array("name"=>$val->name,"zw"=>$val->zw_name,"ct"=>$val->ct_name);
-            }
-        }
         // 输出Excel文件头，可把user.csv换成你要的文件名
         header('Content-Type: application/vnd.ms-excel');
         header('Content-Disposition: attachment;filename="违纪信息表.csv"');
         header('Cache-Control: max-age=0');
         $fp = fopen('php://output', 'a');
         // 输出Excel列名信息
-        $head = explode(",","员工编号,员工姓名,员工身份,职务,店号,餐厅,区经理,区域经理,违纪类型,违纪条款,违纪事件,违纪结论,补充证据,提交日期,生效日期,目前进度,结案日期");
+        $head = explode(",","员工编号,员工姓名,员工身份,职务,店号,餐厅,区经理,区域经理,违纪类型,违纪条款,违纪事件,违纪结论,补充证据,提交日期,生效日期,目前进度,结案日期,违纪时间,处理HR邮箱");
         foreach ($head as $i => $v) {
             // CSV的Excel支持GBK编码，一定要转换，否则乱码
             $head[$i] = iconv('utf-8', 'gbk', $v);
@@ -203,11 +158,11 @@ class AdminorderController extends AdminSet
                 $cnt = 0;
             }
             $row = array($value['emp_id'],
-                empty($adArr[$value['emp_id']]['name'])?"":$adArr[$value['emp_id']]['name'],
+                $value['yg_name'],
                 TempList::$sf[$value['type']],
-                empty($adArr[$value['emp_id']]['zw'])?"":$adArr[$value['emp_id']]['zw'],
+                $value['yg_zw'],
                 $value['ct_no'],
-                empty($adArr[$value['emp_id']]['ct'])?"":$adArr[$value['emp_id']]['ct'],
+                $value['yg_ct'],
                 $value['q_jl'],
                 $value['qy_jl'],
                 $value['wj_lx'],
@@ -218,7 +173,10 @@ class AdminorderController extends AdminSet
                 date("Y-m-d H:i:s",$value['tj_time']),
                 empty($value['sx_time'])?"":date("Y-m-d H:i:s",$value['sx_time']),
                 $value['stage'],
-                empty($value['ja_time'])?"":date("Y-m-d H:i:s",$value['ja_time'])
+                empty($value['ja_time'])?"":date("Y-m-d H:i:s",$value['ja_time']),
+                empty($value['wj_time'])?"":date("Y-m-d H:i:s",$value['wj_time']),
+                $value['tz_email']
+
             );
             foreach ($row as $i => $v) {
                 // CSV的Excel支持GBK编码，一定要转换，否则乱码
@@ -241,6 +199,12 @@ class AdminorderController extends AdminSet
 //        $order_zw = Yii::app()->getRequest()->getParam("order_zw", ""); //员工职位
 //
 //        $order_ct = Yii::app()->getRequest()->getParam("order_ct", ""); //餐厅
+
+        $order_name = Yii::app()->getRequest()->getParam("order_name", ""); //员工姓名
+        $order_zw = Yii::app()->getRequest()->getParam("order_zw", ""); //员工职务
+        $order_ct = Yii::app()->getRequest()->getParam("order_ct", ""); //员工餐厅
+        $wj_time = Yii::app()->getRequest()->getParam("wj_time", ""); //违纪时间
+
         $order_qjl = Yii::app()->getRequest()->getParam("order_qjl", ""); //区经理
         $order_qyjl= Yii::app()->getRequest()->getParam("order_qyjl", ""); //区域经理
         $order_yglx = Yii::app()->getRequest()->getParam("order_yglx", 0); //员工类型
@@ -284,6 +248,12 @@ class AdminorderController extends AdminSet
             $model->admin = $this->getUserName();
             $model->ct_no = $this->getUserName();
 
+            $model->wj_time = strtotime($wj_time);
+            $model->yg_name = $order_name;
+            $model->yg_zw = $order_zw;
+            $model->yg_ct = $order_ct;
+            $model->sfz = $order_sfid;
+
             if($model->save())
             {
                 $this->msgsucc($msg);
@@ -310,10 +280,9 @@ class AdminorderController extends AdminSet
         $criteria->select = 'wx_type';
         $criteria->distinct = TRUE; //是否唯一查询
         $allList = AppBsWj::model()->findAll($criteria);
-
         $model = AppBsOrder::model()->findByPk($id);
-        $atp = AppBsEmp::model()->findByPk($model->emp_id);
-        $this->renderPartial('edit',array("models"=>$allList,"atpo"=>$model,"atpt"=>$atp));
+
+        $this->renderPartial('edit',array("models"=>$allList,"atpo"=>$model));
 
     }
 
@@ -327,6 +296,13 @@ class AdminorderController extends AdminSet
         $id = Yii::app()->getRequest()->getParam("order_id", 0); //用户名
         $order_sfid = Yii::app()->getRequest()->getParam("order_sfid", ""); //身份证
         $order_emid = Yii::app()->getRequest()->getParam("order_emid", ""); //员工编号
+
+
+
+        $order_name = Yii::app()->getRequest()->getParam("order_name", ""); //员工姓名
+        $order_zw = Yii::app()->getRequest()->getParam("order_zw", ""); //员工职务
+        $order_ct = Yii::app()->getRequest()->getParam("order_ct", ""); //员工餐厅
+        $wj_time = Yii::app()->getRequest()->getParam("wj_time", ""); //违纪时间
 
         $order_qjl = Yii::app()->getRequest()->getParam("order_qjl", ""); //区经理
         $order_qyjl= Yii::app()->getRequest()->getParam("order_qyjl", ""); //区域经理
@@ -356,10 +332,14 @@ class AdminorderController extends AdminSet
             $model->wj_jl = $wj_jl;
             $model->type = $order_yglx;
             $model->fj = $wj_zl;
-            $model->tj_time = time();
-            $model->stage = TempList::$stage[0];
             $model->admin = $this->getUserName();
             $model->ct_no = $this->getUserName();
+
+            $model->wj_time = strtotime($wj_time);
+            $model->yg_name = $order_name;
+            $model->yg_zw = $order_zw;
+            $model->yg_ct = $order_ct;
+            $model->sfz = $order_sfid;
             if($model->save())
             {
                 $this->msgsucc($msg);

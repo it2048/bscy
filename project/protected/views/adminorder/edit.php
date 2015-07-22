@@ -3,7 +3,7 @@
         <div class="pageFormContent" layoutH="56">
             <p class="nowrap">
                 <label>身份证号码：</label>
-                <input  name="order_sfid" type="text" class="textInput required" size="30" alt="请输入您的身份证号码" value="<?php echo $atpt->sf_id;?>">
+                <input  name="order_sfid" type="text" class="textInput required" size="30" alt="请输入违纪员工的身份证号码" value="<?php echo $atpo->sfz;?>">
             </p>
             <p class="nowrap">
                 <label>员工编号：</label>
@@ -12,23 +12,27 @@
             </p>
             <p class="nowrap">
                 <label>员工姓名：</label>
-                <input  name="order_name" type="text" size="20" readonly="readonly" value="<?php echo $atpt->name;?>">
+                <input  name="order_name" type="text" size="20" value="<?php echo $atpo->yg_name;?>">
             </p>
             <p class="nowrap">
                 <label>职务：</label>
-                <input  name="order_zw" type="text" size="20" readonly="readonly" value="<?php echo $atpt->zw_name;?>">
+                <input  name="order_zw" type="text" size="20" value="<?php echo $atpo->yg_zw;?>">
             </p>
             <p class="nowrap">
                 <label>餐厅：</label>
-                <input  name="order_ct" type="text" size="30" value="<?php echo $atpt->ct_name;?>">
+                <input  name="order_ct" type="text" size="30" value="<?php echo $atpo->yg_ct;?>">
             </p>
             <p class="nowrap">
                 <label>区经理：</label>
-                <input  name="order_qjl" type="text" size="20" readonly="readonly" value="<?php echo $atpo->q_jl;?>">
+                <input  name="order_qjl" type="text" size="20" value="<?php echo $atpo->q_jl;?>">
             </p>
             <p class="nowrap">
                 <label>区域经理：</label>
-                <input  name="order_qyjl" type="text" size="20" readonly="readonly" value="<?php echo $atpo->qy_jl;?>">
+                <input  name="order_qyjl" type="text" size="20" value="<?php echo $atpo->qy_jl;?>">
+            </p>
+            <p>
+                <label>违纪发生时间：</label>
+                <input type="text" name="wj_time" size="18" class="date" dateFmt="yyyy-MM-dd HH:mm:ss" readonly="true" value="<?php echo empty($atpo->wj_time)?date('Y-m-d H:i:s'):date('Y-m-d H:i:s',$atpo->wj_time);?>"/>
             </p>
             <p>
                 <label>员工类型：</label>

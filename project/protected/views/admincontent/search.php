@@ -1,5 +1,5 @@
 <div class="pageHeader">
-    <form id="pagerForm" onsubmit="return navTabSearch(this);" action="<?php echo Yii::app()->createAbsoluteUrl('admincontent/usermanager'); ?>" method="post">
+    <form id="pagerForm" onsubmit="return navTabSearch(this);" action="<?php echo Yii::app()->createAbsoluteUrl('admincontent/search'); ?>" method="post">
         <div class="searchBar">
             <table class="searchContent">
                 <tbody><tr>
@@ -43,7 +43,7 @@
                         </select>
                     </td>
                     <td>
-                    <div class="buttonActive"><div class="buttonContent"><button type="submit">搜索</button></div></div>
+                        <div class="buttonActive"><div class="buttonContent"><button type="submit">搜索</button></div></div>
                     </td>
                 </tr>
                 </tbody></table>
@@ -54,33 +54,16 @@
     </form>
 </div>
 <div class="pageContent">
-    <div class="panelBar">
-        <ul class="toolBar">
-            <li><a class="add" height="500" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('admincontent/useradd');?>"><span>添加</span></a></li>
-            <li><a title="导入数据" mask="true" height="200" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('admincontent/vimport'); ?>" class="add"><span>导入数据</span></a></li>
-            <li>
-                <a title="确实要删除所有办公室记录吗?" callback="deleteAuCall" target="ajaxTodo" href="<?php echo Yii::app()->createAbsoluteUrl('admincontent/del',array('type'=>1)); ?>" class="delete"><span>删除办公室数据</span></a>
-            </li>
-            <li>
-                <a title="确实要删除所有餐厅记录吗?" callback="deleteAuCall" target="ajaxTodo" href="<?php echo Yii::app()->createAbsoluteUrl('admincontent/del',array('type'=>2)); ?>" class="delete"><span>删除餐厅数据</span></a>
-            </li>
-            <li>
-                <a title="确实要删除所有配销中心记录吗?" callback="deleteAuCall" target="ajaxTodo" href="<?php echo Yii::app()->createAbsoluteUrl('admincontent/del',array('type'=>3)); ?>" class="delete"><span>删除配销中心数据</span></a>
-            </li>
-
-        </ul>
-    </div>
-    <table class="table" width="1060" layoutH="138">
+    <table class="table" width="1060" layoutH="108">
         <thead>
         <tr>
             <th width="80">邮箱名/店号</th>
             <th width="160">电话</th>
-            <th width="60">姓名</th>
+            <th width="60">姓名/餐厅经理</th>
             <th width="140">工作地点</th>
             <th width="80">类型</th>
             <th width="80">餐厅名称</th>
-            <th width="290">详细信息</th>
-            <th width="160">操作</th>
+            <th width="320">详细信息</th>
         </tr>
         </thead>
         <tbody>
@@ -93,11 +76,6 @@
                 <td><?php echo TempList::$Type[$value['type']]; ?></td>
                 <td><?php echo $value['ct_name']; ?></td>
                 <td title="<?php echo $value['desc']; ?>"><?php echo $value['desc']; ?></td>
-                <td>
-                    <a title="确实要删除这条记录吗?" callback="deleteAuCall" target="ajaxTodo" href="<?php echo Yii::app()->createAbsoluteUrl('admincontent/userdelete',array('username'=>$value['username'])); ?>" class="btnDel">删除</a>
-                    <a title="编辑" target="dialog" height="500" href="<?php echo Yii::app()->createAbsoluteUrl('admincontent/useredit',array('username'=>$value['username'])); ?>" class="btnEdit">编辑</a>
-                    <a title="确实要重置密码为123456吗?" callback="deleteAuCall" target="ajaxTodo" href="<?php echo Yii::app()->createAbsoluteUrl('admincontent/usermm',array('uname'=>$value['username'])); ?>" class="btnAssign">重置密码</a>
-                </td>
             </tr>
         <?php }?>
         </tbody>

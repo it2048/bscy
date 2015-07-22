@@ -3,7 +3,7 @@
         <div class="pageFormContent" layoutH="56">
             <p class="nowrap">
                 <label>身份证号码：</label>
-                <input  name="order_sfid" type="text" class="textInput required" size="30" alt="请输入您的身份证号码" value="">
+                <input  name="order_sfid" type="text" class="textInput required" size="30" alt="请输入违纪员工的身份证号码" value="">
             </p>
             <p class="nowrap">
                 <label>员工编号：</label>
@@ -28,6 +28,10 @@
             <p class="nowrap">
                 <label>区域经理：</label>
                 <input  name="order_qyjl" type="text" readonly="readonly" size="20" value="">
+            </p>
+            <p>
+                <label>违纪发生时间：</label>
+                <input type="text" name="wj_time" size="18" class="date" dateFmt="yyyy-MM-dd HH:mm:ss" readonly="true" value="<?php echo date('Y-m-d H:i:s');?>"/>
             </p>
             <p>
                 <label>员工类型：</label>
@@ -55,6 +59,7 @@
             <p>
                 <label>违纪条款：</label>
                 <select name="order_wjtk">
+                    <option value="">请选择</option>
                 </select>
             </p>
             <p class="nowrap">

@@ -31,7 +31,6 @@ class AppBsEmp extends BsEmp
         $sql = sprintf("INSERT INTO %s(`em_id`,`name`,`hyp`,`bm_id`,`sf_id`,`zw_name`,`ct_name`) VALUES",$this->tableName()); //构造SQL
         $file_handle = fopen($loadPath, "r");
         fgetcsv($file_handle);
-
         $str = "";
         while (!feof($file_handle)) {
             $arr = fgetcsv($file_handle);
@@ -42,7 +41,7 @@ class AppBsEmp extends BsEmp
             }
             if(isset($arr[7])&&!empty($arr[0]))
             {
-                $str .= sprintf("('%s','%s','%s','%s','%s','%s','%s-%s'),",
+                $str .= sprintf("('%s','%s','%s','%s','%s','%s','%s|%s'),",
                     $arr[0],$arr[1],strtolower($arr[2]),$arr[3],$arr[4],$arr[5],$arr[7],$arr[6]);
             }
         }

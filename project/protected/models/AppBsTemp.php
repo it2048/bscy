@@ -22,7 +22,7 @@ class AppBsTemp extends BsTemp{
     public function dealCsv($loadPath,$time)
     {
         $connection = Yii::app()->db;
-        $sql = sprintf("INSERT INTO %s(`desc`) VALUES",$this->tableName()); //构造SQL
+        $sql = sprintf("INSERT INTO %s(`desc`,`ct_no`) VALUES",$this->tableName()); //构造SQL
         $file_handle = fopen($loadPath, "r");
         $tmp = fgetcsv($file_handle);
         $str = "";
@@ -30,7 +30,7 @@ class AppBsTemp extends BsTemp{
             $arr = fgetcsv($file_handle);
             if(empty($arr[0]))break;
             if(date("Y/m/d",$time)>$arr[28]) continue;
-            $taot = array(1,9,12,13,16,17,19,29,28,29,28);
+            $taot = array(1,9,12,13,16,17,19,29,28,29,28); //35
             $desc = "";
 
             foreach($taot as $k=>$val)
@@ -39,22 +39,22 @@ class AppBsTemp extends BsTemp{
                 $xss = $arr[$val];
                 if($k==7)
                     $xss = empty($arr[29])?"无固定期限":"固定期限";
-                if($k==8)
+                elseif($k==8)
                 {
                     $xss = empty($arr[29])?"":$arr[28];
                 }
-                if($k==9)
+                elseif($k==9)
                 {
                     $xss = empty($arr[29])?"":$arr[29];
                 }
-                if($k==10)
+                elseif($k==10)
                 {
                     $xss = empty($arr[29])?$arr[28]:"";
                 }
                 $desc .= sprintf("%s|",$xss);
             }
-            $desc = rtrim($desc,"|");
-            $str .= sprintf("('%s'),",$desc);
+            $ct = isset($arr[34])?$arr[34]:'';
+            $str .= sprintf("('%s','%s'),",$desc,$ct);
         }
         fclose($file_handle);
         if(empty($str))

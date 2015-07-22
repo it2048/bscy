@@ -31,10 +31,9 @@
         <ul class="toolBar">
             <li><a title="导入数据" mask="true" height="200" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('admincontracts/vimport'); ?>" class="add"><span>导入数据</span></a></li>
             <li><a title="发送邮件告知餐厅已邮寄" target="selectedTodo" callback="updateAuCall" rel="ids" postType="string" href="<?php echo Yii::app()->createAbsoluteUrl('admincontracts/sh');?>" class="add"><span>批量发送邮件告知餐厅已邮寄</span></a></li>
-            <li><a title="导入餐厅人事基本数据表" mask="true" height="200" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('admincontracts/drdeal'); ?>" class="add"><span>导入餐厅人事基本数据表</span></a></li>
-
-            <li class="line">line</li>
             <li><a class="icon" href="<?php echo Yii::app()->createAbsoluteUrl('admincontracts/exp');?>" target="dwzExport" targetType="navTab" title="导出所有纪录"><span>导出所有纪录</span></a></li>
+            <li class="line">line</li>
+            <li><a title="导入餐厅人事基本数据表" mask="true" height="200" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('admincontracts/drdeal'); ?>" class="delete"><span>导入餐厅人事基本数据表</span></a></li>
             <li><a class="icon" href="<?php echo Yii::app()->createAbsoluteUrl('admincontracts/exptp');?>" target="dwzExport" targetType="navTab" title="导出续签人员信息"><span>导出续签人员信息</span></a></li>
 
         </ul>

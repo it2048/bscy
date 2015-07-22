@@ -29,6 +29,10 @@ class AdmincontentController extends AdminSet
         $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 50); //每页多少条数据
 
 
+        $pages['srh_email'] = Yii::app()->getRequest()->getParam("srh_email",""); //按名称查询
+        $pages['srh_det'] = Yii::app()->getRequest()->getParam("srh_det",""); //按名称查询
+
+
         $pages['srh_name'] = Yii::app()->getRequest()->getParam("srh_name",""); //按名称查询
         $pages['srh_dep_name'] = Yii::app()->getRequest()->getParam("srh_dep_name",""); //按部门名称查询
         $pages['srh_tel'] = Yii::app()->getRequest()->getParam("srh_tel",""); //按电话查询
@@ -45,6 +49,10 @@ class AdmincontentController extends AdminSet
         !empty($pages['srh_ct_name'])&&$criteria->addSearchCondition('ct_name', $pages['srh_ct_name']);
         !empty($pages['srh_type'])&&$criteria->addCondition('type='.$pages['srh_type']);
 
+        !empty($pages['srh_email'])&&$criteria->addSearchCondition('username', $pages['srh_email']);
+        !empty($pages['srh_det'])&&$criteria->addSearchCondition('desc', $pages['srh_det']);
+
+
         $pages['countPage'] = AppBsAdmin::model()->count($criteria);
         $criteria->limit = $pages['numPerPage'];
         $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
@@ -52,6 +60,74 @@ class AdmincontentController extends AdminSet
         $this->renderPartial('usermanager', array(
             'models' => $allList,
             'pages' => $pages),false,true);
+    }
+
+
+    public function actionSearch()
+    {
+        //print_r(Yii::app()->user->getState('username'));
+        //先获取当前是否有页码信息
+        $pages['pageNum'] = Yii::app()->getRequest()->getParam("pageNum", 1); //当前页
+        $pages['countPage'] = Yii::app()->getRequest()->getParam("countPage", 0); //总共多少记录
+        $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 50); //每页多少条数据
+
+
+        $pages['srh_email'] = Yii::app()->getRequest()->getParam("srh_email",""); //按名称查询
+        $pages['srh_det'] = Yii::app()->getRequest()->getParam("srh_det",""); //按名称查询
+
+
+        $pages['srh_name'] = Yii::app()->getRequest()->getParam("srh_name",""); //按名称查询
+        $pages['srh_dep_name'] = Yii::app()->getRequest()->getParam("srh_dep_name",""); //按部门名称查询
+        $pages['srh_tel'] = Yii::app()->getRequest()->getParam("srh_tel",""); //按电话查询
+        $pages['srh_dh_name'] = Yii::app()->getRequest()->getParam("srh_dh_name",""); //按店号查询
+        $pages['srh_ct_name'] = Yii::app()->getRequest()->getParam("srh_ct_name",""); //按餐厅名称查询
+        $pages['srh_type'] = Yii::app()->getRequest()->getParam("srh_type",""); //按餐厅名称查询
+
+
+        $criteria = new CDbCriteria;
+        !empty($pages['srh_name'])&&$criteria->addSearchCondition('name', $pages['srh_name']);
+        !empty($pages['srh_dep_name'])&&$criteria->addSearchCondition('dep_name', $pages['srh_dep_name']);
+        !empty($pages['srh_tel'])&&$criteria->addSearchCondition('tel', $pages['srh_tel']);
+        !empty($pages['srh_dh_name'])&&$criteria->addSearchCondition('dh_name', $pages['srh_dh_name']);
+        !empty($pages['srh_ct_name'])&&$criteria->addSearchCondition('ct_name', $pages['srh_ct_name']);
+        !empty($pages['srh_type'])&&$criteria->addCondition('type='.$pages['srh_type']);
+
+        !empty($pages['srh_email'])&&$criteria->addSearchCondition('username', $pages['srh_email']);
+        !empty($pages['srh_det'])&&$criteria->addSearchCondition('desc', $pages['srh_det']);
+
+
+        $pages['countPage'] = AppBsAdmin::model()->count($criteria);
+        $criteria->limit = $pages['numPerPage'];
+        $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
+        $allList = AppBsAdmin::model()->findAll($criteria);
+        $this->renderPartial('search', array(
+            'models' => $allList,
+            'pages' => $pages),false,true);
+    }
+
+    /**
+     * 重置密码
+     */
+    public function actionUsermm()
+    {
+        $msg = $this->msgcode();
+        $id = Yii::app()->getRequest()->getParam("uname", 0); //用户名
+        if($id!="")
+        {
+            $model = AppBsPwd::model()->findByPk($id);
+            if(empty($model))
+            {
+                $model = new AppBsPwd();
+                $model->username = $id;
+            }
+            $model->password = md5("123456");
+            if($model->save())
+                $this->msgsucc($msg);
+        }else
+        {
+            $msg['msg'] = "帐号不能为空";
+        }
+        echo json_encode($msg);
     }
 
     public function actionUseradd()

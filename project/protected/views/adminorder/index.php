@@ -5,10 +5,10 @@
 <div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
-            <li><a class="add" mask="true" height="400" width="700" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/add');?>"><span>添加违纪</span></a></li>
+            <li><a class="add" mask="true" height="500" width="700" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/add');?>"><span>添加违纪</span></a></li>
         </ul>
     </div>
-    <table class="table" width="960" layoutH="76">
+    <table class="table" width="1060" layoutH="76">
         <thead>
         <tr>
             <th width="20">员工编号</th>
@@ -27,17 +27,19 @@
             <th width="60">提交日期</th>
             <th width="60">生效日期</th>
             <th width="100">目前进度</th>
+            <th width="60">违纪时间</th>
+            <th width="100">处理HR邮箱</th>
         </tr>
         </thead>
         <tbody>
         <?php foreach ($models as $value) {?>
             <tr>
                 <td><?php echo $value['emp_id']; ?></td>
-                <td><?php echo empty($arr[$value['emp_id']]['name'])?"":$arr[$value['emp_id']]['name']; ?></td>
+                <td><?php echo $value['yg_name']; ?></td>
                 <td><?php echo TempList::$sf[$value['type']]; ?></td>
-                <td><?php echo empty($arr[$value['emp_id']]['zw'])?"":$arr[$value['emp_id']]['zw']; ?></td>
+                <td><?php echo $value['yg_zw']; ?></td>
                 <td><?php echo $value['ct_no']; ?></td>
-                <td><?php echo empty($arr[$value['emp_id']]['ct'])?"":$arr[$value['emp_id']]['ct']; ?></td>
+                <td><?php echo $value['yg_ct']; ?></td>
                 <td><?php echo $value['q_jl']; ?></td>
                 <td><?php echo $value['qy_jl']; ?></td>
                 <td title="<?php echo $value['wj_lx']; ?>"><?php echo $value['wj_lx']; ?></td>
@@ -48,6 +50,8 @@
                 <td><?php echo date("Y-m-d H:i:s",$value['tj_time']); ?></td>
                 <td><?php echo empty($value['sx_time'])?"":date("Y-m-d H:i:s",$value['sx_time']); ?></td>
                 <td title="<?php echo $value['stage']; ?>"><?php echo $value['stage']; ?></td>
+                <td><?php echo empty($value['wj_time'])?"":date("Y-m-d H:i:s",$value['wj_time']); ?></td>
+                <td><?php echo $value['tz_email']; ?></td>
             </tr>
         <?php }?>
         </tbody>

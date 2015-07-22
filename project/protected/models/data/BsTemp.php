@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'bs_temp':
  * @property integer $id
  * @property string $desc
+ * @property string $ct_no
  */
 class BsTemp extends CActiveRecord
 {
@@ -26,9 +27,10 @@ class BsTemp extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('desc', 'required'),
+			array('ct_no', 'length', 'max'=>32),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, desc', 'safe', 'on'=>'search'),
+			array('id, desc, ct_no', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,6 +53,7 @@ class BsTemp extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'desc' => 'Desc',
+			'ct_no' => 'Ct No',
 		);
 	}
 
@@ -74,6 +77,7 @@ class BsTemp extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('desc',$this->desc,true);
+		$criteria->compare('ct_no',$this->ct_no,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

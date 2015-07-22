@@ -250,6 +250,37 @@ class AdmincontractsController extends AdminSet
     public function actionExptp()
     {
         $allList = AppBsTemp::model()->findAll();
+
+        $str_id = "";
+        foreach($allList as $val)
+        {
+            $str_id .= sprintf('"%s",',$val->ct_no);
+        }
+        $str_id = rtrim($str_id,",");
+
+        $EmpArr = array();
+        $Emp = AppBsEmp::model()->findAll("hyp in({$str_id})");
+        foreach($Emp as $val)
+        {
+            if(!isset($EmpArr[$val->hyp]))
+            {
+                $bmm = explode("|",$val->ct_name);
+                $EmpArr[$val->hyp] = sprintf('%s|%s|%s',isset($bmm[0])?$bmm[0]:"",isset($bmm[1])?$bmm[1]:"",$val->zw_name);
+            }
+
+        }
+
+        $AdmArr = array();
+        $Admin = AppBsAdmin::model()->findAll("username in({$str_id})");
+        foreach($Admin as $val)
+        {
+            if(!isset($AdmArr[$val->username]))
+            {
+                $AdmArr[$val->username] = $val->dep_name;
+            }
+        }
+
+
         header('Content-Type: application/vnd.ms-excel');
         header('Content-Disposition: attachment;filename="续签人员信息表.csv"');
         header('Cache-Control: max-age=0');
@@ -276,7 +307,10 @@ class AdmincontractsController extends AdminSet
                 flush();
                 $cnt = 0;
             }
-            $row = explode("|",$value->desc);
+            $str1 = isset($EmpArr[$value->ct_no])?$EmpArr[$value->ct_no]:"||";
+            $str2 = isset($AdmArr[$value->ct_no])?$AdmArr[$value->ct_no]:"";
+
+            $row = explode("|",$value->desc.$str1."|".$str2);
             foreach ($row as $i => $v) {
                 // CSV的Excel支持GBK编码，一定要转换，否则乱码
                 $row[$i] = iconv('utf-8', 'gbk', $v);

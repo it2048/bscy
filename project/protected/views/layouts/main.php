@@ -63,15 +63,16 @@
                     <ul class="tree treeFolder">
                         <li><a href="#">后台管理</a>
                             <ul>
-                                <?php NavigatorHelper::getInstance()->printNavigator('admincontent/usermanager', 'usermaneger', '用户管理'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('admincontent/usermanager', 'usermaneger', '通讯录设置'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('admincontent/search', 'usersearch', '通讯录查询'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminemp/index', 'empindex', '员工名单管理'); ?>
-                                <?php NavigatorHelper::getInstance()->printNavigator('adminwj/index', 'wjindex', '违纪下拉管理'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminwj/index', 'wjindex', '违纪条款管理'); ?>
 
-                                <?php NavigatorHelper::getInstance()->printNavigator('adminorder/index', 'orderindex', '员工违纪设置'); ?>
-                                <?php NavigatorHelper::getInstance()->printNavigator('adminorder/admin', 'orderadmin', 'HR违纪设置'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminorder/index', 'orderindex', '员工违纪处理申请'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminorder/admin', 'orderadmin', 'HR违纪处理'); ?>
 
                                 <?php NavigatorHelper::getInstance()->printNavigator('admincontracts/admin', 'contractsadmin', 'HR劳动合同追踪'); ?>
-                                <?php NavigatorHelper::getInstance()->printNavigator('admincontracts/index', 'contractsindex', '员工劳动合同追踪'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('admincontracts/index', 'contractsindex', '餐厅劳动合同追踪'); ?>
 
 
 

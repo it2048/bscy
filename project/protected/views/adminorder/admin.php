@@ -5,7 +5,6 @@
 <div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
-            <li><a class="add" mask="true" height="400" width="700" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/add');?>"><span>添加违纪</span></a></li>
             <li><a title="批量资料审核通过" target="selectedTodo" callback="updateAuCall" rel="ids" postType="string" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/sh',array("stage"=>1));?>" class="delete"><span>资料审核通过</span></a></li>
             <li><a title="DM/AM审核通过，进入盖章流程" target="selectedTodo" callback="updateAuCall" rel="ids" postType="string" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/sh',array("stage"=>2));?>" class="edit"><span>DM/AM审核通过，进入盖章流程</span></a></li>
             <li><a title="协议已邮寄/交给助理" target="selectedTodo" callback="updateAuCall" rel="ids" postType="string" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/sh',array("stage"=>3));?>" class="add"><span>协议已邮寄/交给助理</span></a></li>
@@ -15,7 +14,7 @@
 
         </ul>
     </div>
-    <table class="table" width="960" layoutH="76">
+    <table class="table" width="1060" layoutH="76">
         <thead>
         <tr>
             <th width="22"><input type="checkbox" group="ids" class="checkboxCtrl"></th>
@@ -35,6 +34,9 @@
             <th width="60">提交日期</th>
             <th width="60">生效日期</th>
             <th width="100">目前进度</th>
+            <th width="60">违纪时间</th>
+            <th width="100">处理HR邮箱</th>
+
             <th width="140">编辑</th>
         </tr>
         </thead>
@@ -43,11 +45,11 @@
             <tr>
                 <td><input name="ids" value="<?php echo $value['id']; ?>" type="checkbox"></td>
                 <td><?php echo $value['emp_id']; ?></td>
-                <td><?php echo empty($arr[$value['emp_id']]['name'])?"":$arr[$value['emp_id']]['name']; ?></td>
+                <td><?php echo $value['yg_name']; ?></td>
                 <td><?php echo TempList::$sf[$value['type']]; ?></td>
-                <td><?php echo empty($arr[$value['emp_id']]['zw'])?"":$arr[$value['emp_id']]['zw']; ?></td>
+                <td><?php echo $value['yg_zw']; ?></td>
                 <td><?php echo $value['ct_no']; ?></td>
-                <td><?php echo empty($arr[$value['emp_id']]['ct'])?"":$arr[$value['emp_id']]['ct']; ?></td>
+                <td><?php echo $value['yg_ct']; ?></td>
                 <td><?php echo $value['q_jl']; ?></td>
                 <td><?php echo $value['qy_jl']; ?></td>
                 <td title="<?php echo $value['wj_lx']; ?>"><?php echo $value['wj_lx']; ?></td>
@@ -58,11 +60,12 @@
                 <td><?php echo date("Y-m-d H:i:s",$value['tj_time']); ?></td>
                 <td><?php echo empty($value['sx_time'])?"":date("Y-m-d H:i:s",$value['sx_time']); ?></td>
                 <td title="<?php echo $value['stage']; ?>"><?php echo $value['stage']; ?></td>
+                <td><?php echo empty($value['wj_time'])?"":date("Y-m-d H:i:s",$value['wj_time']); ?></td>
+                <td><?php echo $value['tz_email']; ?></td>
                 <td>
                     <a title="确实要删除这条记录吗?" callback="deleteAuCall" target="ajaxTodo" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/del',array('id'=>$value['id'])); ?>" class="btnDel">删除</a>
                     <a title="编辑" mask="true" height="400" width="620" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/edit',array('id'=>$value['id'])); ?>" class="btnEdit">编辑</a>
-
-                    <a title="添加生效日期" mask="true" height="260" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/sx',array('id'=>$value['id'])); ?>" class="btnAdd">添加生效日期</a>
+                    <a title="添加生效日期" mask="true" height="300" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/sx',array('id'=>$value['id'])); ?>" class="btnAdd">添加生效日期</a>
 
                 </td>
             </tr>
