@@ -49,8 +49,8 @@
                 <div class="login_banner"><img src="<?php echo $home; ?>admincss/dwzthemes/default/images/login_banner.jpg" /></div>
                 <div class="login_main">
                     <ul class="helpList">
-                        <li><a href="#" onclick="alert('请找管理员');">忘记密码怎么办？</a></li>
-                        <li><a href="#" onclick="alert('请询问管理员');">总是提示权限不足？</a></li>
+                        <li><a target="_blank" href="<?php echo Yii::app()->createAbsoluteUrl('home/index',array('id'=>1)); ?>">忘记密码怎么办？</a></li>
+                        <li><a target="_blank" href="<?php echo Yii::app()->createAbsoluteUrl('home/index',array('id'=>2)); ?>">总是提示权限不足？</a></li>
                     </ul>
                     <div class="login_inner">
                         <p>如果你没有帐号和密码，请找管理员申请</p>

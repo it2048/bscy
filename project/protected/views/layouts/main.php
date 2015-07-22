@@ -63,6 +63,8 @@
                     <ul class="tree treeFolder">
                         <li><a href="#">后台管理</a>
                             <ul>
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminart/index', 'adminart', '通知类文章'); ?>
+
                                 <?php NavigatorHelper::getInstance()->printNavigator('admincontent/usermanager', 'usermaneger', '通讯录设置'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('admincontent/search', 'usersearch', '通讯录查询'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminemp/index', 'empindex', '员工名单管理'); ?>

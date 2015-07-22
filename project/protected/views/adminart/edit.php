@@ -1,22 +1,16 @@
 <div class="pageContent">
-    <form method="post" action="<?php echo Yii::app()->createAbsoluteUrl('adminhys/update'); ?>" class="pageForm required-validate" onsubmit="return iframeCallback(this, viData);" enctype="multipart/form-data">
+    <form method="post" action="<?php echo Yii::app()->createAbsoluteUrl('adminart/update'); ?>" class="pageForm required-validate" onsubmit="return iframeCallback(this, viData);" enctype="multipart/form-data">
         <div class="pageFormContent" layoutH="56">
             <p class="nowrap">
-                <label>所在城市：</label>
+                <label>文章标题：</label>
                 <input  name="id" type="hidden" value="<?php echo $models->id;?>">
-                <input  name="hys_city" type="text" class="textInput required" size="40" value="<?php echo $models->city;?>">
+                <input  name="art_title" type="text" class="textInput required" size="50" value="<?php echo $models->title;?>">
             </p>
+            <div class="divider"></div>
+            请添加文章内容或在文章中上传文件：<br>
             <p class="nowrap">
-                <label>会议室名称：</label>
-                <input  name="hys_name" type="text" class="textInput required" size="40" value="<?php echo $models->name;?>">
-            </p>
-            <p class="nowrap">
-                <label>容纳人数：</label>
-                <input  name="hys_num" type="text" class="textInput required number" size="10" value="<?php echo $models->num;?>">
-            </p>
-            <p class="nowrap">
-                <label>会议室描述</label>
-                <textarea name="hys_desc" cols="50" rows="9"><?php echo $models->desc;?></textarea>
+                <textarea class="editor" name="art_desc" rows="30" cols="96"
+                          upLinkUrl="<?php echo Yii::app()->createAbsoluteUrl('adminart/upload'); ?>" upLinkExt="zip,rar,txt"><?php echo $models->desc;?></textarea>
             </p>
         </div>
         <div class="formBar">

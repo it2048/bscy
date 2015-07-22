@@ -74,7 +74,7 @@
             请勾选已有的证据和资料：<br>
             <p class="nowrap">
                 <div style="margin-left: 130px;">
-                <input type="checkbox" name="order_zj[]" value="1" />1、面谈记录（每一页均有面谈者签字）（模板下载）
+                <input type="checkbox" name="order_zj[]" value="1" />1、面谈记录（每一页均有面谈者签字）（<a target="_blank" href="<?php echo Yii::app()->createAbsoluteUrl('home/index',array('id'=>3)); ?>"><span style="color: red;">模板下载</span></a>）
                 <br><input type="checkbox" name="order_zj[]" value="2" />2、员工手册确认书（本人亲笔签字）
                 <br><input type="checkbox" name="order_zj[]" value="3" />3、员工状况异动表（示例）
                 </div>
