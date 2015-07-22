@@ -120,10 +120,10 @@ class AdmincontractsController extends AdminSet
         $criteria = new CDbCriteria;
         $uname = Yii::app()->user->getState('username');
         $bm_arr = AppBsEmp::model()->find("hyp='{$uname}'");
-        if(!empty($bm_arr))
+        if(empty($bm_arr))
         {
-            $bm_id = $bm_arr->bm_id;
-            $criteria->addCondition("bm_id='{$bm_id}'");
+            //$bm_id = $bm_arr->bm_id;
+            //$criteria->addCondition("bm_id='{$bm_id}'");
             $criteria->addCondition("dr_time>={$tm} AND dr_time<={$e2}");
             $pages['countPage'] = AppBsContracts::model()->count($criteria);
             $criteria->limit = $pages['numPerPage'];

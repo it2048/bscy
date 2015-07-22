@@ -31,8 +31,10 @@
             <th width="22"><input type="checkbox" group="ids" class="checkboxCtrl"></th>
             <th width="40">导入日期</th>
             <?php
-            foreach(TempList::$Contracts as $val)
+            $arrt = array(1,5,7,8,9,10,11,13,14,15);
+            foreach(TempList::$Contracts as $k=>$val)
             {
+                if(in_array($k,$arrt))
                 echo sprintf('<th width="60">%s</th>',$val);
             }
             ?>
@@ -45,12 +47,14 @@
             <tr>
                 <td><input name="ids" value="<?php echo $value['id']; ?>" type="checkbox"></td>
                 <td><?php echo date('Y-m-d H:i:s',$value['dr_time']); ?></td>
-                <td><?php echo $value['bm_id']; ?></td>
                 <?php
                 $arr = explode("|",$value->desc);
-                foreach($arr as $val)
+                foreach($arr as $k=>$val)
                 {
-                    printf('<td title="%s">%s</td>',$val,$val);
+                    if(in_array($k+1,$arrt))
+                    {
+                        printf('<td title="%s">%s</td>',$val,$val);
+                    }
                 }
                 ?>
                 <td><?php echo empty($value['ct_time'])?"":date('Y-m-d H:i:s',$value['ct_time']); ?></td>
