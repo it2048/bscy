@@ -25,8 +25,8 @@
             <th width="80">会议室名称</th>
             <th width="30">容纳人数</th>
             <th width="200">描述</th>
-            <th width="480">预定情况(只显示已预定)</th>
-            <th width="60">预定</th>
+            <th width="380">预定情况(只显示已预定)</th>
+            <th width="120">点击加号预定，放大镜看详情</th>
         </tr>
         </thead>
         <tbody>
