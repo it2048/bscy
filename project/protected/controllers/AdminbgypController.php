@@ -13,12 +13,25 @@ class AdminbgypController extends AdminSet
         $pages['countPage'] = Yii::app()->getRequest()->getParam("countPage", 0); //总共多少记录
         $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 50); //每页多少条数据
 
+
+        $pages['sq_time'] = Yii::app()->getRequest()->getParam("sq_time", date('Ym',time())); //每页多少条数据
+
+        $tm = $pages['sq_time']."01";
+        $e2 = $pages['sq_time']."31";
+
         $criteria = new CDbCriteria;
+        $uname = Yii::app()->user->getState('username');
+
+        //$bm_id = $bm_arr->bm_id;
+        $criteria->addCondition("ct_no='{$uname}'");
+        $criteria->addCondition("sq_time>={$tm} AND sq_time<={$e2}");
         $pages['countPage'] = AppBsBgyp::model()->count($criteria);
         $criteria->limit = $pages['numPerPage'];
         $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
         $criteria->order = 'id DESC';
         $allList = AppBsBgyp::model()->findAll($criteria);
+
+
         $this->renderPartial('index', array(
             'models' => $allList,
             'pages' => $pages),false,true);
@@ -33,6 +46,75 @@ class AdminbgypController extends AdminSet
         $this->renderPartial('add');
     }
 
+
+    /**
+     * 导入功能显示页面
+     */
+    public function actionVimport(){
+        $this->renderPartial('_import');
+    }
+
+    /**
+     * 导入功能
+     */
+    public function actionImport(){
+        $msg = array("code" => 1, "msg" => "上传失败", "obj" => NULL);
+        $type = Yii::app()->getRequest()->getParam("imtype", ""); //类型
+        $month = Yii::app()->getRequest()->getParam("month", ""); //月份
+        if(!empty($_FILES['obj']['name']))
+        {
+            $_tmp_pathinfo = pathinfo($_FILES['obj']['name']);
+
+            if (strtolower($_tmp_pathinfo['extension'])=="csv") {
+                //设置文件路径
+                $flname = "upload/emp".time().".".strtolower($_tmp_pathinfo['extension']);
+                $dest_file_path = Yii::app()->basePath . '/../public/'.$flname;
+                $filepathh = dirname($dest_file_path);
+                if (!file_exists($filepathh))
+                    $b_mkdir = mkdir($filepathh, 0777, true);
+                else
+                    $b_mkdir = true;
+                if ($b_mkdir && is_dir($filepathh)) {
+                    //转存文件到 $dest_file_path路径
+                    if (move_uploaded_file($_FILES['obj']['tmp_name'], $dest_file_path)) {
+                        $msg["msg"] = AppBsItem::model()->storeCsv($dest_file_path,$type,$month);
+                        $msg["code"] = 0;
+                        unlink($dest_file_path);
+                    } else {
+                        $msg["msg"] = '文件上传失败';
+                    }
+                }
+            } else {
+                $msg["msg"] = '上传的文件格式需要是csv';
+            }
+        }
+        echo json_encode($msg);
+    }
+    public function actionBgyp()
+    {
+        //print_r(Yii::app()->user->getState('username'));
+        //先获取当前是否有页码信息
+        $pages['pageNum'] = Yii::app()->getRequest()->getParam("pageNum", 1); //当前页
+        $pages['countPage'] = Yii::app()->getRequest()->getParam("countPage", 0); //总共多少记录
+        $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 50); //每页多少条数据
+
+        $pages['sp_name'] = Yii::app()->getRequest()->getParam("sp_name",''); //员工姓名
+
+        $criteria = new CDbCriteria;
+        !empty($pages['sp_name'])&&$criteria->addSearchCondition('sp_name', $pages['sp_name']);
+
+        $pages['countPage'] = AppBsItem::model()->count($criteria);
+        $criteria->limit = $pages['numPerPage'];
+        $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
+        $allList = AppBsItem::model()->findAll($criteria);
+
+
+        $mod =  AppBsItem::model()->findAll();
+        $this->renderPartial('bgyp', array(
+            'models' => $allList,
+            'mod'=>$mod,
+            'pages' => $pages),false,true);
+    }
 
     /**
      * 保存幻灯
@@ -127,7 +209,7 @@ class AdminbgypController extends AdminSet
         $id = Yii::app()->getRequest()->getParam("id", 0); //用户名
         if($id!=0)
         {
-            if(AppBsHys::model()->deleteByPk($id))
+            if(AppBsItem::model()->deleteByPk($id))
             {
                 $this->msgsucc($msg);
             }

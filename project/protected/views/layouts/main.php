@@ -13,6 +13,9 @@
     <script src="<?php echo $home; ?>adminjs/dwz.min.js" type="text/javascript"></script>
     <script src="<?php echo $home; ?>adminjs/xheditor/xheditor-zh-cn.min.js" type="text/javascript"></script>
     <script src="<?php echo $home; ?>adminjs/dwz.regional.zh.js" type="text/javascript"></script>
+    <script src="<?php echo $home; ?>adminjs/jquery.autocomplete.min.js" type="text/javascript"></script>
+    <link href="<?php echo $home; ?>css/autocomplete.min.css" rel="stylesheet" type="text/css" media="print"/>
+
 
     <!--[if IE]>
     <link href="<?php echo $home; ?>admincss/dwzthemes/css/ieHack.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -83,6 +86,11 @@
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminwj/index', 'wjindex', '违纪条款管理'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminorder/admin', 'orderadmin', 'HR违纪处理'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('admincontracts/admin', 'contractsadmin', 'HR劳动合同追踪'); ?>
+
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminbgyp/bgyp', 'adminbgypbgyp', '办公用品列表导入'); ?>
+
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminbgyp/index', 'adminbgyp', '办公用品订单管理'); ?>
+
 
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminhys/index', 'hysindex', '会议室设置'); ?>
                             </ul>
