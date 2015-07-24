@@ -4,6 +4,7 @@
     <?php $home = Yii::app()->request->baseUrl."/public/dwz/";?>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><?php echo Yii::app()->name;?></title>
+    <link href="<?php echo $home; ?>css/autocomplete.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo $home; ?>admincss/dwzthemes/default/style.css" rel="stylesheet" type="text/css" media="screen"/>
     <link href="<?php echo $home; ?>admincss/dwzthemes/css/core.css" rel="stylesheet" type="text/css" media="screen"/>
     <link href="<?php echo $home; ?>admincss/dwzthemes/css/print.css" rel="stylesheet" type="text/css" media="print"/>
@@ -14,7 +15,6 @@
     <script src="<?php echo $home; ?>adminjs/xheditor/xheditor-zh-cn.min.js" type="text/javascript"></script>
     <script src="<?php echo $home; ?>adminjs/dwz.regional.zh.js" type="text/javascript"></script>
     <script src="<?php echo $home; ?>adminjs/jquery.autocomplete.min.js" type="text/javascript"></script>
-    <link href="<?php echo $home; ?>css/autocomplete.min.css" rel="stylesheet" type="text/css" media="print"/>
 
 
     <!--[if IE]>

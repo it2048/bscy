@@ -4,7 +4,7 @@
             <table class="searchContent">
                 <tbody><tr>
                     <td>
-                        商品名称：<input type="text" id="sp_name" name="sp_name" value="<?php echo $pages['sp_name'];?>"/>
+                        商品名称：<input type="text" id="sp_name" size="30" name="sp_name" value="<?php echo $pages['sp_name'];?>"/>
                     </td>
                     <td>
                         <div class="buttonActive"><div class="buttonContent"><button type="submit">搜索</button></div></div>
@@ -56,7 +56,7 @@
 </div>
 <script type="text/javascript">
     $(function() {
-        $("#sp_name").autocomplete({
+        var tm = $("#sp_name").autocomplete({
             data: [<?php
            foreach ($mod as $val) {
                printf("['%s',%d],",$val->sp_name,$val->sp_id);
@@ -64,6 +64,7 @@
            ?>],
             minChars: 0
         });
+        console.log(tm);
     });
     function deleteAuCall(res)
     {
