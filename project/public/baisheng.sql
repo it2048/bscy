@@ -1309,3 +1309,13 @@ CREATE TABLE `bs_coli` (
   PRIMARY KEY (`month`),
   UNIQUE KEY `month_UNIQUE` (`month`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bs_item` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sp_id` int(11) DEFAULT NULL,
+  `sp_name` varchar(128) DEFAULT NULL,
+  `sp_dw` varchar(8) DEFAULT NULL,
+  `sp_mn` varchar(16) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
