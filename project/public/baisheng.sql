@@ -1289,3 +1289,23 @@ ADD CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE `bs_col` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `month` int(11) DEFAULT NULL,
+  `am` varchar(45) DEFAULT NULL,
+  `dm` varchar(45) DEFAULT NULL,
+  `ct_id` varchar(32) DEFAULT NULL,
+  `desc` mediumtext,
+  `ct_name` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bs_coli` (
+  `month` int(11) NOT NULL COMMENT '月份',
+  `desc` mediumtext COMMENT '月份对应的项',
+  `type` tinyint(2) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`month`),
+  UNIQUE KEY `month_UNIQUE` (`month`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
