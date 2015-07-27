@@ -20,16 +20,18 @@ class AdmincolController extends AdminSet
         $pages['countPage'] = Yii::app()->getRequest()->getParam("countPage", 0); //总共多少记录
         $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 50); //每页多少条数据
 
-        $pages['col_time'] = Yii::app()->getRequest()->getParam("col_time",date("Ym")); //时间
+        $pages['scol_time'] = Yii::app()->getRequest()->getParam("scol_time",date("Ym")); //时间
+        $pages['pcol_time'] = Yii::app()->getRequest()->getParam("pcol_time",date("Ym")); //时间
+
         $pages['col_type'] = Yii::app()->getRequest()->getParam("col_type",0); //类型
 
         $criteria = new CDbCriteria;
-        $criteria->addCondition('month='.$pages['col_time']);
+        $criteria->addCondition("month>={$pages['scol_time']} AND month<={$pages['pcol_time']}");
         $pages['countPage'] = AppBsCol::model()->count($criteria);
         $criteria->limit = $pages['numPerPage'];
         $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
         $allList = AppBsCol::model()->findAll($criteria);
-        $col = AppBsColi::model()->findByPk($pages['col_time']);
+        $col = AppBsColi::model()->findByPk($pages['scol_time']);
         if(empty($col))
         {
             $ms = array();
@@ -47,10 +49,48 @@ class AdmincolController extends AdminSet
             'pages' => $pages),false,true);
     }
 
+    public function actionAdmin()
+    {
+        //print_r(Yii::app()->user->getState('username'));
+        //先获取当前是否有页码信息
+        $pages['pageNum'] = Yii::app()->getRequest()->getParam("pageNum", 1); //当前页
+        $pages['countPage'] = Yii::app()->getRequest()->getParam("countPage", 0); //总共多少记录
+        $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 50); //每页多少条数据
+
+        $pages['scol_time'] = Yii::app()->getRequest()->getParam("scol_time",date("Ym")); //时间
+        $pages['pcol_time'] = Yii::app()->getRequest()->getParam("pcol_time",date("Ym")); //时间
+
+        $pages['col_type'] = Yii::app()->getRequest()->getParam("col_type",0); //类型
+
+        $criteria = new CDbCriteria;
+        $criteria->addCondition("month>={$pages['scol_time']} AND month<={$pages['pcol_time']}");
+        $pages['countPage'] = AppBsCol::model()->count($criteria);
+        $criteria->limit = $pages['numPerPage'];
+        $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
+        $allList = AppBsCol::model()->findAll($criteria);
+        $col = AppBsColi::model()->findByPk($pages['scol_time']);
+        if(empty($col))
+        {
+            $ms = array();
+        }else
+        {
+            $head = json_decode($col->desc,true);
+            $ms = isset($head[$pages['col_type']])?$head[$pages['col_type']]:array();
+        }
+
+        //file_put_contents('/Applications/XAMPP/xamppfiles/htdocs/t.log',print_r($ms,true),8);
+
+        $this->renderPartial('admin', array(
+            'models' => $allList,
+            'head' => $ms,
+            'pages' => $pages),false,true);
+    }
+
     public function actionUseradd()
     {
         $this->renderPartial('useradd');
     }
+
     /**
      * 删除用户
      */
@@ -74,6 +114,87 @@ class AdmincolController extends AdminSet
      */
     public function actionVimport(){
         $this->renderPartial('_import');
+    }
+
+    public function actionExport(){
+        $this->renderPartial('_export');
+    }
+
+    public function actionExp()
+    {
+        $msg = $this->msgcode();
+        $smonth = Yii::app()->getRequest()->getParam("smonth",date("Ym")); //时间
+        $pmonth = Yii::app()->getRequest()->getParam("pmonth",date("Ym")); //时间
+
+        $mcol_type= Yii::app()->getRequest()->getParam("mcol_type",0); //类型
+
+        $col = AppBsColi::model()->findByPk($smonth);
+        if(empty($col))
+        {
+            $msg['msg'] = sprintf("开始时间%s 该月数据为空，请重新选择开始时间",$smonth);
+            echo $msg['msg'];
+        }else
+        {
+            $criteria = new CDbCriteria;
+            $criteria->addCondition("month>={$smonth} AND month<={$pmonth}");
+            $allList = AppBsCol::model()->findAll($criteria);
+
+                $head = json_decode($col->desc,true);
+                $ms = isset($head[$mcol_type])?$head[$mcol_type]:array();
+
+            header('Content-Type: application/vnd.ms-excel');
+            header('Content-Disposition: attachment;filename="COL.csv"');
+            header('Cache-Control: max-age=0');
+            $fp = fopen('php://output', 'a');
+            // 输出Excel列名信息
+
+            $head1 = array("月份","AM","DM","餐厅编号","餐厅名");
+            foreach($ms as $k=>$val)
+            {
+                if($k==="min")continue;
+                if($k==="max")continue;
+                array_push($head1,$val);
+
+            }
+            foreach ($head1 as $i => $v) {
+                // CSV的Excel支持GBK编码，一定要转换，否则乱码
+                $head1[$i] = iconv('utf-8', 'gbk', $v);
+            }
+            // 将数据通过fputcsv写到文件句柄
+            fputcsv($fp, $head1);
+            // 计数器
+            $cnt = 0;
+            // 每隔$limit行，刷新一下输出buffer，不要太大，也不要太小
+            $limit = 100000;
+
+            foreach($allList as $value)
+            {
+                $cnt ++;
+                if ($limit == $cnt) { //刷新一下输出buffer，防止由于数据过多造成问题
+                    ob_flush();
+                    flush();
+                    $cnt = 0;
+                }
+
+                $mkl = explode("|!|",$value->desc);
+                if(isset($ms['min']))
+                {
+                    $arrr = array($value->month,$value->am,$value->dm,$value->ct_id,$value->ct_name);
+
+                    if(empty($ms['max']))
+                        $mkl = array_merge($arrr,array_slice($mkl,$ms['min']));
+                    else
+                        $mkl = array_merge($arrr,array_slice($mkl,$ms['min'],$ms['max']));
+                }
+                $row = $mkl;
+                foreach ($row as $i => $v) {
+                    // CSV的Excel支持GBK编码，一定要转换，否则乱码
+                    $row[$i] = iconv('utf-8', 'gbk', $v);
+                }
+                fputcsv($fp, $row);
+            }
+
+        }
     }
 
     /**

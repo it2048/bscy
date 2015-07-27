@@ -248,6 +248,11 @@ class AdminhysController extends AdminSet
         {
             $msg['msg'] = "预定日期不能小于当前日期";
         }
+        elseif($dhys_sttime>=$dhys_sptime)
+        {
+            $msg['msg'] = "开始时间必须小于结束时间";
+
+        }
         elseif($dhys_id!=""&&$dhys_time!=""&&$dhys_ydbm!=""&&$dhys_ydr!="")
         {
             $mod = AppBsDhy::model()->findAll("hys_no={$dhys_id} AND d_time = {$dhys_time} AND ((st_time<{$dhys_sttime} AND

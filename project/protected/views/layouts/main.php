@@ -94,6 +94,7 @@
 
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminbgyp/admin', 'adminbgyp', '办公用品订单管理'); ?>
 
+                                <?php NavigatorHelper::getInstance()->printNavigator('admincol/admin', 'admincoln', 'COL数据导入'); ?>
 
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminhys/index', 'hysindex', '会议室设置'); ?>
                             </ul>

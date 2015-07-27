@@ -1,5 +1,5 @@
 <div class="pageHeader">
-    <form id="pagerForm" onsubmit="return navTabSearch(this);" action="<?php echo Yii::app()->createAbsoluteUrl('admincol/index'); ?>" method="post">
+    <form id="pagerForm" onsubmit="return navTabSearch(this);" action="<?php echo Yii::app()->createAbsoluteUrl('admincol/admin'); ?>" method="post">
         <div class="searchBar">
             <table class="searchContent">
                 <tbody><tr>
@@ -35,10 +35,10 @@
 <div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
-            <li><a title="导出数据" mask="true" height="200" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('admincol/export'); ?>" class="icon"><span>导出数据</span></a></li>
+            <li><a title="导入数据" mask="true" height="200" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('admincol/vimport'); ?>" class="add"><span>导入数据</span></a></li>
         </ul>
     </div>
-    <table class="table" width="2060" layoutH="112">
+    <table class="table" width="2060" layoutH="110">
         <thead>
         <tr>
             <th width="100">月份</th>
