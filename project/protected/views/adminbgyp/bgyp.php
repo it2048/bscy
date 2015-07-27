@@ -23,7 +23,7 @@
             <li><a title="导入数据" mask="true" height="200" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminbgyp/vimport'); ?>" class="add"><span>导入数据</span></a></li>
         </ul>
     </div>
-    <table class="table" width="610" layoutH="90">
+    <table class="table" width="610" layoutH="110">
         <thead>
         <tr>
             <th width="90">商品编号</th>
@@ -56,7 +56,7 @@
 </div>
 <script type="text/javascript">
     $(function() {
-        var tm = $("#sp_name").autocomplete({
+        $("#sp_name").autocomplete({
             data: [<?php
            foreach ($mod as $val) {
                printf("['%s',%d],",$val->sp_name,$val->sp_id);
@@ -64,7 +64,6 @@
            ?>],
             minChars: 0
         });
-        console.log(tm);
     });
     function deleteAuCall(res)
     {

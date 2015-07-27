@@ -36,15 +36,108 @@ class AdminbgypController extends AdminSet
             'models' => $allList,
             'pages' => $pages),false,true);
     }
+    public function actionAdmin()
+    {
+        //print_r(Yii::app()->user->getState('username'));
+        //先获取当前是否有页码信息
+        $pages['pageNum'] = Yii::app()->getRequest()->getParam("pageNum", 1); //当前页
+        $pages['countPage'] = Yii::app()->getRequest()->getParam("countPage", 0); //总共多少记录
+        $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 50); //每页多少条数据
 
+
+        $pages['sq_time'] = Yii::app()->getRequest()->getParam("sq_time", date('Ym',time())); //每页多少条数据
+
+        $tm = $pages['sq_time']."01";
+        $e2 = $pages['sq_time']."31";
+        $criteria = new CDbCriteria;
+        $criteria->addCondition("sq_time>={$tm} AND sq_time<={$e2}");
+        $pages['countPage'] = AppBsBgyp::model()->count($criteria);
+        $criteria->limit = $pages['numPerPage'];
+        $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
+        $criteria->order = 'id DESC';
+        $allList = AppBsBgyp::model()->findAll($criteria);
+
+        $this->renderPartial('admin', array(
+            'models' => $allList,
+            'pages' => $pages),false,true);
+    }
+
+
+    public function actionExp()
+    {
+        $allList = AppBsBgyp::model()->findAll();
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="办公用品申请列表.csv"');
+        header('Cache-Control: max-age=0');
+        $fp = fopen('php://output', 'a');
+        // 输出Excel列名信息
+        $arr = explode(",","申请部门,申请日期,所在城市,法人公司,申请人,商品编码,商品名称,单位,单价,数量,金额,部门主管,备注");
+        $head = $arr;
+        foreach ($head as $i => $v) {
+            // CSV的Excel支持GBK编码，一定要转换，否则乱码
+            $head[$i] = iconv('utf-8', 'gbk', $v);
+        }
+        // 将数据通过fputcsv写到文件句柄
+        fputcsv($fp, $head);
+        // 计数器
+        $cnt = 0;
+        // 每隔$limit行，刷新一下输出buffer，不要太大，也不要太小
+        $limit = 100000;
+
+        foreach($allList as $value)
+        {
+            $cnt ++;
+            if ($limit == $cnt) { //刷新一下输出buffer，防止由于数据过多造成问题
+                ob_flush();
+                flush();
+                $cnt = 0;
+            }
+
+            $row = array(
+                $value->org,
+                $value->sq_time,
+                $value->city,$value->company,$value->sqr,$value->code,$value->name,$value->dw,
+                $value->dj,$value->cnt,$value->money,$value->boss,$value->desc
+            );
+            foreach ($row as $i => $v) {
+                // CSV的Excel支持GBK编码，一定要转换，否则乱码
+                $row[$i] = iconv('utf-8', 'gbk', $v);
+            }
+            fputcsv($fp, $row);
+        }
+    }
 
     /**
      * 添加幻灯
      */
     public function actionAdd()
     {
-        $this->renderPartial('add');
+        $mod =  AppBsItem::model()->findAll();
+        $this->renderPartial('add',array(
+            'mod'=>$mod));
     }
+    public function actionItem()
+    {
+        $msg = $this->msgcode();
+        $id = Yii::app()->getRequest()->getParam("id", ""); //h会议室城市
+
+        if($id!="")
+        {
+            $model = AppBsItem::model()->findByPk($id);
+            if(!empty($model))
+            {
+                $this->msgsucc($msg);
+                $msg['data'] = array("dw"=>$model->sp_dw,"dj"=>$model->sp_mn,"bh"=>$model->sp_id);
+            }else
+            {
+                $msg['msg'] = "物品不存在";
+            }
+        }else{
+            $msg['msg'] = "物品编号不能为空";
+        }
+        echo json_encode($msg);
+    }
+
 
 
     /**
@@ -122,31 +215,51 @@ class AdminbgypController extends AdminSet
     public function actionSave()
     {
         $msg = $this->msgcode();
-        $hys_city = Yii::app()->getRequest()->getParam("hys_city", ""); //h会议室城市
-        $hys_name = Yii::app()->getRequest()->getParam("hys_name", ""); //会议室名称
-        $hys_num = Yii::app()->getRequest()->getParam("hys_num", ""); //会议室容纳人数
-        $hys_desc = Yii::app()->getRequest()->getParam("hys_desc", ""); //会议室描述
 
-        if($hys_city!=""&&$hys_name!="")
+        $bgyp_org = Yii::app()->getRequest()->getParam("bgyp_org", "");
+        $bgyp_city = Yii::app()->getRequest()->getParam("bgyp_city", "");
+        $bgyp_company = Yii::app()->getRequest()->getParam("bgyp_company", "");
+        $bgyp_sqr = Yii::app()->getRequest()->getParam("bgyp_sqr", "");
+        $bgyp_name = Yii::app()->getRequest()->getParam("bgyp_name", "");
+        $bgyp_code = Yii::app()->getRequest()->getParam("bgyp_code", "");
+        $bgyp_dw = Yii::app()->getRequest()->getParam("bgyp_dw", "");
+        $bgyp_dj = Yii::app()->getRequest()->getParam("bgyp_dj", "");
+        $bgyp_cnt = Yii::app()->getRequest()->getParam("bgyp_cnt", "");
+        $bgyp_money = Yii::app()->getRequest()->getParam("bgyp_money", "");
+        $bgyp_boss = Yii::app()->getRequest()->getParam("bgyp_boss", "");
+        $bgyp_desc = Yii::app()->getRequest()->getParam("bgyp_desc", "");
+
+        $model = new AppBsBgyp();
+
+
+        $model->city = $bgyp_city;
+        $model->company = $bgyp_company;
+        $model->org = $bgyp_org;
+        $model->sq_time = date('Ymd');
+
+        $model->sqr = $bgyp_sqr;
+        $model->code = $bgyp_code;
+        $model->name = $bgyp_name;
+        $model->dw = $bgyp_dw;
+
+        $model->dj = $bgyp_dj;
+        $model->cnt = $bgyp_cnt;
+        $model->money = $bgyp_money;
+        $model->boss = $bgyp_boss;
+
+        $model->desc = $bgyp_desc;
+        $model->status = 0;
+        $model->ct_no = $this->getUserName();
+
+        if($model->save())
         {
-            $model = new AppBsHys();
-            $model->city = $hys_city;
-            $model->name = $hys_name;
-            $model->num = $hys_num;
-            $model->desc = $hys_desc;
-            if($model->save())
-            {
-                $this->msgsucc($msg);
-                $msg['msg'] = "添加成功";
-            }else
-            {
-                $msg['msg'] = "存入数据库异常";
-            }
-
-        }else{
-            if($msg["code"]!=3)
-                $msg['msg'] = "必填项不能为空";
+            $this->msgsucc($msg);
+            $msg['msg'] = "添加成功";
+        }else
+        {
+            $msg['msg'] = "存入数据库异常";
         }
+
         echo json_encode($msg);
     }
 
@@ -222,6 +335,24 @@ class AdminbgypController extends AdminSet
         echo json_encode($msg);
     }
 
+    public function actionBgdel()
+    {
+        $msg = $this->msgcode();
+        $id = Yii::app()->getRequest()->getParam("id", 0); //用户名
+        if($id!=0)
+        {
+            if(AppBsBgyp::model()->deleteByPk($id))
+            {
+                $this->msgsucc($msg);
+            }
+            else
+                $msg['msg'] = "数据删除失败";
+        }else
+        {
+            $msg['msg'] = "id不能为空";
+        }
+        echo json_encode($msg);
+    }
 
     /**
      * 幻灯片管理

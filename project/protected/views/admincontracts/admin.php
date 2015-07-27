@@ -38,7 +38,7 @@
 
         </ul>
     </div>
-    <table class="table" width="960" layoutH="76">
+    <table class="table" width="960" layoutH="112">
         <thead>
         <tr>
             <th width="22"><input type="checkbox" group="ids" class="checkboxCtrl"></th>

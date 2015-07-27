@@ -19,7 +19,7 @@
 <div class="pageContent">
     <div class="panelBar">
         <ul class="toolBar">
-            <li><a class="add" mask="true" height="400" width="600" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminbgyp/add');?>"><span>办公用品申请</span></a></li>
+            <li><a class="icon" href="<?php echo Yii::app()->createAbsoluteUrl('adminbgyp/exp');?>" target="dwzExport" targetType="navTab" title="导出所有纪录"><span>导出所有纪录</span></a></li>
         </ul>
     </div>
     <table class="table" width="960" layoutH="110">
@@ -33,11 +33,13 @@
             <th width="40">商品编码</th>
             <th width="80">商品名称</th>
             <th width="20">单位</th>
-            <th width="40">单价(元)</th>
+            <th width="20">单价(元)</th>
             <th width="20">数量</th>
-            <th width="40">金额(元)</th>
+            <th width="30">金额(元)</th>
             <th width="20">部门主管</th>
-            <th width="120">备注</th>
+            <th width="20">备注</th>
+            <th width="40">操作</th>
+
         </tr>
         </thead>
         <tbody>
@@ -56,6 +58,10 @@
                 <td><?php echo $value['money']; ?></td>
                 <td><?php echo $value['boss']; ?></td>
                 <td title="<?php echo $value['desc']; ?>"><?php echo $value['desc']; ?></td>
+                <td>
+                    <a title="确实要删除这条记录吗?" callback="deleteAuCall" target="ajaxTodo" href="<?php echo Yii::app()->createAbsoluteUrl('adminbgyp/bgdel',array('id'=>$value['id'])); ?>" class="btnDel">删除</a>
+
+                </td>
             </tr>
         <?php }?>
         </tbody>

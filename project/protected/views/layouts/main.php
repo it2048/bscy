@@ -73,6 +73,9 @@
                                 <?php NavigatorHelper::getInstance()->printNavigator('admincontracts/index', 'contractsindex', '餐厅劳动合同追踪'); ?>
 
 
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminbgyp/index', 'adminbgyp', '办公用品申请'); ?>
+
+                                <?php NavigatorHelper::getInstance()->printNavigator('admincol/index', 'admincol', 'COL查询'); ?>
 
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminhys/manager', 'hysmanager', '会议室预定'); ?>
 
@@ -89,7 +92,7 @@
 
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminbgyp/bgyp', 'adminbgypbgyp', '办公用品列表导入'); ?>
 
-                                <?php NavigatorHelper::getInstance()->printNavigator('adminbgyp/index', 'adminbgyp', '办公用品订单管理'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminbgyp/admin', 'adminbgyp', '办公用品订单管理'); ?>
 
 
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminhys/index', 'hysindex', '会议室设置'); ?>

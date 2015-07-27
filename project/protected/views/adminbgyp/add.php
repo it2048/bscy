@@ -19,7 +19,7 @@
             </p>
             <p class="nowrap">
                 <label>商品名称：</label>
-                <input  name="bgyp_name" type="text" class="textInput required" size="40" value="">
+                <input  name="bgyp_name" id="bgyp_name" type="text" class="textInput required" size="40" value="">
             </p>
             <p class="nowrap">
                 <label>商品编号：</label>
@@ -35,7 +35,7 @@
             </p>
             <p class="nowrap">
                 <label>商品数量：</label>
-                <input  name="bgyp_cnt" type="text" class="textInput required" size="40" value="">
+                <input  name="bgyp_cnt" type="text" class="textInput required number" size="40" value="">
             </p>
             <p class="nowrap">
                 <label>总金额：</label>
@@ -60,6 +60,43 @@
     </form>
 </div>
 <script type="text/javascript">
+    $(function() {
+        $("#bgyp_name").autocomplete({
+            data: [<?php
+           foreach ($mod as $val) {
+               printf("['%s',%d],",$val->sp_name,$val->id);
+           }
+           ?>],
+            minChars: 0,
+            onItemSelect:function($alt){
+                var id = $alt.data[0];
+                $.ajax({
+                    url: '<?php echo Yii::app()->createAbsoluteUrl('adminbgyp/item'); ?>',
+                    type: 'POST',
+                    data: 'id='+id,
+                    dataType: "json",
+                    success: function(data) {
+                        if(data.code==0)
+                        {
+                            $("input[name='bgyp_code']").val(data.data.bh);
+                            $("input[name='bgyp_dw']").val(data.data.dw);
+                            $("input[name='bgyp_dj']").val(data.data.dj);
+                        }
+                    }
+                });
+            }
+        });
+    });
+
+    $("input[name='bgyp_cnt']").blur(function(){
+        if($("input[name='bgyp_cnt']").val()!="")
+        {
+            var mn = $("input[name='bgyp_cnt']").val()*$("input[name='bgyp_dj']").val();
+            $("input[name='bgyp_money']").val(mn.toFixed(2));
+        }
+
+    });
+
     /**
      * 回调函数
      */
