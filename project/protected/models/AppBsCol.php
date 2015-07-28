@@ -26,7 +26,7 @@ class AppBsCol extends BsCol
         {
             $tp1[$k] = trim(iconv("GBK","UTF-8//IGNORE", $val));
         }
-        $sendArr[0] = array_slice($tp1,4,$colAll[0]);
+        $sendArr[0] = array_slice($tp1,4,$colAll[0]-4);
         $sendArr[1] = array_slice($tp1,$colAll[0],$colAll[1]-$colAll[0]);
         $sendArr[2] = array_slice($tp1,$colAll[1],$colAll[2]-$colAll[1]);
         $sendArr[3] = array_slice($tp1,$colAll[2],$colAll[3]-$colAll[2]);
@@ -74,7 +74,7 @@ class AppBsCol extends BsCol
             if($k==0)
             {
                 $sendArr2[$k]['min'] = 4;
-                $sendArr2[$k]['max'] = $colAll[0];
+                $sendArr2[$k]['max'] = $colAll[0]-4;
             }elseif($k==6)
             {
                 $sendArr2[$k]['min'] = $colAll[5];
