@@ -30,12 +30,12 @@
 </p>
 <?php
 echo $model->wj_sj;
-?>>
+?>
 <p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 58px">
     <strong><span style="color: red">&nbsp;</span></strong>
 </p><?php
 echo $model->wj_jl;
-?>>
+?>
 <p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 58px">
     <strong><span style="color: red">&nbsp;</span></strong>
 </p>
@@ -181,6 +181,18 @@ echo $model->wj_jl;
 </p>
 <p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 58px">
     附件中包含如下资料：
+    1、 员工/证明人的面谈记录
+
+    2、 服务组员工状况异动表
+
+    3、 员工手册确认书
+    <?php
+    $tm = explode("\r\n", $wj);
+    foreach($tm as $k=>$val)
+    {
+        echo sprintf("%d、 %s",$k+1,$val);
+    }
+    ?>
 </p>
 <?php
 echo $wj;
