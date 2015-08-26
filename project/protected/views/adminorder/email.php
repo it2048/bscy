@@ -20,7 +20,7 @@
     <span>&nbsp;</span>
 </p>
 <p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal">
-    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>以下为<span>XX</span>餐厅服务组<span>/</span>管理组员工严重违纪说明，申请与其解除劳动关系，请审批。<span>&nbsp;</span>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>以下为<span><?php echo $model->yg_ct; ?></span><span>/</span><?php echo $model->yg_zw; ?>严重违纪说明，申请与其解除劳动关系，请审批。<span>&nbsp;</span>
 </p>
 <p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal">
     <strong><span style="text-decoration:underline;"><span>&nbsp;</span></span></strong>
@@ -28,9 +28,14 @@
 <p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 58px">
     <strong><span style="color: red">一、&nbsp;</span></strong><strong><span style="color: red;background: yellow">违纪事件描述（</span></strong><strong><span style="color: red">请描述时间、地点、人物、事件）</span></strong>
 </p>
+<?php
+echo $model->wj_sj;
+?>>
 <p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 58px">
     <strong><span style="color: red">&nbsp;</span></strong>
-</p>
+</p><?php
+echo $model->wj_jl;
+?>>
 <p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 58px">
     <strong><span style="color: red">&nbsp;</span></strong>
 </p>
@@ -177,18 +182,9 @@
 <p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 58px">
     附件中包含如下资料：
 </p>
-<p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 82px">
-    <span>1、&nbsp;</span>员工<span>/</span>证明人的面谈记录
-</p>
-<p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 82px">
-    <span>2、&nbsp;</span>服务组员工状况异动表
-</p>
-<p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 82px">
-    <span>3、&nbsp;</span>员工手册确认书<strong></strong>
-</p>
-<p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 82px">
-    <span>4、&nbsp;</span><strong><span style="color: red">违纪证据清单（请在下方写明证据清单的内容，如排版表、限期返岗通知书、收银单据等）</span></strong>
-</p>
+<?php
+echo $wj;
+?>
 <p>
     <strong><span style="color: red"><br/></span></strong>
 </p>

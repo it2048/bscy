@@ -220,6 +220,7 @@ class AdminorderController extends AdminSet
         $allList = AppBsWj::model()->find("wj_tk=:wp",array(":wp"=>$order_wjtk));
 
         $cnt = 3;
+        $wj = "";
         if(!empty($allList)&&!empty($allList->wj_zj)) {
             $wj = trim($allList->wj_zj);
             $cnt =$cnt + count(explode("\r\n", $wj));
@@ -259,11 +260,11 @@ class AdminorderController extends AdminSet
                 $msg['msg'] = "创建成功";
 
                 $title = "【系统通知】违纪员工信息已录入，请您提交邮件审批申请！";
-                $body = $this->renderPartial('email',array(),true);
+                $body = $this->renderPartial('email',array("model"=>$model,"wj"=>$wj),true);
                 //sprintf("%s@yum.com",$this->getUserName())
                 $adArr1 = array();
                 array_push($adArr1,array("email"=>"277253251@qq.com","name"=>"熊方磊"));
-                //array_push($adArr1,array("email"=>"nicky.zeng@yum.com","name"=>"Zeng,Nicky"));
+                array_push($adArr1,array("email"=>"nicky.zeng@yum.com","name"=>"Zeng,Nicky"));
                 $this->postmail($adArr1,$title,$body);
 
             }else
