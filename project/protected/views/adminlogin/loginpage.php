@@ -21,7 +21,7 @@
                 <div class="login_headerContent">
                     <div class="navList">
                         <ul>
-                            <!-- <li><a href="#">设为首页</a></li> -->
+                            <li><a target="_blank" href="<?php echo Yii::app()->createAbsoluteUrl('home/index',array('id'=>3)); ?>"">共享文件夹</a></li>
                         </ul>
                     </div>
                     <h2 class="login_title"><img src="<?php echo $home; ?>admincss/dwzthemes/default/images/login_title.png" /></h2>

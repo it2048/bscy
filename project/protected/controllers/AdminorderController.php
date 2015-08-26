@@ -253,11 +253,19 @@ class AdminorderController extends AdminSet
             $model->yg_zw = $order_zw;
             $model->yg_ct = $order_ct;
             $model->sfz = $order_sfid;
-
             if($model->save())
             {
                 $this->msgsucc($msg);
                 $msg['msg'] = "创建成功";
+
+                $title = "【系统通知】违纪员工信息已录入，请您提交邮件审批申请！";
+                $body = $this->renderPartial('email',array(),true);
+                //sprintf("%s@yum.com",$this->getUserName())
+                $adArr1 = array();
+                array_push($adArr1,array("email"=>"277253251@qq.com","name"=>"熊方磊"));
+                //array_push($adArr1,array("email"=>"nicky.zeng@yum.com","name"=>"Zeng,Nicky"));
+                $this->postmail($adArr1,$title,$body);
+
             }else
             {
                 $msg['msg'] = "存入数据库异常";
@@ -543,7 +551,7 @@ class AdminorderController extends AdminSet
                 }
                 $adArr1 = array();
                 array_push($adArr1,array("email"=>"277253251@qq.com","name"=>"熊方磊"));
-                array_push($adArr1,array("email"=>"nicky.zeng@yum.com","name"=>"Zeng,Nicky"));
+                //array_push($adArr1,array("email"=>"nicky.zeng@yum.com","name"=>"Zeng,Nicky"));
                 return $this->postmail($adArr1,$title,$body);
             }else
             {

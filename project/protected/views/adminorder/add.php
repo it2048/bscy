@@ -7,27 +7,27 @@
             </p>
             <p class="nowrap">
                 <label>员工编号：</label>
-                <input  name="order_emid" type="text" readonly="readonly" size="20" value="">
+                <input  name="order_emid" type="text" size="20" value="">
             </p>
             <p class="nowrap">
                 <label>员工姓名：</label>
-                <input  name="order_name" type="text" readonly="readonly" size="20" value="">
+                <input  name="order_name" type="text" size="20" value="">
             </p>
             <p class="nowrap">
                 <label>职务：</label>
-                <input  name="order_zw" type="text" readonly="readonly" size="20" value="">
+                <input  name="order_zw" type="text"  size="20" value="">
             </p>
             <p class="nowrap">
                 <label>餐厅：</label>
-                <input  name="order_ct" type="text" readonly="readonly" size="30" value="">
+                <input  name="order_ct" type="text" size="30" value="">
             </p>
             <p class="nowrap">
                 <label>区经理：</label>
-                <input  name="order_qjl" type="text" readonly="readonly" size="20" value="">
+                <input  name="order_qjl" type="text" size="20" value="">
             </p>
             <p class="nowrap">
                 <label>区域经理：</label>
-                <input  name="order_qyjl" type="text" readonly="readonly" size="20" value="">
+                <input  name="order_qyjl" type="text" size="20" value="">
             </p>
             <p>
                 <label>违纪发生时间：</label>

@@ -130,6 +130,7 @@
                     <div class="pageFormContent" layoutH="80" style="margin-right:230px">
                         <div class="divider"></div>
                         <h2>系统一期说明文档:</h2><br/><br/>
+                        <a target="_blank" href="<?php echo Yii::app()->createAbsoluteUrl('home/index',array('id'=>3)); ?>"">共享文件夹查看</a>
 
 
 
