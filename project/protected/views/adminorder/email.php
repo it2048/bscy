@@ -112,62 +112,62 @@ echo $model->wj_jl;
     <tr style="height: 95px">
         <td width="72" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 72px;border-top-style: none;border-right-color: windowtext;border-bottom-color: windowtext;border-left-color: windowtext;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px;text-align: center">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">cduXXX</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->ct_no;?></span>
             </p>
         </td>
         <td width="72" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 72px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px;text-align: center">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">KFC</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->yg_ct;?></span>
             </p>
         </td>
         <td width="72" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 72px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px;text-align: center">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">AAA</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->qy_ji;?></span>
             </p>
         </td>
         <td width="72" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 72px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px;text-align: center">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">BBB</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->q_jl;?></span>
             </p>
         </td>
         <td width="72" nowrap="" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 72px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">　</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->emp_id;?></span>
             </p>
         </td>
         <td width="72" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 72px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px;text-align: center">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">CCC</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->yg_name;?></span>
             </p>
         </td>
         <td width="71" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 71px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px;text-align: center">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">XX</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->yg_ct;?></span>
             </p>
         </td>
         <td width="71" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 71px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px;text-align: center">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">服务员</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->yg_zw;?></span>
             </p>
         </td>
         <td width="109" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 109px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px;text-align: center">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">PT</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo TempList::$sf[$model->type];?></span>
             </p>
         </td>
         <td width="106" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 106px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">E-</span><span style="font-size: 13px;line-height: 15.3333320617676px">旷工</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px">E-</span><span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->wj_ly;?></span>
             </p>
         </td>
         <td width="130" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 130px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">E-1-</span><span style="font-size: 13px;line-height: 15.3333320617676px">旷工时间超过两日已排工时数（含两天）</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px">E-1-</span><span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->wj_tk;?></span>
             </p>
         </td>
         <td width="226" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 226px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">经查证你于<span>12</span>月<span>29</span>日至<span>12</span>月<span>30</span>日既未按班表上班又未履行任何请假手续，你旷工两天及以上的行为给营运造成严重影响。</span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->wj_sj;?></span>
             </p>
         </td>
     </tr>

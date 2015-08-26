@@ -109,7 +109,7 @@ class AdminorderController extends AdminSet
         }
         if(AppBsOrder::model()->updateAll($arr,"id in({$ids})"))
         {
-            if(in_array($stage,array(1,2,3)))
+            if(in_array($stage,array(1,2,3,4)))
             {
                 if($this->Mail($stage,$ids))
                     $this->msgsucc($msg);
@@ -539,16 +539,25 @@ class AdminorderController extends AdminSet
                 $body = "由于系统故障，误发了该邮件。收到请删除";
                 if($stage==1)
                 {
-                    $title = "审核通过";
-                    $body = "您提交的违纪处理申请资料已审核通过，已进入DM/AM审核阶段。<br><br><br>请邮寄纸质资料至：四川省成都市城市之心;<br><br>收件人：曾XX";
+                    $title = "【系统通知】违纪员工资料审核通过，请邮寄资料，催促DM/AM邮件批复！";
+                    $body = $this->renderPartial('shtgemail',array(),true);
+                    //$body = "您提交的违纪处理申请资料已审核通过，已进入DM/AM审核阶段。<br><br><br>请邮寄纸质资料至：四川省成都市城市之心;<br><br>收件人：曾XX";
                 }elseif($stage==2)
                 {
-                    $title = "审核通过";
-                    $body = "您提交的违纪处理申请资料AM/DM已审核通过，将进入盖章流程阶段。<br><br><br>生效日期请查看下表：<br>".$sx;
+                    $title = "【系统通知】违纪员工DM/AM审核通过，进入盖章流程";
+                    $body = "餐厅经理，您好！<br>
+                HR已确认您提交的员工违纪处理已通过DM/AM审批，目前已申请《劳动合同/劳务协议解除通知书》，进入盖章流程。请耐心等待。<br><br><br>生效日期请查看下表：<br>".$sx;
                 }elseif($stage==3)
                 {
-                    $title = "协议已邮寄";
-                    $body = "您提交的违纪处理申请已进入协议邮寄阶段。<br><br><br>协议已邮寄请餐厅注意签收，签收后返寄公司。";
+                    $title = "【系统通知】《解除劳动关系通知书》已送出，请注意签收，并联系员工签字并返回HR！";
+                    $body = $this->renderPartial('xyyjemail',array(),true);
+
+                    //$body = "您提交的违纪处理申请已进入协议邮寄阶段。<br><br><br>协议已邮寄请餐厅注意签收，签收后返寄公司。";
+                }elseif($stage==4)
+                {
+                    $title = "【系统通知】HR收到签收资料，本次违纪处理结案";
+                    $body = "餐厅经理，您好！<br><br>
+                HR已收到您返寄/递交的员工《解除劳动关系通知书》原件。本次违纪事件处理结束。谢谢。";
                 }
                 $adArr1 = array();
                 array_push($adArr1,array("email"=>"277253251@qq.com","name"=>"熊方磊"));

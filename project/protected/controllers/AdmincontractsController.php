@@ -348,8 +348,8 @@ class AdmincontractsController extends AdminSet
             }
             if(!empty($adArr))
             {
-                $title = "劳动合同追踪流程";
-                $body = "劳动合同已邮寄，请登录系统查看";
+                $title = "【系统通知】您餐厅近期劳动合同邮寄/转交通知，请注意查收！";
+                $body = $this->renderPartial('email',array(),true);
                 $adArr1 = array();
                 array_push($adArr1,array("email"=>"277253251@qq.com","name"=>"熊方磊"));
                 array_push($adArr1,array("email"=>"nicky.zeng@yum.com","name"=>"Zeng,Nicky"));
