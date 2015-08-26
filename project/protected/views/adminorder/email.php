@@ -157,7 +157,7 @@ echo $model->wj_jl;
         </td>
         <td width="106" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 106px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
             <p style="line-height: 13.8000001907349px">
-                <span style="font-size: 13px;line-height: 15.3333320617676px">E-</span><span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->wj_ly;?></span>
+                <span style="font-size: 13px;line-height: 15.3333320617676px">E-</span><span style="font-size: 13px;line-height: 15.3333320617676px"><?php echo $model->wj_lx;?></span>
             </p>
         </td>
         <td width="130" style="font-size: 12px;-webkit-font-smoothing: subpixel-antialiased;width: 130px;border-top-style: none;border-left-style: none;border-bottom-color: windowtext;border-bottom-width: 1px;border-right-color: windowtext;border-right-width: 1px;padding: 0 7px;height: 95px">
