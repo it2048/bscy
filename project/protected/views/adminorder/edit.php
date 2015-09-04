@@ -74,6 +74,10 @@
                 <textarea name="wj_jl" cols="50" rows="5"><?php echo $atpo->wj_jl;?></textarea>
             </p>
             <p class="nowrap">
+                <label>是否为特殊期员工，如工伤、孕期、产期、哺乳期、患有精神类疾病等：</label>
+                <textarea name="wj_yf" cols="50" rows="5"><?php echo $atpo->wj_yf;?></textarea>
+            </p>
+            <p class="nowrap">
                 <label>其他补充证据：（请列明，如派出所立案证明等）</label>
                 <textarea name="wj_zl" cols="50" rows="5"><?php echo $atpo->fj;?></textarea>
             </p>

@@ -69,7 +69,7 @@ class AdmincontentController extends AdminSet
         //先获取当前是否有页码信息
         $pages['pageNum'] = Yii::app()->getRequest()->getParam("pageNum", 1); //当前页
         $pages['countPage'] = Yii::app()->getRequest()->getParam("countPage", 0); //总共多少记录
-        $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 0); //每页多少条数据
+        $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 50); //每页多少条数据
 
 
         $pages['srh_email'] = Yii::app()->getRequest()->getParam("srh_email",""); //按名称查询
@@ -100,6 +100,12 @@ class AdmincontentController extends AdminSet
         $criteria->limit = $pages['numPerPage'];
         $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
         $allList = AppBsAdmin::model()->findAll($criteria);
+        if($pages['srh_email']==""&&$pages['srh_name']==""&&$pages['srh_tel']==""&&$pages['srh_dh_name']==""&&$pages['srh_ct_name']=="")
+        {
+            $pages['countPage'] = 0;
+            $allList = array();
+        }
+
         $this->renderPartial('search', array(
             'models' => $allList,
             'pages' => $pages),false,true);

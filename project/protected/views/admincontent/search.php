@@ -10,7 +10,7 @@
                         电话：<input type="text" name="srh_tel" class="textInput" value="<?php echo $pages['srh_tel'];?>">
                     </td>
                     <td>
-                        用户名：<input type="text" name="srh_email" class="textInput" value="<?php echo $pages['srh_email'];?>">
+                        邮箱名：<input type="text" name="srh_email" class="textInput" value="<?php echo $pages['srh_email'];?>">
                     </td>
                 </tr>
                 <tr>

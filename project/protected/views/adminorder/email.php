@@ -11,7 +11,7 @@
     <span style="font-size: 16px;line-height: 24px">请按照以下模板填写违纪处理申请邮件，并将您提交系统时勾选的材料拍照作为附件，</span><strong><span style="font-size: 16px;line-height: 24px;color: red">以邮件形式发送<span>AM/DM</span>审批，抄送<span>HR-ER</span></span></strong>
 </p>
 <p style="line-height: 21px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal">
-    <strong><span style="font-size: 16px;line-height: 24px;color: red">__________________________________________________________</span></strong><strong><span style="font-size: 16px;line-height: 24px;color: red">以下为邮件发送模板，请粘贴至邮件中发送<span>_______________________________________________________________________________</span></span></strong>
+    <strong><span style="font-size: 16px;line-height: 24px;color: red">_________________</span></strong><strong><span style="font-size: 16px;line-height: 24px;color: red">以下为邮件发送模板，请粘贴至邮件中发送<span>__________________________</span></span></strong>
 </p>
 <p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal">
     <span>AM/DM</span>，你们好！
@@ -180,17 +180,17 @@ echo $model->wj_jl;
     <strong><span style="color: red">三、附件说明（请将下方资料拍照，作为附件发送）：</span></strong>
 </p>
 <p style="line-height: 23.7999992370605px;font-family: &#39;lucida Grande&#39;, Verdana;font-size: 14px;white-space: normal;margin-left: 58px">
-    附件中包含如下资料：
-    1、 员工/证明人的面谈记录
+    附件中包含如下资料：<br>
+    1、 员工/证明人的面谈记录<br>
 
-    2、 服务组员工状况异动表
+    2、 服务组员工状况异动表<br>
 
-    3、 员工手册确认书
+    3、 员工手册确认书<br>
     <?php
     $tm = explode("\r\n", $wj);
     foreach($tm as $k=>$val)
     {
-        echo sprintf("%d、 %s",$k+1,$val);
+        echo sprintf("%d、 %s<br>",$k+1,$val);
     }
     ?>
 </p>

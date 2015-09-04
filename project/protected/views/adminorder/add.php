@@ -70,6 +70,10 @@
                 <label>请填写违纪结论（简述行为,例如：“经查证，你的XX行为给营运造成严重影响”）：</label>
                 <textarea name="wj_jl" cols="50" rows="5"></textarea>
             </p>
+            <p class="nowrap">
+                <label>是否为特殊期员工，如工伤、孕期、产期、哺乳期、患有精神类疾病等：</label>
+                <textarea name="wj_yf" cols="50" rows="5"></textarea>
+            </p>
             <div class="divider"></div>
             请勾选已有的证据和资料：<br>
             <p class="nowrap">

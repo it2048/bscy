@@ -214,6 +214,8 @@ class AdminorderController extends AdminSet
         $wj_sj = Yii::app()->getRequest()->getParam("wj_sj", ""); //违纪事件
         $wj_jl = Yii::app()->getRequest()->getParam("wj_jl", ""); //违纪结论
 
+        $wj_yf = Yii::app()->getRequest()->getParam("wj_yf", ""); //违纪孕妇
+
         $order_zj = Yii::app()->getRequest()->getParam("order_zj", ""); //违纪证据
         $wj_zl = Yii::app()->getRequest()->getParam("wj_zl", ""); //附加资料
 
@@ -237,6 +239,7 @@ class AdminorderController extends AdminSet
             $model->q_jl = $order_qjl;
             $model->qy_jl = $order_qyjl;
             $model->wj_lx = $order_wjlx;
+            $model->wj_yf = $wj_yf;
 
             $model->wj_tk = $order_wjtk;
             $model->wj_sj = $wj_sj;
@@ -321,6 +324,7 @@ class AdminorderController extends AdminSet
         $order_wjtk = Yii::app()->getRequest()->getParam("order_wjtk", ""); //违纪条款
         $wj_sj = Yii::app()->getRequest()->getParam("wj_sj", ""); //违纪事件
         $wj_jl = Yii::app()->getRequest()->getParam("wj_jl", ""); //违纪结论
+        $wj_yf = Yii::app()->getRequest()->getParam("wj_yf", ""); //违纪孕妇
 
         $wj_zl = Yii::app()->getRequest()->getParam("wj_zl", ""); //附加资料
 
@@ -343,6 +347,7 @@ class AdminorderController extends AdminSet
             $model->fj = $wj_zl;
             $model->admin = $this->getUserName();
             $model->ct_no = $this->getUserName();
+            $model->wj_yf = $wj_yf;
 
             $model->wj_time = strtotime($wj_time);
             $model->yg_name = $order_name;
