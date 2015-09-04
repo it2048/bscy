@@ -73,6 +73,13 @@ class AdminorderController extends AdminSet
         $model = AppBsOrder::model()->findByPk($id);
         $this->renderPartial('sx',array("model"=>$model));
     }
+
+    public function actionClr()
+    {
+        $id = Yii::app()->getRequest()->getParam("id", ""); //身份证
+        $model = AppBsOrder::model()->findByPk($id);
+        $this->renderPartial('clr',array("model"=>$model));
+    }
     public function actionSxsave()
     {
         $msg = $this->msgcode();
@@ -83,8 +90,10 @@ class AdminorderController extends AdminSet
 
         $time = strtotime($time);
         $tk = AppBsOrder::model()->findByPk($id);
-        $tk->sx_time = $time;
-        $tk->tz_email = $email;
+        if($time!="")
+            $tk->sx_time = $time;
+        if($email!="")
+            $tk->tz_email = $email;
         if($tk->save())
         {
             $this->msgsucc($msg);

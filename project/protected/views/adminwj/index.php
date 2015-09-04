@@ -14,9 +14,9 @@
             <th width="20">编号</th>
             <th width="120">违纪类型</th>
             <th width="120">违纪条款</th>
-            <th width="160">违纪案例</th>
+            <th width="100">违纪案例</th>
             <th width="200">违纪证据</th>
-            <th width="40">编辑</th>
+            <th width="60">编辑</th>
         </tr>
         </thead>
         <tbody>

@@ -14,7 +14,7 @@
 
         </ul>
     </div>
-    <table class="table" width="1060" layoutH="76">
+    <table class="table" width="1160" layoutH="76">
         <thead>
         <tr>
             <th width="22"><input type="checkbox" group="ids" class="checkboxCtrl"></th>
@@ -30,6 +30,8 @@
             <th width="60">违纪条款</th>
             <th width="120">违纪事件</th>
             <th width="120">违纪结论</th>
+            <th width="120">特殊期员工</th>
+
             <th width="100">补充证据</th>
             <th width="60">提交日期</th>
             <th width="60">生效日期</th>
@@ -37,7 +39,7 @@
             <th width="60">违纪时间</th>
             <th width="100">处理HR邮箱</th>
 
-            <th width="140">编辑</th>
+            <th width="220">编辑</th>
         </tr>
         </thead>
         <tbody>
@@ -55,6 +57,8 @@
                 <td title="<?php echo $value['wj_lx']; ?>"><?php echo $value['wj_lx']; ?></td>
                 <td title="<?php echo $value['wj_tk']; ?>"><?php echo $value['wj_tk']; ?></td>
                 <td title="<?php echo $value['wj_sj']; ?>"><?php echo $value['wj_sj']; ?></td>
+                <td title="<?php echo $value['wj_yf']; ?>"><?php echo $value['wj_yf']; ?></td>
+
                 <td title="<?php echo $value['wj_jl']; ?>"><?php echo $value['wj_jl']; ?></td>
                 <td title="<?php echo $value['fj']; ?>"><?php echo $value['fj']; ?></td>
                 <td><?php echo date("Y-m-d H:i:s",$value['tj_time']); ?></td>
@@ -66,6 +70,7 @@
                     <a title="确实要删除这条记录吗?" callback="deleteAuCall" target="ajaxTodo" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/del',array('id'=>$value['id'])); ?>" class="btnDel">删除</a>
                     <a title="编辑" mask="true" height="400" width="620" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/edit',array('id'=>$value['id'])); ?>" class="btnEdit">编辑</a>
                     <a title="添加生效日期" mask="true" height="300" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/sx',array('id'=>$value['id'])); ?>" class="btnAdd">添加生效日期</a>
+                    <a title="添加处理人" mask="true" height="300" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminorder/clr',array('id'=>$value['id'])); ?>" class="btnAssign">添加处理人</a>
 
                 </td>
             </tr>

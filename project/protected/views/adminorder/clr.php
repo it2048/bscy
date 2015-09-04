@@ -10,9 +10,9 @@
                 <label>违纪事件：</label>
                 <textarea name="wj_qyj" cols="40" rows="3"><?php echo $model->wj_sj;?></textarea>
             </p>
-            <p>
-                <label>生效日期：</label>
-                <input type="text" name="sx_time" size="18" class="date" dateFmt="yyyy-MM-dd HH:mm:ss" readonly="true" value="<?php echo empty($model->sx_time)?date('Y-m-d H:i:s'):date('Y-m-d H:i:s',$model->sx_time);?>"/>
+            <p class="nowrap">
+                <label>处理HR邮箱：</label>
+                <input  name="wj_email" type="text" class="textInput email" size="40" value="<?php echo $model->tz_email;?>">
             </p>
         </div>
         <div class="formBar">

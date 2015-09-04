@@ -26,6 +26,7 @@
  * @property string $yg_ct
  * @property string $tz_email
  * @property string $sfz
+ * @property string $wj_yf
  */
 class BsOrder extends CActiveRecord
 {
@@ -62,10 +63,10 @@ class BsOrder extends CActiveRecord
 			array('yg_name', 'length', 'max'=>36),
 			array('yg_zw', 'length', 'max'=>64),
 			array('sfz', 'length', 'max'=>24),
-			array('wj_sj, wj_jl, fj', 'safe'),
+			array('wj_sj, wj_jl, fj, wj_yf', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, emp_id, q_jl, qy_jl, wj_lx, wj_tk, wj_sj, wj_jl, fj, tj_time, sx_time, stage, admin, ct_no, type, ja_time, wj_time, yg_name, yg_zw, yg_ct, tz_email, sfz', 'safe', 'on'=>'search'),
+			array('id, emp_id, q_jl, qy_jl, wj_lx, wj_tk, wj_sj, wj_jl, fj, tj_time, sx_time, stage, admin, ct_no, type, ja_time, wj_time, yg_name, yg_zw, yg_ct, tz_email, sfz, wj_yf', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -108,6 +109,7 @@ class BsOrder extends CActiveRecord
 			'yg_ct' => 'Yg Ct',
 			'tz_email' => 'Tz Email',
 			'sfz' => 'Sfz',
+			'wj_yf' => 'Wj Yf',
 		);
 	}
 
@@ -144,6 +146,7 @@ class BsOrder extends CActiveRecord
 		$criteria->compare('yg_ct',$this->yg_ct,true);
 		$criteria->compare('tz_email',$this->tz_email,true);
 		$criteria->compare('sfz',$this->sfz,true);
+		$criteria->compare('wj_yf',$this->wj_yf,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

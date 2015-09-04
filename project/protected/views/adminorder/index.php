@@ -22,6 +22,8 @@
             <th width="60">违纪类型</th>
             <th width="60">违纪条款</th>
             <th width="120">违纪事件</th>
+            <th width="120">特殊期员工</th>
+
             <th width="120">违纪结论</th>
             <th width="100">补充证据</th>
             <th width="60">提交日期</th>
@@ -45,6 +47,8 @@
                 <td title="<?php echo $value['wj_lx']; ?>"><?php echo $value['wj_lx']; ?></td>
                 <td title="<?php echo $value['wj_tk']; ?>"><?php echo $value['wj_tk']; ?></td>
                 <td title="<?php echo $value['wj_sj']; ?>"><?php echo $value['wj_sj']; ?></td>
+                <td title="<?php echo $value['wj_yf']; ?>"><?php echo $value['wj_yf']; ?></td>
+
                 <td title="<?php echo $value['wj_jl']; ?>"><?php echo $value['wj_jl']; ?></td>
                 <td title="<?php echo $value['fj']; ?>"><?php echo $value['fj']; ?></td>
                 <td><?php echo date("Y-m-d H:i:s",$value['tj_time']); ?></td>

@@ -190,13 +190,10 @@ echo $model->wj_jl;
     $tm = explode("\r\n", $wj);
     foreach($tm as $k=>$val)
     {
-        echo sprintf("%d、 %s<br>",$k+1,$val);
+        echo sprintf("%d、 %s<br>",$k+4,$val);
     }
     ?>
 </p>
-<?php
-echo $wj;
-?>
 <p>
     <strong><span style="color: red"><br/></span></strong>
 </p>
