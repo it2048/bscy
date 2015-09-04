@@ -4,43 +4,21 @@
             <table class="searchContent">
                 <tbody><tr>
                     <td>
-                        用户名：<input type="text" name="srh_email" class="textInput" value="<?php echo $pages['srh_email'];?>">
-                    </td>
-                    <td>
                         姓名：<input type="text" name="srh_name" class="textInput" value="<?php echo $pages['srh_name'];?>">
                     </td>
                     <td>
                         电话：<input type="text" name="srh_tel" class="textInput" value="<?php echo $pages['srh_tel'];?>">
                     </td>
                     <td>
-                        工作地点：<input type="text" name="srh_dep_name" class="textInput" value="<?php echo $pages['srh_dep_name'];?>">
+                        用户名：<input type="text" name="srh_email" class="textInput" value="<?php echo $pages['srh_email'];?>">
                     </td>
                 </tr>
                 <tr>
-
                     <td>
                         店号：<input type="text" name="srh_dh_name" class="textInput" value="<?php echo $pages['srh_dh_name'];?>">
                     </td>
                     <td>
                         餐厅名称：<input type="text" name="srh_ct_name" class="textInput" value="<?php echo $pages['srh_ct_name'];?>">
-                    </td>
-                    <td>
-                        详细信息：<input type="text" name="srh_det" class="textInput" value="<?php echo $pages['srh_det'];?>">
-                    </td>
-                    <td>
-                        类型：
-                        <select name="srh_type">
-                            <?php
-                            foreach(TempList::$Type as $k=>$val)
-                            {
-                                $str = $k==$pages['srh_type']?"selected":"";
-                                if($k!=0)
-                                    echo sprintf('<option value="%s" %s>%s</option>',$k,$str,$val);
-                                else
-                                    echo "<option value='0' {$str}>所有</option>";
-                            }
-                            ?>
-                        </select>
                     </td>
                     <td>
                         <div class="buttonActive"><div class="buttonContent"><button type="submit">搜索</button></div></div>
