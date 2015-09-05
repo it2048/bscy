@@ -97,6 +97,8 @@
                                 <?php NavigatorHelper::getInstance()->printNavigator('admincol/admin', 'admincoln', 'COL数据导入'); ?>
 
                                 <?php NavigatorHelper::getInstance()->printNavigator('adminhys/index', 'hysindex', '会议室设置'); ?>
+                                <?php NavigatorHelper::getInstance()->printNavigator('adminhys/admin', 'hysadmin', '会议室预定管理'); ?>
+
                             </ul>
                         </li>
                         <li><a href="#">权限管理</a>

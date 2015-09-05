@@ -139,6 +139,24 @@ class AdminhysController extends AdminSet
         }
         echo json_encode($msg);
     }
+    public function actionDelor()
+    {
+        $msg = $this->msgcode();
+        $id = Yii::app()->getRequest()->getParam("id", 0); //用户名
+        if($id!=0)
+        {
+            if(AppBsDhy::model()->deleteByPk($id))
+            {
+                $this->msgsucc($msg);
+            }
+            else
+                $msg['msg'] = "数据删除失败";
+        }else
+        {
+            $msg['msg'] = "id不能为空";
+        }
+        echo json_encode($msg);
+    }
 
 
     /**
@@ -179,6 +197,41 @@ class AdminhysController extends AdminSet
     /**
      * 幻灯片管理
      */
+    public function actionAdmin()
+    {
+        //print_r(Yii::app()->user->getState('username'));
+        //先获取当前是否有页码信息
+        $pages['pageNum'] = Yii::app()->getRequest()->getParam("pageNum", 1); //当前页
+        $pages['countPage'] = Yii::app()->getRequest()->getParam("countPage", 0); //总共多少记录
+        $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 50); //每页多少条数据
+        $pages['hys_time'] = Yii::app()->getRequest()->getParam("hys_time",date('Ymd')); //每页多少条数据
+
+
+        $criteria = new CDbCriteria;
+        $pages['countPage'] = AppBsHys::model()->count($criteria);
+        $criteria->limit = $pages['numPerPage'];
+        $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
+        $criteria->order = 'id DESC';
+        $allList = AppBsHys::model()->findAll($criteria);
+
+        $model = AppBsDhy::model()->findAll("d_time={$pages['hys_time']}");
+        $tk = array();
+        foreach($model as $val)
+        {
+            if(!isset($tk[$val->hys_no]))
+                $tk[$val->hys_no] = array();
+            array_push($tk[$val->hys_no],array("k"=>$val->st_time,"j"=>$val->sp_time));
+        }
+
+        $this->renderPartial('admin', array(
+            'models' => $allList,
+            'tm'=>$tk,
+            'pages' => $pages),false,true);
+    }
+
+    /**
+     * 幻灯片管理
+     */
     public function actionDetail()
     {
         //print_r(Yii::app()->user->getState('username'));
@@ -207,7 +260,34 @@ class AdminhysController extends AdminSet
             'hys'=>$hys,
             'pages' => $pages),false,true);
     }
+    public function actionAdmind()
+    {
+        //print_r(Yii::app()->user->getState('username'));
+        //先获取当前是否有页码信息
+        $pages['pageNum'] = Yii::app()->getRequest()->getParam("pageNum", 1); //当前页
+        $pages['countPage'] = Yii::app()->getRequest()->getParam("countPage", 0); //总共多少记录
+        $pages['numPerPage'] = Yii::app()->getRequest()->getParam("numPerPage", 500); //每页多少条数据
+        $pages['hys_time'] = Yii::app()->getRequest()->getParam("hysyd_time",date('Ymd')); //每页多少条数据
 
+        $pages['id'] = Yii::app()->getRequest()->getParam("id",0); //会议室编号
+
+        $criteria = new CDbCriteria;
+        $criteria->addCondition("hys_no={$pages['id']}");
+        $criteria->addCondition("d_time={$pages['hys_time']}");
+
+        $pages['countPage'] = AppBsDhy::model()->count($criteria);
+        $criteria->limit = $pages['numPerPage'];
+        $criteria->offset = $pages['numPerPage'] * ($pages['pageNum'] - 1);
+        $criteria->order = 'id DESC';
+        $allList = AppBsDhy::model()->findAll($criteria);
+
+        $hys = AppBsHys::model()->findByPk($pages['id']);
+
+        $this->renderPartial('admin_d', array(
+            'models' => $allList,
+            'hys'=>$hys,
+            'pages' => $pages),false,true);
+    }
 
 
     /**
