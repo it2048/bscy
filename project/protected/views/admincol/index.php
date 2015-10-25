@@ -36,6 +36,7 @@
     <div class="panelBar">
         <ul class="toolBar">
             <li><a title="导出数据" mask="true" height="200" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('admincol/export'); ?>" class="icon"><span>导出数据</span></a></li>
+            <li><a title="导出异常工时" mask="true" height="200" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('admincol/ycexport'); ?>" class="icon"><span>导出异常工时</span></a></li>
         </ul>
     </div>
     <table class="table" width="2060" layoutH="112">
@@ -75,6 +76,13 @@
                         $mkl = array_slice($mkl,$head['min'],$head['max']);
                     foreach($mkl as $bl)
                     {
+                        echo sprintf('<td>%s</td>',$bl);
+                    }
+                }else
+                {
+                    foreach($mkl as $k=>$bl)
+                    {
+                        if($k<4)continue;
                         echo sprintf('<td>%s</td>',$bl);
                     }
                 }

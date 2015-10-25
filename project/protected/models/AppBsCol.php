@@ -89,7 +89,7 @@ class AppBsCol extends BsCol
         $dec = json_encode($sendArr2);
 
 
-        $model = AppBsColi::model()->findByPk($month);
+        $model = AppBsColi::model()->find("type=0 and month={$month}");
         if(empty($model))
         {
             $model = new AppBsColi();

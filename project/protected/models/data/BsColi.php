@@ -4,12 +4,23 @@
  * This is the model class for table "bs_coli".
  *
  * The followings are the available columns in table 'bs_coli':
+ * @property integer $id
  * @property integer $month
  * @property string $desc
  * @property integer $type
  */
 class BsColi extends CActiveRecord
 {
+	/**
+	 * Returns the static model of the specified AR class.
+	 * @param string $className active record class name.
+	 * @return BsColi the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -30,8 +41,8 @@ class BsColi extends CActiveRecord
 			array('month, type', 'numerical', 'integerOnly'=>true),
 			array('desc', 'safe'),
 			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('month, desc, type', 'safe', 'on'=>'search'),
+			// Please remove those attributes that should not be searched.
+			array('id, month, desc, type', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,6 +63,7 @@ class BsColi extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'id' => 'ID',
 			'month' => 'Month',
 			'desc' => 'Desc',
 			'type' => 'Type',
@@ -60,22 +72,16 @@ class BsColi extends CActiveRecord
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function search()
 	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('id',$this->id);
 		$criteria->compare('month',$this->month);
 		$criteria->compare('desc',$this->desc,true);
 		$criteria->compare('type',$this->type);
@@ -83,16 +89,5 @@ class BsColi extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-
-	/**
-	 * Returns the static model of the specified AR class.
-	 * Please note that you should have this exact method in all your CActiveRecord descendants!
-	 * @param string $className active record class name.
-	 * @return BsColi the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
 	}
 }
