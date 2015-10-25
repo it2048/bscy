@@ -588,16 +588,16 @@ class AdminorderController extends AdminSet
 
         $mail = new PHPMailer(); //实例化
         $mail->IsSMTP(); // 启用SMTP
-        $mail->Host = "smtp.163.com"; //SMTP服务器 以163邮箱为例子
-        $mail->Port = 25;  //邮件发送端口
+        $mail->Host = Yii::app()->params['smtp']; //SMTP服务器 以163邮箱为例子
+        $mail->Port = Yii::app()->params['port'];  //邮件发送端口
         $mail->SMTPAuth   = true;  //启用SMTP认证
         $mail->CharSet  = "UTF-8"; //字符集
         $mail->Encoding = "base64"; //编码方式
 
-        $mail->Username = "it2048@163.com";  //你的邮箱
-        $mail->Password = "lnrxmvauvzdeujjy";  //你的密码
+        $mail->Username = Yii::app()->params['email'];  //你的邮箱
+        $mail->Password = Yii::app()->params['pass'];  //你的密码
         $mail->Subject = $Subject; //邮件标题
-        $mail->From = "it2048@163.com";  //发件人地址（也就是你的邮箱）
+        $mail->From = Yii::app()->params['email'];  //发件人地址（也就是你的邮箱）
         $mail->FromName = "办公系统";  //发件人姓名
         if(is_array($address))
         {
