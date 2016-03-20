@@ -3,6 +3,9 @@
 class HomeController extends Controller
 {
 
+    public $layout = '//layouts/wx';
+
+
     public function actionIndex()
     {
         $id = Yii::app()->getRequest()->getParam("id", ""); //月份
@@ -44,6 +47,15 @@ class HomeController extends Controller
         } else {
             return true;
         }
+    }
+
+    public function actionW()
+    {
+        return $this->render('weui');
+    }
+    public function actionEdit()
+    {
+        return $this->render('edit');
     }
 
 }
