@@ -14,7 +14,7 @@
         </p>
 
     </div>
-
-            <a href="<?php echo Yii::app()->createAbsoluteUrl('home/edit'); ?>" class="weui_btn weui_btn_primary">我要挑战</a>
-
+    <div style="margin-bottom: 20px;">
+    <a href="<?php echo Yii::app()->createAbsoluteUrl('home/edit'); ?>" class="weui_btn weui_btn_primary">我要挑战</a>
+</div>
 </div>
