@@ -5,7 +5,7 @@
 
         <p class="weui_msg_desc">
             <img width="160" height="160" style="border-radius:80px;width: 160px;height: 160px;"
-                 src="/bscy/project/public/img/panda.png">
+                 src="/bscy/project/public/img/panda.jpg">
         </p><br>
         <h4>擂主：熊方磊 <br>  工作地址：春熙路</h4>
         <br>
