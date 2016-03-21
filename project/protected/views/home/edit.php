@@ -18,7 +18,7 @@
     </div>
     <div class="weui_cell weui_cell_select weui_select_after">
         <div class="weui_cell_hd">
-            选择挑战人
+            选择工作站
         </div>
         <div class="weui_cell_bd weui_cell_primary">
             <select class="weui_select" name="select1">
