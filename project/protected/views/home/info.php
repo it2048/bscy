@@ -244,5 +244,23 @@
             }
         });
 
+        $("#del").on("click",function(){
+            $.ajax({
+                url: '<?=Yii::app()->createAbsoluteUrl('home/del',array("id"=>$model->id)); ?>',
+                type: 'POST',
+                dataType: "json",
+                success: function(data) {
+                    if(data.code==0)
+                    {
+                        window.location.href = data.data;
+                    }else{
+                        palert('发现一个问题',data.msg);
+
+                    }
+                }
+            });
+
+        });
+
     });
 </script>

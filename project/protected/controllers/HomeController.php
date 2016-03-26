@@ -38,6 +38,28 @@ class HomeController extends Controller
         return $this->render('edit');
     }
 
+    public function actionDel()
+    {
+        $id = intval(trim(Yii::app()->request->getParam("id",0)));  //店号
+        $uname = $this->getU();
+        $area = Arena::model()->findByPk($id);
+        if(!empty($area)&&$uname != $area->sno){
+            $msg['msg'] = "您没权限操作";
+        }else
+        {
+            $path = Yii::app()->basePath . '/../public/';
+            if(!empty($area)&&!empty($area->simg)&&file_exists($path.$area->simg)){
+               unlink($path.$area->simg);
+            }
+            if(!empty($area))
+            {
+                $area->delete();
+                $this->msgsucc($msg);
+            }
+        }
+        echo json_encode($msg);
+    }
+
     /**
      * 保存编辑内容
      *
@@ -182,38 +204,61 @@ class HomeController extends Controller
         echo json_encode($msg);
     }
 
-    public function actionCate()
-    {
+    public function getU(){
         $uname = Yii::app()->user->getState('username');
-        if(!empty($uname)){
-            $model = Arena::model()->findAll("sno = :sno order by addtime desc",array(":sno"=>$uname));
-            $arr = ['tb0'=>[],'tb1'=>[]];
-            foreach($model as $val){
-                array_push($arr['tb'.$val->publish],
-                    [
-                        'id' => $val->id,
-                        'sname' => $val->sname,
-                        'scate' => $val->scate,
-                        'addtime' => $val->addtime
-                    ]);
+        if(empty($uname))
+        {
+            if(!Yii::app()->request->isAjaxRequest)
+            {
+                $this->redirect (Yii::app ()->createAbsoluteUrl ('home/login'));
+                die();
+            }else{
+                echo json_encode([
+                    'code' => 99,
+                    'msg' => '无权限',
+                    'data' => null
+                ]);
+                die();
             }
-            return $this->render('cate',array('model'=>$arr));
         }else
         {
-            $this->redirect (Yii::app ()->createAbsoluteUrl ('home/login'));
+            return $uname;
         }
+
+    }
+
+    public function actionCate()
+    {
+        $uname = $this->getU();
+
+        $model = Arena::model()->findAll("sno = :sno order by addtime desc",array(":sno"=>$uname));
+        $arr = ['tb0'=>[],'tb1'=>[]];
+        foreach($model as $val){
+            array_push($arr['tb'.$val->publish],
+                [
+                    'id' => $val->id,
+                    'sname' => $val->sname,
+                    'scate' => $val->scate,
+                    'addtime' => $val->addtime
+                ]);
+        }
+        return $this->render('cate',array('model'=>$arr));
+
     }
 
     public function actionInfo()
     {
         $id = intval(Yii::app()->request->getParam("id","")); //编号
-        $uname = Yii::app()->user->getState('username');
-        if(!empty($uname)){
-            $model = Arena::model()->find("sno = :sno and id = :id",array(":sno"=>$uname,":id"=>$id));
-            return $this->render('info',array('model'=>$model));
+        $uname = $this->getU();
+        $model = Arena::model()->find("sno = :sno and id = :id",array(":sno"=>$uname,":id"=>$id));
+        if(empty($model))
+        {
+            $this->redirect (Yii::app ()->createAbsoluteUrl ('home/cate'));
+
         }else
         {
-            $this->redirect (Yii::app ()->createAbsoluteUrl ('home/login'));
+            return $this->render('info',array('model'=>$model));
+
         }
     }
 
@@ -223,8 +268,7 @@ class HomeController extends Controller
         $msg = array("code" => 1, "msg" => "上传失败", "obj" => NULL);
         $id = intval(Yii::app()->request->getParam("id","")); //编号
         $img = trim(Yii::app()->request->getParam("img","")); //编号
-        $uname = Yii::app()->user->getState('username');
-        if(!empty($uname)){
+        $uname = $this->getU();
             $model = Arena::model()->find("sno = :sno and id = :id",array(":sno"=>$uname,":id"=>$id));
             if(empty($model))
             {
@@ -257,10 +301,6 @@ class HomeController extends Controller
                     $msg["msg"] = '上传的图片不能为空';
                 }
             }
-        }else
-        {
-            $msg["msg"] = '您没有权限上传头像';
-        }
         echo json_encode($msg);
     }
 
@@ -286,6 +326,7 @@ class HomeController extends Controller
         }
         else
         {
+            $uname = $this->getU();
             $area = Arena::model()->findByPk($id);
             if(empty($area))
             {
@@ -293,6 +334,8 @@ class HomeController extends Controller
             }elseif(!file_exists(Yii::app()->basePath . '/../public/'.$img))
             {
                 $msg['msg'] = "请上传图片";
+            }elseif($uname != $area->sno){
+                $msg['msg'] = "您没权限操作";
             }
             else
             {

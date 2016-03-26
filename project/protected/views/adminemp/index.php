@@ -21,6 +21,9 @@
     <div class="panelBar">
         <ul class="toolBar">
             <li><a title="导入数据" mask="true" height="200" target="dialog" href="<?php echo Yii::app()->createAbsoluteUrl('adminemp/vimport'); ?>" class="add"><span>导入数据</span></a></li>
+            <li>
+                <a title="确实要删除所有记录吗?" callback="deleteAuCall" target="ajaxTodo" href="<?php echo Yii::app()->createAbsoluteUrl('adminemp/del'); ?>" class="delete"><span>清空数据</span></a>
+            </li>
         </ul>
     </div>
     <table class="table" width="1060" layoutH="110">
