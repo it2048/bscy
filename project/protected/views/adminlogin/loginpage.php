@@ -91,8 +91,8 @@
             type: 'POST',
             url: _url,
             data: _param,
-            success: function(data) {
-                var obj = jQuery.parseJSON(data);
+            dataType: "json",
+            success: function(obj) {
                 if (obj.code == 0)
                     window.location.href = "<?php echo Yii::app()->createAbsoluteUrl('admincontent/index'); ?>/";
                 else
