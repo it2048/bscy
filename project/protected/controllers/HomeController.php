@@ -93,7 +93,7 @@ class HomeController extends Controller
             $chk = $this->createAction('captcha')->getVerifyCode();
             //刷新前端验证码
             $this->createAction('captcha')->getVerifyCode(true);
-            if(strtolower($chk)==strtolower($scode))
+            if(strtolower($chk) != strtolower($scode))
             {
                 $msg["msg"] = "验证码错误，请点击图片刷新重试";
             }else
