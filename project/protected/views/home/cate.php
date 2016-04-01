@@ -16,7 +16,6 @@
 <div class="weui_tab">
     <div class="weui_tab_bd">
         <div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
-            <div class="weui_cells weui_cells_access">
                 <?php foreach($model['tb0'] as $val){?>
                 <a class="weui_cell" href="<?=Yii::app()->createAbsoluteUrl('home/info',['id'=>$val['id']]); ?>">
                     <div class="weui_cell_bd weui_cell_primary">
@@ -25,7 +24,6 @@
                     <div class="weui_cell_ft"><?=date('Y/m/d',$val['addtime'])?></div>
                 </a>
                 <?php }?>
-            </div>
         </div>
         <div id="tab2" class="weui_tab_bd_item">
             <?php foreach($model['tb1'] as $val){?>
@@ -43,13 +41,13 @@
             <div class="weui_tabbar_icon">
                 <img src="<?=Yii::app()->request->baseUrl."/public/home/" ?>img/icon_nav_article.png" alt="">
             </div>
-            <p class="weui_tabbar_label">申请列表</p>
+            <p class="weui_tabbar_label">申请列表(总数:<?=count($model['tb0'])?>)</p>
         </a>
         <a href="#tab2" id="tba2" class="weui_tabbar_item">
             <div class="weui_tabbar_icon">
                 <img src="<?=Yii::app()->request->baseUrl."/public/home/" ?>img/icon_nav_cell.png" alt="">
             </div>
-            <p class="weui_tabbar_label">已分享</p>
+            <p class="weui_tabbar_label">已分享列表(总数:<?=count($model['tb1'])?>)</p>
         </a>
 
     </div>

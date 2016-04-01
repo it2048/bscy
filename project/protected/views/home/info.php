@@ -26,7 +26,7 @@
     <?php
     if($model->simg != '')
     {
-        echo sprintf("<img width='77' height='77' src='%s/public/%s'><br>",Yii::app()->request->baseUrl,$model->simg);
+        echo sprintf("<img width='77' style='margin-left: 40%%' height='77' src='%s/public/%s'><br>",Yii::app()->request->baseUrl,$model->simg);
     }
     ?>
     <div class="weui_cell">

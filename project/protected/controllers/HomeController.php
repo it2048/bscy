@@ -19,6 +19,17 @@ class HomeController extends Controller
         );
     }
 
+    public function filters()
+    {
+        return array(
+            array(
+                'COutputCache+w',
+                'duration'=>300,
+                'varyByParam'=>array('id'),
+            ),
+        );
+    }
+
     public function actionW()
     {
         $id = intval(trim(Yii::app()->request->getParam("id",0)));  //店号
@@ -355,6 +366,11 @@ class HomeController extends Controller
 
         }
         echo json_encode($msg);
+    }
+
+    public function actionError()
+    {
+        echo '无权限访问该接口';die();
     }
 
 }
