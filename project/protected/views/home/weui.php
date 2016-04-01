@@ -3,6 +3,7 @@
         <div class="ui-flex ui-flex-pack-start">
             <div class="tx-img">
                 <img src="<?=Yii::app()->request->baseUrl.'/public/'.$model->simg?>">
+                <div class="span-name">擂主:<?=$model->sname?><br><div class="span-gzz"><?=TempList::$arena[$model['scate']]?>工作站</div></div>
             </div>
             <div class="span-xy">宣言：<?=mb_strcut($model->sdesc,0,68*3,'UTF-8')?></div>
         </div>
