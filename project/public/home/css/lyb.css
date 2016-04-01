@@ -152,6 +152,8 @@
     text-align: center;
     cursor:pointer;
     margin-top: 2.6%;
+    -webkit-animation: arrowGo 1.2s infinite steps(90, end);
+    animation: arrowGo 1.2s infinite steps(90, end);
 }
 
 .button-tz .span-zg{
@@ -228,4 +230,31 @@ select {
     text-align: center;
     color: rgb(255, 225, 132);
     font-size: 20px;
+}
+
+@-webkit-keyframes arrowGo {
+    0% {
+        opacity: 1;
+        transform-origin: center center;
+        margin-top: 0px;
+    }
+    100% {
+        opacity: 0.6;
+        transform-origin: center center;
+        margin-top: 10px;
+
+    }
+}
+@keyframes arrowGo {
+    0% {
+        opacity: 1;
+        transform-origin: center center;
+        margin-top: 0px;
+    }
+    100% {
+        opacity: 0.6;
+        transform-origin: center center;
+        margin-top: 10px;
+
+    }
 }
