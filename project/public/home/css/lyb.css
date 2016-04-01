@@ -89,8 +89,9 @@
     box-sizing: border-box;
 }
 .ui-flex{
+    height: 160px;
+    margin-bottom: 4%;
     padding: 0px 14%;
-    margin-top: 30%;
 }
 .ui-flex-ver{
     border: 1px solid #ddd;
@@ -135,7 +136,7 @@
     line-height: 1.474;
     position: absolute;
     width: 73%;
-    height: 22%;
+    height: 18%;
     overflow:hidden;
 }
 
@@ -227,6 +228,7 @@ select {
     color: rgb(255, 225, 132);
     font-size: 20px;
 }
+
 .ggg{
     background-image: url("../img/g.png");
     background-repeat: no-repeat;
@@ -271,7 +273,7 @@ select {
 @-webkit-keyframes gGo {
     0% {
         transform-origin: center center;
-        margin-top: -40px;
+        margin-top: -30px;
     }
     50% {
         transform-origin: center center;
@@ -279,7 +281,7 @@ select {
     }
     100% {
         transform-origin: center center;
-        margin-top: -40px;
+        margin-top: -30px;
 
     }
 }
@@ -287,15 +289,15 @@ select {
 @keyframes gGo {
     0% {
         transform-origin: center center;
-        margin-top: -25px;
+        margin-top: -30px;
     }
     50% {
         transform-origin: center center;
-        margin-top: 25px;
+        margin-top: 10px;
     }
     100% {
         transform-origin: center center;
-        margin-top: -25px;
+        margin-top: -30px;
 
     }
 }

@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="ui-col">
-                    <div class="ggg"></div>
+<div class="ggg"></div>
                 </div>
             </div>
 
