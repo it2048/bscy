@@ -228,7 +228,13 @@ select {
     color: rgb(255, 225, 132);
     font-size: 20px;
 }
-
+.gfooter {
+    height: 200px;
+    position: fixed;
+    width: 100%;
+    top: 80%;
+    margin-left: 20%;
+}
 .ggg{
     background-image: url("../img/g.png");
     background-repeat: no-repeat;
