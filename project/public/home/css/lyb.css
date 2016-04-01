@@ -1,5 +1,5 @@
 .w-body{
-    background-image: url("../img/bg.jpg");
+    background-image: url("../img/bg.png");
     background-repeat: no-repeat;
     width:100%;height:auto;
     background-size:cover;
@@ -85,10 +85,8 @@
 }
 .ui-col{
     padding: 5px;
-    background: #777;
     text-align: center;
     box-sizing: border-box;
-    border: 1px solid #ddd;
 }
 .ui-flex{
     height: 160px;
@@ -101,7 +99,6 @@
     margin-bottom: 10px;
 }
 .ui-row-flex-ver{
-    border: 1px solid #ddd;
     min-height: 100px;
 }
 .test-img {
@@ -152,8 +149,8 @@
     text-align: center;
     cursor:pointer;
     margin-top: 2.6%;
-    -webkit-animation: arrowGo 1.2s infinite steps(90, end);
-    animation: arrowGo 1.2s infinite steps(90, end);
+    -webkit-animation: arrowGo 1.2s infinite steps(120, end);
+    animation: arrowGo 1.2s infinite steps(120, end);
 }
 
 .button-tz .span-zg{
@@ -232,29 +229,61 @@ select {
     font-size: 20px;
 }
 
+.ggg{
+    background-image: url("../img/g.png");
+    background-repeat: no-repeat;
+    height: 100px;
+    background-size: contain;
+    margin-left: 110px;
+    margin-top: -20px;
+    -webkit-animation: gGo 1s infinite steps(120, end);
+    animation: gGo 1s infinite steps(120, end);
+}
+
 @-webkit-keyframes arrowGo {
     0% {
         opacity: 1;
         transform-origin: center center;
         margin-top: 0px;
     }
-    100% {
+    50% {
         opacity: 0.6;
         transform-origin: center center;
         margin-top: 10px;
-
     }
-}
-@keyframes arrowGo {
-    0% {
+    100% {
         opacity: 1;
         transform-origin: center center;
         margin-top: 0px;
     }
+}
+@keyframes arrowGo {
+    0% {
+        opacity: 0.7;
+        transform-origin: left top;
+    }
+    50% {
+        opacity: 1;
+        transform-origin: center center;
+    }
     100% {
-        opacity: 0.6;
+        opacity: 0.7;
+        transform-origin: right bottom;
+    }
+}
+
+@keyframes gGo {
+    0% {
+        transform-origin: center center;
+        margin-top: -30px;
+    }
+    50% {
         transform-origin: center center;
         margin-top: 10px;
+    }
+    100% {
+        transform-origin: center center;
+        margin-top: -30px;
 
     }
 }

@@ -9,9 +9,20 @@
             <div class="span-xy">宣言：<?=mb_strcut($model->sdesc,0,68*3,'UTF-8')?></div>
         </div>
         <div class="ui-flex ui-flex-pack-center">
-            <div class="button-tz">
-                <a href="<?php echo Yii::app()->createAbsoluteUrl('home/edit'); ?>"><span class="span-zg">击打战鼓，我要挑擂！</span></a>
+
+            <div class="ui-row-flex ui-whitespace ui-row-flex-ver">
+                <div class="ui-col">
+                    <div class="button-tz">
+                        <a href="<?php echo Yii::app()->createAbsoluteUrl('home/edit'); ?>"><span class="span-zg">击打战鼓，我要挑擂！</span></a>
+                    </div>
+                </div>
+                <div class="ui-col">
+<div class="ggg"></div>
+                </div>
             </div>
+
+
         </div>
-    </div>
-    </body>
+
+</div>
+</body>

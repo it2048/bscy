@@ -13,6 +13,7 @@
     }
 
 </style>
+<body>
 <div class="weui_tab">
     <div class="weui_tab_bd">
         <div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
@@ -77,3 +78,5 @@
         });
     });
 </script>
+
+</body>

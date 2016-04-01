@@ -1,3 +1,4 @@
+<body>
 <div class="weui_cells weui_cells_form">
     <div class="weui_cell">
         <div class="weui_cell_hd"><label class="weui_label">店号</label></div>
@@ -264,3 +265,4 @@
 
     });
 </script>
+</body>
