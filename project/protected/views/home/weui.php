@@ -1,21 +1,15 @@
-<div class="weui_msg">
-    <div class="weui_text_area">
-        <h2 class="weui_msg_title"><?=$model->ctname?></h2>
 
-
-        <p class="weui_msg_desc">
-            <img width="160" height="160" style="border-radius:80px;width: 160px;height: 160px;"
-                 src="<?=Yii::app()->request->baseUrl.'/public/'.$model->simg?>">
-        </p><br>
-        <h4>擂主：<?=$model->sname?> <br>  工作站：<?=TempList::$arena[$model['scate']]?>
-        </h4>
-        <br>
-        <p class="weui_msg_desc" style="text-align: left;">
-            <?=$model->sdesc?>
-        </p>
-
+    <div class="demo-block">
+        <div class="ui-flex ui-flex-pack-start">
+            <div class="tx-img">
+                <img src="<?=Yii::app()->request->baseUrl.'/public/'.$model->simg?>">
+                <div class="span-name">擂主:<?=$model->sname?><br><div class="span-gzz"><?=TempList::$arena[$model['scate']]?>工作站</div></div>
+            </div>
+            <div class="span-xy">宣言：<?=mb_strcut($model->sdesc,0,68*3,'UTF-8')?></div>
+        </div>
+        <div class="ui-flex ui-flex-pack-center">
+            <div class="button-tz">
+                <a href="<?php echo Yii::app()->createAbsoluteUrl('home/edit'); ?>"><span class="span-zg">击打战鼓，我要挑擂！</span></a>
+            </div>
+        </div>
     </div>
-    <div style="margin-bottom: 40px;">
-    <a href="<?php echo Yii::app()->createAbsoluteUrl('home/edit'); ?>" class="weui_btn weui_btn_primary">我要挑战</a>
-</div>
-</div>
