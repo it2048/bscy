@@ -90,7 +90,7 @@
 }
 .ui-flex{
     height: 160px;
-    margin-bottom: 6%;
+    margin-bottom: 4%;
     padding: 0px 14%;
 }
 .ui-flex-ver{
@@ -235,7 +235,8 @@ select {
     height: 100px;
     background-size: contain;
     margin-left: 110px;
-    margin-top: -20px;
+    bottom: 10%;
+    position: relative;
     -webkit-animation: gGo 1s infinite steps(120, end);
     animation: gGo 1s infinite steps(120, end);
 }
