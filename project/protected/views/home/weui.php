@@ -1,5 +1,6 @@
+<body class="w-body">
 
-    <div class="demo-block">
+<div class="demo-block">
         <div class="ui-flex ui-flex-pack-start">
             <div class="tx-img">
                 <img src="<?=Yii::app()->request->baseUrl.'/public/'.$model->simg?>">
@@ -13,3 +14,4 @@
             </div>
         </div>
     </div>
+    </body>

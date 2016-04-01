@@ -1,40 +1,35 @@
-<div class="weui_msg">
-    <div class="weui_text_area">
-        <h2 class="weui_msg_title">我要挑战</h2>
-    </div>
+<body class="e-body">
+<div class="top">
+
 </div>
-<div class="weui_cells weui_cells_form">
-    <div class="weui_cell">
-        <div class="weui_cell_hd"><label class="weui_label">店号</label></div>
-        <div class="weui_cell_bd weui_cell_primary">
-            <input class="weui_input" type="text" name="sno" placeholder="请输入您所在餐厅的店号">
+<div class="info-edit">
+    <div class="form-flex1">
+        <div class="ui-form-item dclor">
+            <input type="text" name="sno" placeholder="请输入餐厅店号">
         </div>
     </div>
-    <div class="weui_cell">
-        <div class="weui_cell_hd"><label class="weui_label">姓名</label></div>
-        <div class="weui_cell_bd weui_cell_primary">
-            <input class="weui_input" type="text" name="sname" placeholder="请输入您的姓名">
+    <div class="form-flex1">
+        <div class="ui-form-item dclor">
+            <input type="text" name="sname" placeholder="请输入您的姓名">
         </div>
     </div>
-    <div class="weui_cell weui_cell_select weui_select_after">
-        <div class="weui_cell_hd">
-            选择工作站
-        </div>
-        <div class="weui_cell_bd weui_cell_primary">
-            <select class="weui_select" name="scate">
-                <?php
-                foreach(TempList::$arena as $k=>$val)
-                    echo sprintf('<option value="%d">%s</option>',$k,$val);
-                ?>
-            </select>
+    <div class="form-flex2">
+        <div class="ui-form-item">
+            <div class="ui-select">
+                <select name="scate">
+                    <?php
+                    foreach(TempList::$arena as $k=>$val)
+                        echo sprintf('<option value="%d">%s</option>',$k,$val);
+                    ?>
+                </select>
+            </div>
         </div>
     </div>
-    <div class="weui_cell weui_vcode">
-        <div class="weui_cell_hd"><label class="weui_label">验证码</label></div>
-        <div class="weui_cell_bd weui_cell_primary">
-            <input class="weui_input" type="text" name="scode" placeholder="请输入验证码">
+    <div class="form-flex3">
+        <div class="ui-form-item dclor">
+            <input type="text" size="12" name="scode" placeholder="请输入验证码">
         </div>
-        <div class="weui_cell_ft">
+        <div class="pcode">
             <?php $this->widget('CCaptcha',array(
                 'showRefreshButton'=>FALSE,
                 'clickableImage'=>true,
@@ -42,13 +37,16 @@
                     'alt'=>'点击换图',
                     'title'=>'点击换图',
                     'style'=>'cursor:pointer',
-                    'padding'=>'4')
+                    'padding'=>'6')
             )); ?>
         </div>
     </div>
+    <div class="footer" >
+        <div id="psave">确认</div>
+    </div>
+
 </div>
-<div class="weui_btn_area"><a href="javascript:;" id="psave" class="weui_btn weui_btn_warn">确认</a></div>
-<div class="weui_dialog_alert">
+<div class="weui_dialog_alert hidden">
     <div class="weui_mask"></div>
     <div class="weui_dialog">
         <div class="weui_dialog_hd">
@@ -61,8 +59,6 @@
     </div>
 </div>
 <script type="text/javascript">
-
-
     $(function(){
         var palert = function(title,desc){
             $(".weui_dialog_title").html(title);
@@ -70,7 +66,6 @@
             $(".weui_dialog_alert").show();
         };
         var clk = true;
-        $(".weui_dialog_alert").hide();
 
         $(".weui_btn_dialog").on("click",function(){
             clk = true;
@@ -112,3 +107,4 @@
         });
     });
 </script>
+</body>

@@ -10,10 +10,10 @@ class HomeController extends Controller
             // captcha action renders the CAPTCHA image displayed on the contact page
             'captcha' => array(
                 'class' => 'CCaptchaAction',
-                'backColor' => 0xEAF4FD,
+                'backColor' => 0xfdfdfe,
                 'maxLength' => '4', // 最多生成几个字符
                 'minLength' => '4', // 最少生成几个字符
-                'height' => '40',
+                'height' => '36',
                 'width' => '84',
             ),
         );

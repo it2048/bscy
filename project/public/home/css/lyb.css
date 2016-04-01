@@ -1,5 +1,13 @@
-body{
+.w-body{
     background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    width:100%;height:auto;
+    background-size:cover;
+    z-index: 1;
+}
+
+.e-body{
+    background-image: url("../img/bg.png");
     background-repeat: no-repeat;
     width:100%;height:auto;
     background-size:cover;
@@ -153,4 +161,71 @@ body{
     line-height: 0.818;
     position: relative;
     top:10px;
+}
+
+.top{
+    position: static;
+    height: 144px;
+    background-image: url("../img/top.png");
+    background-repeat: round;
+    background-size:cover;
+}
+
+.info-edit{
+    position: static;
+    background-image: url("../img/info.png");
+    background-size: cover;
+    background-repeat: round;
+    height: 440px;
+}
+
+.form-flex1{
+    height: 20px;
+    margin-top: 28px;
+    display: -webkit-inline-box;
+}
+.form-flex2{
+    height: 20px;
+    margin-top: 28px;
+    display: -webkit-inline-box;
+    margin-left: 12%;
+
+}
+.form-flex3{
+    height: 20px;
+    margin-top: 28px;
+    display: -webkit-inline-box;
+}
+.form-flex4{
+    height: 20px;
+    margin-top: 54px;
+}
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: rgb(103, 79, 63);
+    background-color: white;
+    cursor: default;
+    border: 1px solid;
+}
+.dclor input{
+    color: rgb(103, 79, 63);
+    display: -webkit-inline-box;
+
+}
+.hidden{
+    display: none;
+}
+.pcode{
+    height: 36px;
+}
+.footer{
+    margin-top: 170px;
+    height: 56px;
+    text-align: center;
+    color: rgb(255, 225, 132);
+    font-size: 20px;
 }
