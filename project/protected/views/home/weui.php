@@ -17,15 +17,12 @@
                     </div>
                 </div>
                 <div class="ui-col">
+                    <div class="ggg"></div>
                 </div>
             </div>
 
 
         </div>
-
-</div>
-<div class="gfooter">
-    <div class="ggg"></div>
 
 </div>
 </body>

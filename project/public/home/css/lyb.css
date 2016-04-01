@@ -89,9 +89,8 @@
     box-sizing: border-box;
 }
 .ui-flex{
-    height: 160px;
-    margin-bottom: 4%;
     padding: 0px 14%;
+    margin-top: 30%;
 }
 .ui-flex-ver{
     border: 1px solid #ddd;
@@ -136,7 +135,7 @@
     line-height: 1.474;
     position: absolute;
     width: 73%;
-    height: 18%;
+    height: 22%;
     overflow:hidden;
 }
 
@@ -228,13 +227,6 @@ select {
     color: rgb(255, 225, 132);
     font-size: 20px;
 }
-.gfooter {
-    height: 200px;
-    position: absolute;
-    width: 100%;
-    top: 80%;
-    margin-left: 20%;
-}
 .ggg{
     background-image: url("../img/g.png");
     background-repeat: no-repeat;
@@ -279,7 +271,7 @@ select {
 @-webkit-keyframes gGo {
     0% {
         transform-origin: center center;
-        margin-top: -30px;
+        margin-top: -40px;
     }
     50% {
         transform-origin: center center;
@@ -287,7 +279,7 @@ select {
     }
     100% {
         transform-origin: center center;
-        margin-top: -30px;
+        margin-top: -40px;
 
     }
 }
@@ -295,15 +287,15 @@ select {
 @keyframes gGo {
     0% {
         transform-origin: center center;
-        margin-top: -30px;
+        margin-top: -25px;
     }
     50% {
         transform-origin: center center;
-        margin-top: 10px;
+        margin-top: 25px;
     }
     100% {
         transform-origin: center center;
-        margin-top: -30px;
+        margin-top: -25px;
 
     }
 }
