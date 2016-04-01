@@ -243,19 +243,16 @@ select {
 
 @-webkit-keyframes arrowGo {
     0% {
-        opacity: 1;
-        transform-origin: center center;
-        margin-top: 0px;
+        opacity: 0.7;
+        transform-origin: left top;
     }
     50% {
-        opacity: 0.6;
-        transform-origin: center center;
-        margin-top: 10px;
-    }
-    100% {
         opacity: 1;
         transform-origin: center center;
-        margin-top: 0px;
+    }
+    100% {
+        opacity: 0.7;
+        transform-origin: right bottom;
     }
 }
 @keyframes arrowGo {
@@ -270,6 +267,22 @@ select {
     100% {
         opacity: 0.7;
         transform-origin: right bottom;
+    }
+}
+
+@-webkit-keyframes gGo {
+    0% {
+        transform-origin: center center;
+        margin-top: -30px;
+    }
+    50% {
+        transform-origin: center center;
+        margin-top: 10px;
+    }
+    100% {
+        transform-origin: center center;
+        margin-top: -30px;
+
     }
 }
 
