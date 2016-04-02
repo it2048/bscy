@@ -77,7 +77,8 @@
             if(!clk) return;
             var sno = $("input[name=sno]").val();
             var sname = $("input[name=sname]").val();
-            var scate = $("input[name=scate]").val();
+            var scate = $("select[name=scate]").val();
+            console.log(scate);
             var scode = $("input[name=scode]").val();
 
             if(sno == '')

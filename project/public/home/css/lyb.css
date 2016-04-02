@@ -144,11 +144,12 @@
     background-image: url("../img/button.png");
     background-repeat: round;
     height: 44px;
-    width: 100%;
+    width: 64%;
     background-size: cover;
     text-align: center;
     cursor:pointer;
     margin-top: 2.6%;
+    position: absolute;
     -webkit-animation: arrowGo 1.2s infinite steps(120, end);
     animation: arrowGo 1.2s infinite steps(120, end);
 }
@@ -236,7 +237,7 @@ select {
     background-size: contain;
     margin-left: 110px;
     bottom: 10%;
-    position: relative;
+    position: static;
     -webkit-animation: gGo 1s infinite steps(120, end);
     animation: gGo 1s infinite steps(120, end);
 }
@@ -289,7 +290,7 @@ select {
 @keyframes gGo {
     0% {
         transform-origin: center center;
-        margin-top: -30px;
+        margin-top: -60px;
     }
     50% {
         transform-origin: center center;
@@ -297,7 +298,7 @@ select {
     }
     100% {
         transform-origin: center center;
-        margin-top: -30px;
+        margin-top: -60px;
 
     }
 }
