@@ -28,7 +28,7 @@ class AppBsAdmin extends BsAdmin {
     {
         $connection = Yii::app()->db;
         $sql = sprintf("REPLACE INTO %s(`username`, `tel`, `name`,
-`dep_name`,`type`,`ct_name`,`dh_name`,`ct_boss`,`desc`) VALUES",$this->tableName()); //构造SQL
+`dep_name`,`type`,`ct_name`,`dh_name`,`ct_boss`,`desc`,`account`) VALUES",$this->tableName()); //构造SQL
         $file_handle = fopen($loadPath, "r");
         $header = fgetcsv($file_handle);
         foreach($header as $k=>$val)
@@ -69,8 +69,8 @@ class AppBsAdmin extends BsAdmin {
                     $desc .= sprintf('%s:%s \r\n',$header[$i],$arr[$i]);
                     $i++;
                 }
-                return sprintf("('%s','%s','%s','%s',%s,'','','','%s'),",
-                    strtolower($arr[0]),$arr[1],$arr[2],$arr[3]."-".$arr[4],$type,$desc);
+                return sprintf("('%s','%s','%s','%s',%s,'','','','%s','%s'),",
+                    strtolower($arr[0]),$arr[1],$arr[2],$arr[3]."-".$arr[4],$type,$desc,$arr[0]);
             }
         }elseif($type==2)
         {
@@ -83,8 +83,8 @@ class AppBsAdmin extends BsAdmin {
                     $desc .= sprintf('%s:%s \r\n',$header[$i],$arr[$i]);
                     $i++;
                 }
-                return sprintf("('%s','%s','%s','%s',%s,'%s','%s','%s','%s'),",
-                    strtolower($arr[0]),$arr[1],$arr[2],$arr[3],2,$arr[4],strtoupper($arr[0]),$arr[2],$desc);
+                return sprintf("('%s','%s','%s','%s',%s,'%s','%s','%s','%s','%s'),",
+                    strtolower($arr[0]),$arr[1],$arr[2],$arr[3],2,$arr[4],strtoupper($arr[0]),$arr[2],$desc,$arr[0]);
             }
         }elseif($type==3)
         {
@@ -97,8 +97,8 @@ class AppBsAdmin extends BsAdmin {
                     $desc .= sprintf('%s:%s \r\n',$header[$i],$arr[$i]);
                     $i++;
                 }
-                return sprintf("('%s','%s','%s','%s',%s,'','','','%s'),",
-                    strtolower($arr[0]),$arr[1],$arr[2],$arr[3].$arr[4],3,$desc);
+                return sprintf("('%s','%s','%s','%s',%s,'','','','%s','%s'),",
+                    strtolower($arr[0]),$arr[1],$arr[2],$arr[3].$arr[4],3,$desc,$arr[0]);
             }
         }
     }
