@@ -21,13 +21,13 @@ class HomeController extends Controller
 
     public function filters()
     {
-        return array(
-            array(
-                'COutputCache+w',
-                'duration'=>300,
-                'varyByParam'=>array('id'),
-            ),
-        );
+//        return array(
+//            array(
+//                'COutputCache+w',
+//                'duration'=>300,
+//                'varyByParam'=>array('id'),
+//            ),
+//        );
     }
 
     public function actionW()
@@ -115,7 +115,7 @@ class HomeController extends Controller
                     $msg['msg'] = "请输入正确的店号";
                 }else
                 {
-                    $model = Arena::model()->find("sno = :sno AND sname = :um",array(":sno"=>$sno,":um"=>$sname));
+                    $model = Arena::model()->find("sno = :sno AND sname = :um AND scate = :ct",array(":sno"=>$sno,":um"=>$sname,':ct'=>$scate));
                     if(empty($model)){
                         $model = new Arena();
                         $model->sno = $sno;
