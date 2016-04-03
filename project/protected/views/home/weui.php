@@ -17,7 +17,10 @@
                     </div>
                 </div>
                 <div class="ui-col">
-<div class="ggg"></div>
+                    <a href="<?php echo Yii::app()->createAbsoluteUrl('home/edit'); ?>">
+                        <div class="ggg"></div>
+
+                    </a>
                 </div>
             </div>
 
