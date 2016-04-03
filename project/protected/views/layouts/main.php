@@ -103,6 +103,7 @@
                         </li>
                         <li><a href="#">权限管理</a>
                             <ul>
+                                <?php NavigatorHelper::getInstance()->printNavigator('adming/index', 'gadmin', '擂台赛查看'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('rbacSet/authmanage', 'authmanage', '用户权限管理'); ?>
                                 <?php NavigatorHelper::getInstance()->printNavigator('rbacSet/assignToUsers', 'AssignToUsers', '用户职能分配'); ?>
                             </ul>
