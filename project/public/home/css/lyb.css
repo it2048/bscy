@@ -1,5 +1,5 @@
 .w-body{
-    background-image: url("../img/bg.png");
+    background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
     width:100%;height:auto;
     background-size:cover;
@@ -7,7 +7,7 @@
 }
 
 .e-body{
-    background-image: url("../img/bg.png");
+    background-image: url("../img/bg-w.jpg");
     background-repeat: no-repeat;
     width:100%;height:auto;
     background-size:cover;
@@ -166,14 +166,14 @@
 .top{
     position: static;
     height: 144px;
-    background-image: url("../img/top.png");
+    background-image: url("../img/top.jpg");
     background-repeat: round;
     background-size:cover;
 }
 
 .info-edit{
     position: static;
-    background-image: url("../img/info.png");
+    background-image: url("../img/info.jpg");
     background-size: cover;
     background-repeat: round;
     height: 440px;
