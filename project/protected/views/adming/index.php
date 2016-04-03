@@ -4,7 +4,7 @@
             <table class="searchContent">
                 <tbody><tr>
                     <td>
-                        商店编号：<input type="text" id="sno" size="30" name="sno" value="<?php echo $pages['sno'];?>"/>
+                        餐厅编号：<input type="text" id="sno" size="30" name="sno" value="<?php echo $pages['sno'];?>"/>
                     </td>
                     <td>
                         工作站类型：
