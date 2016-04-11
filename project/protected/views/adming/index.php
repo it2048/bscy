@@ -31,7 +31,12 @@
     </form>
 </div>
 <div class="pageContent">
-    <table class="table" width="960" layoutH="86">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><a class="icon" target="dwzExport" targetType="navTab"  href="<?php echo Yii::app()->createAbsoluteUrl('adming/exp'); ?>"><span>导出数据</span></a></li>
+        </ul>
+    </div>
+    <table class="table" width="960" layoutH="110">
         <thead>
         <tr>
             <th width="20">编号</th>
